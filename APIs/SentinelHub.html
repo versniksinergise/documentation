@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – sentinel2</title>
+<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – sentinelhub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Data/Sentinel3.html" rel="next">
-<link href="../Data/Sentinel1.html" rel="prev">
+<link href="../APIs/SentinelHub/Overview.html" rel="next">
+<link href="../APIs/OpenSearch.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -123,11 +123,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../Data.html" class="sidebar-item-text sidebar-link">Data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Data/Sentinel1.html" class="sidebar-item-text sidebar-link">Sentinel 1</a>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Data/Sentinel2.html" class="sidebar-item-text sidebar-link active">Sentinel 2</a>
+  <a href="../Data/Sentinel2.html" class="sidebar-item-text sidebar-link">Sentinel 2</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -153,11 +153,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../APIs.html" class="sidebar-item-text sidebar-link">APIs</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../APIs/OData.html" class="sidebar-item-text sidebar-link">Data catalogue API with OData interface</a>
@@ -170,12 +170,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../APIs/SentinelHub.html" class="sidebar-item-text sidebar-link">SentinelHub</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a href="../APIs/SentinelHub.html" class="sidebar-item-text sidebar-link active">SentinelHub</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../APIs/SentinelHub/Overview.html" class="sidebar-item-text sidebar-link">API Overview</a>
@@ -244,10 +244,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#sentinel-2" id="toc-sentinel-2" class="nav-link active" data-scroll-target="#sentinel-2">Sentinel 2</a>
+  <li><a href="#sentinel-hub" id="toc-sentinel-hub" class="nav-link active" data-scroll-target="#sentinel-hub">Sentinel Hub</a>
   <ul class="collapse">
-  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
-  <li><a href="#data-offer" id="toc-data-offer" class="nav-link" data-scroll-target="#data-offer">Data Offer</a></li>
+  <li><a href="#what-is-sentinel-hub" id="toc-what-is-sentinel-hub" class="nav-link" data-scroll-target="#what-is-sentinel-hub">What is Sentinel Hub</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -257,196 +256,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="sentinel-2" class="level1">
-<h1>Sentinel 2</h1>
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>The <a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2">Copernicus Sentinel-2 mission</a> comprises a land monitoring constellation of two polar-orbiting satellites placed in the same sun-synchronous orbit, phased at 180° to each other. It aims at monitoring variability in land surface conditions, and its wide swath width (290 km) and high revisit time (10 days at the equator with one satellite, and 5 days with 2 satellites under cloud-free conditions which results in 2-3 days at mid-latitudes) will support monitoring of Earth’s surface changes.</p>
-<p>The <a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Sentinel-2 products</a> are a compilation of elementary granules of fixed size, along with a single orbit. A granule is the minimum indivisible partition of a product (containing all possible spectral bands).</p>
-<p>For Level-1C and Level-2A, the granules, also called tiles, are 100x100 km2 ortho-images in UTM/WGS84 projection. <a href="https://sentinels.copernicus.eu/documents/247904/1955685/S2A_OPER_GIP_TILPAR_MPC__20151209T095117_V20150622T000000_21000101T000000_B00.kml/ec05e22c-a2bc-4a13-9e84-02d5257b09a8">Download</a> the Sentinel-2 tiling grid kml.</p>
-<p>The UTM (Universal Transverse Mercator) system divides the Earth’s surface into 60 zones. Each UTM zone has a vertical width of 6° of longitude and horizontal width of 8° of latitude.</p>
-
-<!-- ### Attention:
-Until the complete set of currently reprocessed data for S2 L2A will be come available (ca. July 2023) the following shall be considered with respects to S2 L2A data:<br>
-**All Sentinel-2 L2A products newer than December 1st, 2021 stored in the Copernicus Data Space Ecosystem repository are produced by the Copernicus Ground Segment.**<br>
-The products from period between January 1st 2020 and November 31st 2021 are mix of products from the ground segment and generated by CREODIAS using the sen2cor processor.
-These products slightly differ from the products generated by the Copernicus Ground Segment and are not visualized in the Browser. The products are compatible and can be downloaded for further processing or analysis. <br>
-
-The products generated by CREODIAS using sen2cor are indicated by "N9999" identifying the processing baseline.<br>
-*Example:<br>
-Original ESA product: S2B_MSIL2A_20220518T073609_**N0400**_R092_T38SMA_20220518T093719.SAFE 
-
-Product generated by CREODIAS: S2A_MSIL2A_20210905T143731_**N9999**_R096_T20QQD_20221112T112946.SAFE 
-More information on the sen2cor and difference in the processing chain can be found [here](https://step.esa.int/main/snap-supported-plugins/sen2cor/sen2cor-v2-11/).
-
-In addition: IAD access to the new Collection-1 for the Sentinel-2 Level-2A products generated by the ESA Copernicus Ground Segment for all Sentinel-2 data will be available gradually as part of the Sentinel-2 reprocessing campaign.   
-
-<br>
-The table below indicates for each type of user level product, the format in which the data will be available, the access type (IAD or DAD), the spatial and temporal extent of the offer and from when the data will be available in the Copernicus Data Space Ecosystem. 
-The data offer will gradually extend starting from January 2023. -->
-<p><strong>Note</strong>: The initial offer as from 01/2023 includes IAD access to the original Sentinel-2 Level-2A products generated by the ESA Copernicus Ground Segment for data acquired since December 2021.</p>
-<p>For Sentinel-2 data acquired before December 2021 :<br> the initial offer in IAD includes Sentinel-2 Level-2A products generated by ESA Copernicus Ground Segment and also Level-2A products generated by the CREODIAS using the Sentinel-2 Toolbox – identified by baseline 99.99 (“N9999” included in the product ID). <br> These products slightly differ from the products generated by the ESA Copernicus Ground Segment and are not visualized in the Browser. The products are compatible and can be downloaded for further processing or analysis.</p>
-<!-- Following lines have been replaced by new lines at request of Jacek Leszczeński mail to Bart Bomans - Thursday, February 23, 2023 12:07:02 PM  
-In addition: IAD access to the new Collection-1 for the Sentinel-2 Level-2A products generated by the ESA Copernicus Ground Segment for all Sentinel-2 data will be available gradually as part of the Sentinel-2 reprocessing campaign.  
-More information about the campaign on the dedicated [webpage](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/copernicus-sentinel-2-collection-1-availability-status)-->
-<p>In addition: IAD access to the new Sentinel-2 Collection-1 products (Level-1C and Level-2A) generated by the ESA Copernicus Ground Segment is available for data starting from December 2021 and proceeding in reverse chronological order of sensing time. These data are gradually made available as they are being generated as a part of the Sentinel-2 reprocessing campaign. More information about the campaign can be found on the dedicated <a href="https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/copernicus-sentinel-2-collection-1-availability-status">webpage</a>. In order to search for the Sentinel-2 Collection-1 products in the Browser users have to select the “Sentinel-2” tick box and type “N0500” in the “Search criteria”</p>
-</section>
-<section id="data-offer" class="level2">
-<h2 class="anchored" data-anchor-id="data-offer">Data Offer</h2>
-<section id="already-available-from-january-2023" class="level3">
-<h3 class="anchored" data-anchor-id="already-available-from-january-2023">Already available (from January 2023)</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Product Type</th>
-<th>File Description</th>
-<th>Data Access Type</th>
-<th>Spatial Extent</th>
-<th>Temporal Extent</th>
-<th>More Information</th>
-<th>Available from</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>L1C</td>
-<td>packed or unpacked</td>
-<td>IAD (Immediately available data)</td>
-<td>World</td>
-<td>Jul-15 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jan-23</td>
-</tr>
-<tr class="even">
-<td>L2A(*)</td>
-<td>packed or unpacked (original ESA product)</td>
-<td>IAD</td>
-<td>Europe</td>
-<td>Mar-17 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jan-23</td>
-</tr>
-<tr class="odd">
-<td>L2A</td>
-<td>packed or unpacked (original ESA product)</td>
-<td>IAD</td>
-<td>RoW (World with exception of Europe)</td>
-<td>Dec-21 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jan-23</td>
-</tr>
-</tbody>
-</table>
-<p>(*) For period 01/2020 – 11/2021 the data repository holds original ESA products and products generated using Sentinel-2 Toolbox (sen2cor). See note above.</p>
-</section>
-<section id="available-from-july-2023" class="level3">
-<h3 class="anchored" data-anchor-id="available-from-july-2023">Available from July 2023</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Product Type</th>
-<th>File Description</th>
-<th>Data Access Type</th>
-<th>Spatial Extent</th>
-<th>Temporal Extent</th>
-<th>More Information</th>
-<th>Available from</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>L1C</td>
-<td>packed or unpacked</td>
-<td>IAD (Immediately available data)</td>
-<td>World</td>
-<td>Jul-15 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jan-23</td>
-</tr>
-<tr class="even">
-<td>L2A</td>
-<td>packed or unpacked (original ESA product)</td>
-<td>IAD</td>
-<td>World</td>
-<td>Jul-15 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jul-23</td>
-</tr>
-<tr class="odd">
-<td>L2A</td>
-<td>packed (original ESA products)</td>
-<td>DAD (Deferred available data)</td>
-<td>World</td>
-<td>Jul-15 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jul-23</td>
-</tr>
-<tr class="even">
-<td>L0(*)</td>
-<td>packed</td>
-<td>DAD</td>
-<td>World</td>
-<td>Jul-15 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Jul-23</td>
-</tr>
-</tbody>
-</table>
-<p>(*) Access restrictions may apply.</p>
-</section>
-<section id="additionally-available-from-october-2023" class="level3">
-<h3 class="anchored" data-anchor-id="additionally-available-from-october-2023">Additionally available from October 2023</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Product Type</th>
-<th>File Description</th>
-<th>Data Access Type</th>
-<th>Spatial Extent</th>
-<th>Temporal Extent</th>
-<th>More Information</th>
-<th>Available from</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>L1B(*)</td>
-<td>EUP</td>
-<td>IAD</td>
-<td>World</td>
-<td>Last 2 weeks</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Oct-23</td>
-</tr>
-<tr class="even">
-<td>L1B(*)</td>
-<td>EUP</td>
-<td>DAD</td>
-<td>World</td>
-<td>Full archive</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products">Details</a></td>
-<td>Oct-23</td>
-</tr>
-</tbody>
-</table>
-<p>(*) Access restrictions may apply.</p>
-<!--|Product Type| File Description| Data Access Type | Spatial Extent | Temporal Extent | More Information | Available from |
-|------------ | ---------------------- | ---------------------- | ------------ | ------------ | ------------| -----------|
-|L1C | packed | IAD (Immediately available data) | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L1C | unpacked | IAD | World | Jul-15 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L1C | packed | DAD (Deferred available data) | World | Jul-15 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jul-23|
-|L2A | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L2A | unpacked (original ESA products) | IAD | Europe? World? | Jul-xx - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L2A | unpacked | IAD | Europe | Jul-15 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L2A | unpacked | IAD | RoW (World with exception of Europe) | Oct-21 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jan-23|
-|L2A | unpacked (original ESA products) | IAD | World | Jul-15 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jul-23|
-|L0(*) | packed | DAD | World | Jul-15 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Jul-23|
-|L1B(*) | EUP | IAD | World | Last 2 weeks | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2/data-products)| Oct-23|
-
-(*) Access restrictions may apply.-->
+<section id="sentinel-hub" class="level1">
+<h1>Sentinel Hub</h1>
+<section id="what-is-sentinel-hub" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-sentinel-hub">What is Sentinel Hub</h2>
+<p>Sentinel Hub is a multi-spectral and multi-temporal big data satellite imagery service, capable of fully automated archiving, real-time processing and distribution of remote sensing data and related EO products. Users can use APIs to retrieve satellite data over their AOI and specific time range from full archives in a matter of seconds.</p>
 
 
-</section>
 </section>
 </section>
 
@@ -586,13 +402,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Data/Sentinel1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sentinel 1</span>
+      <a href="../APIs/OpenSearch.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OpenSearch</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Data/Sentinel3.html" class="pagination-link">
-        <span class="nav-page-text">Sentinel 3</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../APIs/SentinelHub/Overview.html" class="pagination-link">
+        <span class="nav-page-text">API Overview</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
