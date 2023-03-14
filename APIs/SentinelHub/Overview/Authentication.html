@@ -365,15 +365,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="curl" class="level4">
 <h4 class="anchored" data-anchor-id="curl">cURL</h4>
 <p>The following cURL request will return an access token, just make sure to replace <code>&lt;your client id&gt;</code> with your client ID and <code>&lt;your client secret&gt;</code> with your client secret:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'content-type'</span>: <span class="st">'application/x-www-form-urlencoded'</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'content-type'</span>: <span class="st">'application/x-www-form-urlencoded'</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">'grant_type=client_credentials&amp;client_id=&lt;your client id&gt;&amp;client_secret=%3Cyour+client+secret</span><span class="sc">%3E</span><span class="st">'</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="st">'grant_type=client_credentials&amp;client_id=&lt;your client id&gt;&amp;client_secret=%3Cyour+client+secret</span><span class="sc">%3E</span><span class="st">'</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/oauth/token'</span>, headers<span class="op">=</span>headers, data<span class="op">=</span>data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/oauth/token'</span>, headers<span class="op">=</span>headers, data<span class="op">=</span>data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="postman" class="level4">
 <h4 class="anchored" data-anchor-id="postman">Postman</h4>
