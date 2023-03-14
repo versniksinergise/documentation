@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – examples</title>
+<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Catalog API examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Catalog API examples</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -306,18 +306,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul class="collapse">
-  <li><a href="#catalog-api-examples" id="toc-catalog-api-examples" class="nav-link active" data-scroll-target="#catalog-api-examples">Catalog API examples</a></li>
+  <ul>
+  <li><a href="#catalog-api-entry-page" id="toc-catalog-api-entry-page" class="nav-link active" data-scroll-target="#catalog-api-entry-page">Catalog API Entry page</a></li>
+  <li><a href="#list-collections" id="toc-list-collections" class="nav-link" data-scroll-target="#list-collections">List collections</a></li>
+  <li><a href="#sentinel-2-l1c-collection" id="toc-sentinel-2-l1c-collection" class="nav-link" data-scroll-target="#sentinel-2-l1c-collection">Sentinel 2 L1C collection</a></li>
+  <li><a href="#simple-get-search" id="toc-simple-get-search" class="nav-link" data-scroll-target="#simple-get-search">Simple GET search</a></li>
+  <li><a href="#simple-post-search" id="toc-simple-post-search" class="nav-link" data-scroll-target="#simple-post-search">Simple POST search</a></li>
+  <li><a href="#simple-post-search-with-pagination" id="toc-simple-post-search-with-pagination" class="nav-link" data-scroll-target="#simple-post-search-with-pagination">Simple POST search with pagination</a></li>
+  <li><a href="#search-with-geojson" id="toc-search-with-geojson" class="nav-link" data-scroll-target="#search-with-geojson">Search with GeoJSON</a></li>
+  <li><a href="#search-with-filter" id="toc-search-with-filter" class="nav-link" data-scroll-target="#search-with-filter">Search with Filter</a></li>
+  <li><a href="#get-filter-parameters-for-collection" id="toc-get-filter-parameters-for-collection" class="nav-link" data-scroll-target="#get-filter-parameters-for-collection">Get Filter parameters for collection</a></li>
+  <li><a href="#search-with-fields-no-fields" id="toc-search-with-fields-no-fields" class="nav-link" data-scroll-target="#search-with-fields-no-fields">Search with Fields: No fields</a></li>
+  <li><a href="#search-with-fields-empty-fields" id="toc-search-with-fields-empty-fields" class="nav-link" data-scroll-target="#search-with-fields-empty-fields">Search with Fields: Empty fields</a></li>
+  <li><a href="#search-with-fields-include" id="toc-search-with-fields-include" class="nav-link" data-scroll-target="#search-with-fields-include">Search with Fields: Include</a></li>
+  <li><a href="#search-with-fields-exclude" id="toc-search-with-fields-exclude" class="nav-link" data-scroll-target="#search-with-fields-exclude">Search with Fields: Exclude</a></li>
+  <li><a href="#search-with-distinct" id="toc-search-with-distinct" class="nav-link" data-scroll-target="#search-with-distinct">Search with distinct</a></li>
+  <li><a href="#search-on-byocbatch-collections" id="toc-search-on-byocbatch-collections" class="nav-link" data-scroll-target="#search-on-byocbatch-collections">Search on BYOC/BATCH collections</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Catalog API examples</h1>
+</div>
 
 
-<section id="catalog-api-examples" class="level1">
-<h1>Catalog API examples</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>To request data using any of the request below, you will need to replace the string <code>&lt;your access token&gt;</code> with your Sentinel Hub access token. Sentinel Hub access token will look something like this:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ayJhbGciOiJSUzI1NiJ9.ayJzdWIiOiI0MmYwODZjCy1kMzI3LTRlOTMtYWMxNS00ODAwOGFiZjI0YjIiLCJhdWQiOiJlY2I1MGM1Zi1i</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">MWM1LTQ3ZTgtYWE4NC0zZTU4NzJlM2I2MTEiLCJqdGkiOiI5MzYxMWE4ODEyNTM4Y2M0MmU0NDJjYjUyMTY0YmJlNyIsImV4cCI6MTU1N</span></span>
@@ -698,7 +725,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

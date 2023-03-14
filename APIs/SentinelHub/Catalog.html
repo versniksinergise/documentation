@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – catalog</title>
+<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Catalog API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Catalog API</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -306,13 +306,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul class="collapse">
-  <li><a href="#catalog-api" id="toc-catalog-api" class="nav-link active" data-scroll-target="#catalog-api">Catalog API</a>
-  <ul class="collapse">
-  <li><a href="#api-reference" id="toc-api-reference" class="nav-link" data-scroll-target="#api-reference">API Reference</a></li>
+  <ul>
+  <li><a href="#api-reference" id="toc-api-reference" class="nav-link active" data-scroll-target="#api-reference">API Reference</a></li>
   <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
   <li><a href="#pagination" id="toc-pagination" class="nav-link" data-scroll-target="#pagination">Pagination</a></li>
-  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a>
+  <ul>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">Filter</a></li>
+  <li><a href="#fields" id="toc-fields" class="nav-link" data-scroll-target="#fields">Fields</a>
+  <ul class="collapse">
+  <li><a href="#includeexclude-behaviour" id="toc-includeexclude-behaviour" class="nav-link" data-scroll-target="#includeexclude-behaviour">Include/Exclude behaviour</a></li>
+  </ul></li>
+  <li><a href="#distinct" id="toc-distinct" class="nav-link" data-scroll-target="#distinct">Distinct</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -320,10 +325,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Catalog API</h1>
+</div>
 
 
-<section id="catalog-api" class="level1">
-<h1>Catalog API</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Sentinel Hub Catalog API (or shortly "Catalog") is an API implementing the <a href="https://stacspec.org/">STAC Specification</a>, describing geospatial information about different data used with Sentinel Hub.</p>
 <section id="api-reference" class="level2">
 <h2 class="anchored" data-anchor-id="api-reference">API Reference</h2>
@@ -454,7 +472,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>As with the <code>filter</code> attribute, <code>distinct</code> is also a collection limited to some specific properties. Information describing these properties can be found inside each collection's documentation (ex. <a href="../../Data/Sentinel1.html#distinct-extension">Sentinel-1 GRD</a>).</p>
 
 
-</section>
 </section>
 </section>
 

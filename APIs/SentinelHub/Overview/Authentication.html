@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – authentication</title>
+<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Authentication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Authentication</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -306,18 +306,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul class="collapse">
-  <li><a href="#authentication" id="toc-authentication" class="nav-link active" data-scroll-target="#authentication">Authentication</a></li>
+  <ul>
+  <li><a href="#how-to-use-tokens" id="toc-how-to-use-tokens" class="nav-link active" data-scroll-target="#how-to-use-tokens">How to use tokens</a></li>
+  <li><a href="#registering-oauth-client" id="toc-registering-oauth-client" class="nav-link" data-scroll-target="#registering-oauth-client">Registering OAuth client</a></li>
+  <li><a href="#oauth2-endpoints" id="toc-oauth2-endpoints" class="nav-link" data-scroll-target="#oauth2-endpoints">OAuth2 Endpoints</a></li>
+  <li><a href="#token-request-examples" id="toc-token-request-examples" class="nav-link" data-scroll-target="#token-request-examples">Token Request Examples</a>
+  <ul>
+  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl">cURL</a></li>
+  <li><a href="#postman" id="toc-postman" class="nav-link" data-scroll-target="#postman">Postman</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#javascript" id="toc-javascript" class="nav-link" data-scroll-target="#javascript">Javascript</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Authentication</h1>
+</div>
 
 
-<section id="authentication" class="level1">
-<h1>Authentication</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>The Sentinel Hub API uses OAuth2 Authentication and requires that you have an access token. In essence, this is a piece of information you add to your requests so the server knows it's you. These tokens do not last forever for a multitude of reasons, but you can get new ones and when they expire from the Sentinel-Hub OAuth2 server at the token endpoint listed below. But first, if you do not have one already, you need to register an OAuth Client in your <a href="https://apps.sentinel-hub.com/dashboard/#/account/settings">account settings</a>. This is so the server can expect you to make such token requests. If you do not have a Sentinel-Hub account, you can sign up for a <a href="https://www.sentinel-hub.com/create_account">free trial account</a>.</p>
 <section id="how-to-use-tokens" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-use-tokens">How to use tokens</h4>
@@ -415,22 +437,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>instance<span class="op">.</span><span class="fu">post</span>(<span class="st">"/oauth/token"</span><span class="op">,</span> body<span class="op">,</span> config)<span class="op">.</span><span class="fu">then</span>(resp <span class="kw">=&gt;</span> {</span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(instance<span class="op">.</span><span class="at">defaults</span><span class="op">,</span> {<span class="dt">headers</span><span class="op">:</span> {<span class="dt">authorization</span><span class="op">:</span> <span class="vs">`Bearer </span><span class="sc">${</span>resp<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">access_token</span><span class="sc">}</span><span class="vs">`</span>}})</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="recaptcha-based-authentication" class="level3">
-<h3 class="anchored" data-anchor-id="recaptcha-based-authentication">reCAPTCHA Based Authentication</h3>
-<p>With public web-applications, there is always a risk that someone will hijack the API credentials (e.g., OGC instance ID or Processing API OAuth client ID/secret) and misuse them for their own purposes. We have worked around this by integrating Google reCAPTCHA technology, which allows for anonymous token authentication. We are using this technology in our web applications (e.g.&nbsp;EO Browser) and it is also available to our Enterprise-level users.</p>
-<p>To implement it into your application, follow the instructions below.</p>
-<ol type="1">
-<li>Register your reCAPTCHA keys here: <a href="https://www.google.com/recaptcha/admin/create">reCAPTCHA v3</a>.</li>
-<li>You will receive a reCAPTCHA <code>site key</code> and <code>secret key</code>.</li>
-<li>Put the <code>site key</code> you received into your application (as an example, see line 29 in <a href="https://github.com/sentinel-hub/SentinelPlayground/blob/26d5b064e02d5ca01a29cd49769a5634a3cf8718/public/tokenAssisted.html#L29">SentinelPlayground/tokenAssisted.html</a>).</li>
-<li>Register an <a href="../../../APIs/SentinelHub/Overview/Authentication.html#registering-oauth-client">OAuth client</a>, select IMPLICIT grant type and fill in Redirect URL for your application.</li>
-<li><a href="mailto:info@sentinel-hub.com">Contact us</a> and provide us the generated <code>client_id</code> of your OAuth client and the reCAPTCHA <code>secret key</code>. The secret key is required so that the backend can verify the captcha.</li>
-<li>After we receive needed information, we will update your <code>client_id</code> configuration to support the anonymous authentication.</li>
-<li>You can now configure it in your application as seen in line 25 of the example <a href="https://github.com/sentinel-hub/SentinelPlayground/blob/26d5b064e02d5ca01a29cd49769a5634a3cf8718/public/tokenAssisted.html#L25">SentinelPlayground/tokenAssisted.html</a>.</li>
-</ol>
-<p>Note that as with any other security measure, things can be broken. However, we have found this option to be quite secure. You can, of course, implement another method of hiding credentials on your side.</p>
 
 
 </section>
