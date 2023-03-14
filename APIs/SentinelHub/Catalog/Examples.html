@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Catalog API Entry page with link to other catalog API endpoints and available collections.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="list-collections" class="level3">
 <h3 class="anchored" data-anchor-id="list-collections">List collections</h3>
@@ -343,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Authorization'</span>: <span class="st">'Bearer &lt;your access token&gt;'</span>,</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/collections'</span>, headers<span class="op">=</span>headers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/collections'</span>, headers<span class="op">=</span>headers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="sentinel-2-l1c-collection" class="level3">
 <h3 class="anchored" data-anchor-id="sentinel-2-l1c-collection">Sentinel 2 L1C collection</h3>
@@ -354,7 +354,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Authorization'</span>: <span class="st">'Bearer &lt;your access token&gt;'</span>,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/collections/sentinel-2-l1c/'</span>, headers<span class="op">=</span>headers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/collections/sentinel-2-l1c/'</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="simple-get-search" class="level3">
 <h3 class="anchored" data-anchor-id="simple-get-search">Simple GET search</h3>
@@ -366,7 +369,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search?bbox=13,45,14,46&amp;limit=5&amp;collections=sentinel-1-grd&amp;datetime=2019-12-10T00:00:00Z/2019-12-11T00:00:00Z'</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search?bbox=13,45,14,46&amp;limit=5&amp;collections=sentinel-1-grd&amp;datetime=2019-12-10T00:00:00Z/2019-12-11T00:00:00Z'</span>,</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
@@ -394,7 +397,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'limit'</span>: <span class="dv">5</span>,</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="simple-post-search-with-pagination" class="level3">
 <h3 class="anchored" data-anchor-id="simple-post-search-with-pagination">Simple POST search with pagination</h3>
@@ -421,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'next'</span>: <span class="dv">5</span>,</span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-geojson" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-geojson">Search with GeoJSON</h3>
@@ -448,7 +451,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    },</span>
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-filter" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-filter">Search with Filter</h3>
@@ -475,7 +478,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'filter'</span>: <span class="st">"sat:orbit_state='ascending'"</span>,</span>
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="get-filter-parameters-for-collection" class="level3">
 <h3 class="anchored" data-anchor-id="get-filter-parameters-for-collection">Get Filter parameters for collection</h3>
@@ -487,7 +490,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/collections/sentinel-1-grd/queryables'</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/collections/sentinel-1-grd/queryables'</span>,</span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
@@ -515,7 +518,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'limit'</span>: <span class="dv">1</span>,</span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-fields-empty-fields" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-fields-empty-fields">Search with Fields: Empty fields</h3>
@@ -542,7 +545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fields'</span>: {},</span>
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-fields-include" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-fields-include">Search with Fields: Include</h3>
@@ -573,7 +576,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    },</span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-fields-exclude" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-fields-exclude">Search with Fields: Exclude</h3>
@@ -604,7 +607,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    },</span>
 <span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-with-distinct" class="level3">
 <h3 class="anchored" data-anchor-id="search-with-distinct">Search with distinct</h3>
@@ -631,7 +634,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'distinct'</span>: <span class="st">'date'</span>,</span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or see different Sentinel 1 instrument modes used.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -655,7 +658,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'distinct'</span>: <span class="st">'sar:instrument_mode'</span>,</span>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="search-on-byocbatch-collections" class="level3">
 <h3 class="anchored" data-anchor-id="search-on-byocbatch-collections">Search on BYOC/BATCH collections</h3>
@@ -681,7 +684,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'limit'</span>: <span class="dv">5</span>,</span>
 <span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(<span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search'</span>, headers<span class="op">=</span>headers, json<span class="op">=</span>json_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or using GET simple search endpoint:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -690,7 +693,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://services.sentinel-hub.com/api/v1/catalog/1.0.0/search?bbox=13,45,14,46&amp;limit=5&amp;collections=batch-&lt;batch-collection-id&gt;&amp;datetime=2019-12-10T00:00:00Z/2019-12-11T00:00:00Z'</span>,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search?bbox=13,45,14,46&amp;limit=5&amp;collections=batch-&lt;batch-collection-id&gt;&amp;datetime=2019-12-10T00:00:00Z/2019-12-11T00:00:00Z'</span>,</span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>headers,</span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
