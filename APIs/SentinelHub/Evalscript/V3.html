@@ -1055,7 +1055,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>There are some specifics when using evalscript V3 with WMS, WTS, WCS services:</p>
 <ul>
 <li>These services return only the default <a href="#output-object-properties">output</a>. Only one image can be returned with each request and it is not possible to request metadata in JSON format.</li>
-<li>TRANSPARENCY and BGCOLOR parameters are ignored. You can use <a href="UserGuides/Datamask.md"><code>dataMask</code></a> band in evalscript V3 to handle transparency, as described <a href="UserGuides/Transparency.md">here</a>.</li>
+<li>TRANSPARENCY and BGCOLOR parameters are ignored. You can use <a href="../../../APIs/SentinelHub/UserGuides/Datamask.html"><code>dataMask</code></a> band in evalscript V3 to handle transparency, as described <a href="../../../APIs/SentinelHub/UserGuides/Transparency.html">here</a>.</li>
 <li>Bit depth, which is given as the part of a <code>FORMAT</code> parameter (e.g. <code>FORMAT=image/tiff;depth=8</code>) is ignored. You can use <a href="#sampletype"><code>sampleType</code></a> in evalscript V3 to request the bit depth of your choice.</li>
 </ul>
 
