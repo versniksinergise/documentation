@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Catalog API</title>
+<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Statistical API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,8 +92,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../APIs/SentinelHub/Catalog/Examples.html" rel="next">
-<link href="../../APIs/SentinelHub/Process/Examples/S5PL2.html" rel="prev">
+<link href="../../APIs/SentinelHub/Statistical/Examples.html" rel="next">
+<link href="../../APIs/SentinelHub/Catalog/Examples.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -145,7 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Catalog API</h1>
+      <h1 class="quarto-secondary-nav-title">Statistical API</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -351,12 +351,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link active">Catalog API</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+            <a href="../../APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link">Catalog API</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">Catalog API examples</a>
@@ -366,12 +366,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">Statistical API</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+            <a href="../../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link active">Statistical API</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">Examples of Statistical API</a>
@@ -417,17 +417,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#api-reference" id="toc-api-reference" class="nav-link active" data-scroll-target="#api-reference">API Reference</a></li>
-  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
-  <li><a href="#pagination" id="toc-pagination" class="nav-link" data-scroll-target="#pagination">Pagination</a></li>
-  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a>
+  <li><a href="#general-approach" id="toc-general-approach" class="nav-link active" data-scroll-target="#general-approach">General approach</a></li>
+  <li><a href="#statistical-api-and-evalscript" id="toc-statistical-api-and-evalscript" class="nav-link" data-scroll-target="#statistical-api-and-evalscript">Statistical API and evalscript</a></li>
+  <li><a href="#apis-features" id="toc-apis-features" class="nav-link" data-scroll-target="#apis-features">API's features</a>
   <ul>
-  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">Filter</a></li>
-  <li><a href="#fields" id="toc-fields" class="nav-link" data-scroll-target="#fields">Fields</a>
-  <ul class="collapse">
-  <li><a href="#includeexclude-behaviour" id="toc-includeexclude-behaviour" class="nav-link" data-scroll-target="#includeexclude-behaviour">Include/Exclude behaviour</a></li>
-  </ul></li>
-  <li><a href="#distinct" id="toc-distinct" class="nav-link" data-scroll-target="#distinct">Distinct</a></li>
+  <li><a href="#split-requested-timerange-into-multiple-time-intervals" id="toc-split-requested-timerange-into-multiple-time-intervals" class="nav-link" data-scroll-target="#split-requested-timerange-into-multiple-time-intervals">Split requested timeRange into multiple time intervals</a></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram">Histogram</a></li>
+  <li><a href="#percentile-calculations" id="toc-percentile-calculations" class="nav-link" data-scroll-target="#percentile-calculations">Percentile calculations</a></li>
+  <li><a href="#exclude-pixels-from-calculations-datamask-output" id="toc-exclude-pixels-from-calculations-datamask-output" class="nav-link" data-scroll-target="#exclude-pixels-from-calculations-datamask-output">Exclude pixels from calculations (dataMask output)</a></li>
+  <li><a href="#multiple-outputs-and-multi-bands-outputs" id="toc-multiple-outputs-and-multi-bands-outputs" class="nav-link" data-scroll-target="#multiple-outputs-and-multi-bands-outputs">Multiple outputs and multi bands outputs</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#tutorials-and-other-related-materials" id="toc-tutorials-and-other-related-materials" class="nav-link" data-scroll-target="#tutorials-and-other-related-materials">Tutorials and Other Related Materials</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -437,7 +437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Catalog API</h1>
+<h1 class="title d-none d-lg-block">Statistical API</h1>
 </div>
 
 
@@ -452,108 +452,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>Sentinel Hub Catalog API (or shortly "Catalog") is an API implementing the <a href="https://stacspec.org/">STAC Specification</a>, describing geospatial information about different data used with Sentinel Hub.</p>
-<section id="api-reference" class="level2">
-<h2 class="anchored" data-anchor-id="api-reference">API Reference</h2>
-<p>API Reference for Sentinel Hub Catalog is available as an <a href="https://docs.sentinel-hub.com/api/latest/reference/#tag/catalog_core">OpenAPI description</a>.</p>
-<p>Simple search request for Sentinel-1 GRD with a bounding box (the coordinate reference system of the values is WGS84 longitude/latitude), available on 10th December 2019.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bbox"</span>: [<span class="dv">13</span>, <span class="dv">45</span>, <span class="dv">14</span>, <span class="dv">46</span>],</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"datetime"</span>: <span class="st">"2019-12-10T00:00:00Z/2019-12-10T23:59:59Z"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"collections"</span>: [<span class="st">"sentinel-1-grd"</span>],</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"limit"</span>: <span class="dv">5</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(url, json<span class="op">=</span>data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The Statistical API (or shortly "Stats API") enables you to get statistics calculated based on satellite imagery without having to download images. In your Statistical API request, you can specify your area of interest, time period, evalscript and which statistical measures should be calculated. The requested statistics are returned in the API response. Using Statistical API you can <a href="../../APIs/SentinelHub/Statistical/Examples.html#percentage-of-cloudy-pixels-for-selected-area-of-interest">calculate the percentage of cloudy pixels for a given area of interest and time period</a>, or <a href="../../APIs/SentinelHub/Statistical/Examples.html#statistics-histogram-and-percentiles-for-one-single-band-output">calculate mean, standard deviation, and histogram of band values for a parcel in a given time period</a>. Find more examples <a href="../../APIs/SentinelHub/Statistical/Examples.html">here</a>.</p>
+<p>To familiarise yourself with the Statistical API, we recommend checking the <a href="https://apps.sentinel-hub.com/requests-builder/?enable-statistics&amp;set-url=https://services.sentinel-hub.com/">Requests builder</a>, our <a href="https://docs.sentinel-hub.com/api/latest/reference/#tag/statistical">API reference</a> and our <a href="https://www.youtube.com/watch?v=4JviobxqTO8">Statistical API webinar</a>.</p>
+<p>The Statistical API fully replaces the <a href="https://www.sentinel-hub.com/develop/api/ogc/fis-request/">FIS service</a> and brings additional functionality described below.</p>
+<section id="general-approach" class="level2">
+<h2 class="anchored" data-anchor-id="general-approach">General approach</h2>
+<p>Based on parameters specified by users in requests (e.g.&nbsp;area of interest, time range, evalscript) the Statistical API processes satellite data in a similar way as Processing API. Instead of returning images, it calculates requested statistics and returns the results in a json format.</p>
 </section>
-<section id="authentication" class="level2">
-<h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
-<p>Authentication for the Catalog API works completely the same as authentication for other Sentinel Hub services, see <a href="../../APIs/SentinelHub/Overview/Authentication.html">Authentication chapter</a>.</p>
-</section>
-<section id="pagination" class="level2">
-<h2 class="anchored" data-anchor-id="pagination">Pagination</h2>
-<p>Executing the request specified above returns search context fields at the end of the response, looking like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"context"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"next"</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"limit"</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"returned"</span><span class="fu">:</span> <span class="dv">5</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The presence of the <code>next</code> attribute indicates there is more data available for this query, but the server chose to only return 5 results, because the <code>limit</code> specified was <code>5</code> (if <code>limit</code> is not specified, default value is <code>10</code>). To query the next page of items, our request needs to include the <code>next</code> attribute with its value in the query, like so:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bbox"</span>: [<span class="dv">13</span>, <span class="dv">45</span>, <span class="dv">14</span>, <span class="dv">46</span>],</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"datetime"</span>: <span class="st">"2019-12-10T00:00:00Z/2019-12-10T23:59:59Z"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"collections"</span>: [<span class="st">"sentinel-1-grd"</span>],</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"limit"</span>: <span class="dv">5</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"next"</span>: <span class="dv">5</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://sh.dataspace.copernicus.eu/api/v1/catalog/1.0.0/search"</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.post(url, json<span class="op">=</span>data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The response now includes the next page of items; in this case there is no <code>next</code> token in <code>context</code>, meaning no more items exist for this query.</p>
-</section>
-<section id="extensions" class="level2">
-<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
-<section id="filter" class="level3">
-<h3 class="anchored" data-anchor-id="filter">Filter</h3>
-<p>The search endpoint by default only accepts the parameters described in <a href="https://docs.sentinel-hub.com/api/latest/reference/#tag/catalog_item_search/operation/postCatalogItemSearch">OpenAPI</a>. The Filter extension enables users to specify an additional parameter to filter on, while searching through data.</p>
-<p>The syntax for <code>filter</code> is <a href="https://docs.ogc.org/DRAFTS/21-065.html">CQL2</a>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"filter"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"op"</span><span class="fu">:</span> <span class="st">"&lt;operator&gt;"</span><span class="fu">,</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"property"</span><span class="fu">:</span> <span class="st">"&lt;property_name&gt;"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;value&gt;"</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"filter-lang"</span><span class="fu">:</span> <span class="st">"cql2-json"</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It is also possible to use simple cql2-text:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"filter"</span><span class="fu">:</span> <span class="st">"eo:cloud_cover &gt; 90"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The available operators are <code>eq</code>, <code>neq</code>, <code>lt</code>, <code>lte</code>, <code>gt</code>, <code>gte</code>, <code>between</code> and <code>not</code>. Only <code>and</code> is currently supported as a logical operator. Be careful - different collections have different properties for the query filter available. The information describing this is available inside the documentation for each specific collection (ex. <a href="../../Data/Sentinel1.html#filter-extension">Sentinel-1 GRD</a>).</p>
-</section>
-<section id="fields" class="level3">
-<h3 class="anchored" data-anchor-id="fields">Fields</h3>
-<p>By default, the search endpoint returns all the available attributes of each item. The <code>fields</code> extension provides a way for the client to specify which attributes should not be part of the output, making it easy for the client to not have to deal with unnecessary data.</p>
-<p>Syntax for the <code>fields</code> is:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"fields"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"include"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;property_name_1&gt;"</span><span class="ot">,</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;property_name_2&gt;"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"exclude"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;property_name_3&gt;"</span><span class="ot">,</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;property_name_4&gt;"</span><span class="ot">,</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;property_name_5&gt;"</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="includeexclude-behaviour" class="level4">
-<h4 class="anchored" data-anchor-id="includeexclude-behaviour">Include/Exclude behaviour</h4>
+<section id="statistical-api-and-evalscript" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-api-and-evalscript">Statistical API and evalscript</h2>
+<p>All general rules for building <a href="../../APIs/SentinelHub/Evalscript.html">evalscripts</a> apply. However, there are some specifics when using evalscripts with the Statistical API:</p>
 <ul>
-<li>When no <code>fields</code> attribute is specified in the request, all the available attributes will be included in the response.</li>
-<li>If the <code>fields</code> attribute is specified with an empty object, or both <code>include</code> and <code>exclude</code> are set to null or an empty array is returned, the attributes for each item will be as if <code>include</code> was set to a default set of <code>["id", "type", "geometry", "bbox", "links", "assets", "properties.datetime"]</code>.</li>
-<li>If only <code>include</code> is specified, the attributes in <code>include</code> will be merged with the default set above.</li>
-<li>If only <code>exclude</code> is specified, the attributes in <code>exclude</code> will be removed from the default set above.</li>
-<li>If both <code>include</code> and <code>exclude</code> are specified, the rule is that an attribute must be included in and not excluded from the response.</li>
+<li>The <code>evaluatePixel()</code> function <strong>must</strong>, in addition to other output, always return also <code>dataMask</code> output. This output defines which pixels are excluded from calculations. For more details and an example, see <a href="../../APIs/SentinelHub/Statistical.html#exclude-pixels-from-calculations-datamask-output">here</a>.</li>
+<li>The default value of <code>sampleType</code> is <code>FLOAT32</code>.</li>
+<li>The <code>output.bands</code> parameter in the <code>setup()</code> function can be an array. This makes it possible to specify custom names for the output bands and different output <code>dataMask</code> for different outputs, see this <a href="../../APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types">example</a>.</li>
 </ul>
 </section>
+<section id="apis-features" class="level2">
+<h2 class="anchored" data-anchor-id="apis-features">API's features</h2>
+<section id="split-requested-timerange-into-multiple-time-intervals" class="level3">
+<h3 class="anchored" data-anchor-id="split-requested-timerange-into-multiple-time-intervals">Split requested timeRange into multiple time intervals</h3>
+<p>The Statistical API supports requesting statistics for multiple time intervals with only one request. For example, requesting the <code>aggregationInterval</code> and <code>timeRange</code> as:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">"timeRange":</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"from"</span><span class="fu">:</span> <span class="st">"2020-06-01T00:00:00Z"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"to"</span><span class="fu">:</span> <span class="st">"2020-07-31T00:00:00Z"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="er">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="er">"aggregationInterval":</span> <span class="fu">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"of"</span><span class="fu">:</span> <span class="st">"P10D"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>returns the requested statistics calculated for multiple 10-day intervals, see this <a href="../../APIs/SentinelHub/Statistical/Examples.html#statistics-for-one-single-band-output-for-two-months-with-10-days-aggregation-period">example</a>. The aggregation intervals should be at least one day long (e.g.&nbsp;"P5D", "P30D"). You can only use period OR time designator not both.</p>
+<p>If a <code>timeRange</code> is not divisible by an <code>aggregationInterval</code>, the last ("not full") time interval will be dismissed by default (<code>SKIP</code> option). The user can instead set the <code>lastIntervalBehavior</code> to <code>SHORTEN</code> (shortens the last interval so that it ends at the end of the provided time range) or <code>EXTEND</code> (extends the last interval over the end of the provided time range so that all the intervals are of equal duration).</p>
+<p>Note that the data is mosaicked for each of the time intervals (as defined with the <code>mosaicking</code> parameter in an evalscript) before the statistics are calculated. To calculate statistics over time (for example, the maximum NDVI value in a month), you should set mosaicking to ORBIT or TILE and calculate the required value in an evalscript, see this <a href="../../APIs/SentinelHub/Statistical/Examples.html#statistics-of-maximum-monthly-ndvi-for-a-parcel-in-2020">example</a>. If you use mosaicking SIMPLE, one <strong>mosaicked</strong> output for each time interval is a basis for calculating statistics.</p>
 </section>
-<section id="distinct" class="level3">
-<h3 class="anchored" data-anchor-id="distinct">Distinct</h3>
-<p>Sometimes we don't want to search for product metadata, but want some general information about the product, such as for example, which acquisition dates are available for Sentinel-1 inside the specified <code>bbox</code> and time interval. <code>distinct</code> attribute inside a search request makes this possible.</p>
-<p>Syntax for <code>distinct</code> attribute is:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"distinct"</span><span class="fu">:</span> <span class="st">"&lt;property_name&gt;"</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>As with the <code>filter</code> attribute, <code>distinct</code> is also a collection limited to some specific properties. Information describing these properties can be found inside each collection's documentation (ex. <a href="../../Data/Sentinel1.html#distinct-extension">Sentinel-1 GRD</a>).</p>
+<section id="histogram" class="level3">
+<h3 class="anchored" data-anchor-id="histogram">Histogram</h3>
+<p>Requesting histograms is optional. A variety of histogram customisations are available. Users can specify:</p>
+<ul>
+<li>number of bins <code>nBins</code> or</li>
+<li>width of bins <code>binWidth</code>or</li>
+<li>arbitrary <code>bins</code>.</li>
+</ul>
+<p><a href="../../APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types">This example</a> demonstrates all three options.</p>
+</section>
+<section id="percentile-calculations" class="level3">
+<h3 class="anchored" data-anchor-id="percentile-calculations">Percentile calculations</h3>
+<p>It is possible to get values for any percentile. For example, to get values for 33%, 75%, and 90% percentile, add the "percentiles" parameter to your requests as:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"percentiles"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"k"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">33</span><span class="ot">,</span> <span class="dv">75</span><span class="ot">,</span> <span class="dv">90</span><span class="ot">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See also this <a href="../../APIs/SentinelHub/Statistical/Examples.html#statistics-histogram-and-percentiles-for-one-single-band-output">example</a>.</p>
+</section>
+<section id="exclude-pixels-from-calculations-datamask-output" class="level3">
+<h3 class="anchored" data-anchor-id="exclude-pixels-from-calculations-datamask-output">Exclude pixels from calculations (dataMask output)</h3>
+<p>It is possible to exclude certain pixels from the calculation of the statistics. The most common use cases are excluding no data and cloudy pixels.</p>
+<p>With the Statistical API, this is achieved by defining a special output called "dataMask". This output should have value "0" assigned for the pixels that should be excluded from the calculations, and a value of "1" elsewhere. The values of the "dataMask" output are defined by the user in an evalscript. An illustrative example is excluding water pixels from statistics of NDVI, see this <a href="../../APIs/SentinelHub/Statistical/Examples.html#statistics-of-maximum-monthly-ndvi-for-a-parcel-in-2020">example</a>.</p>
+<p>Note that the Statistical API does not automatically exclude the no data pixels from calculating the statistics. We recommend that you always exclude those unless there is a good reason not to. This is especially important when you are requesting statistics for a polygon, as it will ensure that pixels outside of the polygon (and inside of the bounding box) are excluded. To exclude no data pixels you need to pass input <code>dataMask</code> band to the <code>dataMask</code> output, e.g.:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>function evaluatePixel(samples) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    return {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        ...,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        dataMask: [samples.dataMask]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>All evalscripts in the examples <a href="../../APIs/SentinelHub/Statistical/Examples.html">here</a> exclude no data pixels.</p>
+</section>
+<section id="multiple-outputs-and-multi-bands-outputs" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-outputs-and-multi-bands-outputs">Multiple outputs and multi bands outputs</h3>
+<p>Statistics can be requested for multiple outputs. This is useful when we need to use different dataMasks or different sampleTypes for each output. Additionally, each output can have multiple bands. It is possible to request different statistics for each band and for each output. <a href="../../APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types">This example</a> demonstrates how to do all this.</p>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p><a href="../../APIs/SentinelHub/Statistical/Examples.html">Examples of Statistical API</a></p>
+</section>
+<section id="tutorials-and-other-related-materials" class="level3">
+<h3 class="anchored" data-anchor-id="tutorials-and-other-related-materials">Tutorials and Other Related Materials</h3>
+<ul>
+<li>To get you started, we created a detailed beginner <a href="https://www.youtube.com/watch?v=4JviobxqTO8">webinar on statistical API</a>, where you can learn how to get statistics for your data, how to manipulate the evalscript to return several outputs, each with its own statistical information, how to make use of powerful aggregations, exclude pixels from the calculation, make custom histograms and visualize your statistics in Python.</li>
+</ul>
 
 
 </section>
@@ -695,13 +675,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../APIs/SentinelHub/Process/Examples/S5PL2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Examples for S5PL2</span>
+      <a href="../../APIs/SentinelHub/Catalog/Examples.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Catalog API examples</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../APIs/SentinelHub/Catalog/Examples.html" class="pagination-link">
-        <span class="nav-page-text">Catalog API examples</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../APIs/SentinelHub/Statistical/Examples.html" class="pagination-link">
+        <span class="nav-page-text">Examples of Statistical API</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
