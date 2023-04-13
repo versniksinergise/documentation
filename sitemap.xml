@@ -1,155 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Support.html</loc>
-    <lastmod>2023-03-28T07:36:16.203Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Data/Sentinel1.html</loc>
+    <lastmod>2023-04-13T08:31:15.639Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Applications.html</loc>
-    <lastmod>2023-03-28T07:36:17.139Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Data/Sentinel5P.html</loc>
+    <lastmod>2023-04-13T08:31:19.087Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs.html</loc>
-    <lastmod>2023-03-28T07:36:17.575Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Data/Sentinel2.html</loc>
+    <lastmod>2023-04-13T08:31:22.151Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Data/Sentinel3.html</loc>
-    <lastmod>2023-03-28T07:36:18.103Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Data/Sentinel3.html</loc>
+    <lastmod>2023-04-13T08:31:25.223Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Data/Sentinel1.html</loc>
-    <lastmod>2023-03-28T07:36:18.599Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Home.html</loc>
+    <lastmod>2023-04-13T08:31:25.611Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Data/Sentinel2.html</loc>
-    <lastmod>2023-03-28T07:36:19.119Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/404-not-found.html</loc>
+    <lastmod>2023-04-13T08:31:26.007Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Data/Sentinel5P.html</loc>
-    <lastmod>2023-03-28T07:36:19.591Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/logos.html</loc>
+    <lastmod>2023-04-13T08:31:26.367Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Applications/Browser.html</loc>
-    <lastmod>2023-03-28T07:36:20.311Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Registration.html</loc>
+    <lastmod>2023-04-13T08:31:26.779Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Data.html</loc>
-    <lastmod>2023-03-28T07:36:20.779Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Roadmap.html</loc>
+    <lastmod>2023-04-13T08:31:27.179Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Evalscript/Functions.html</loc>
-    <lastmod>2023-03-28T07:36:21.759Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Data.html</loc>
+    <lastmod>2023-04-13T08:31:27.543Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Evalscript/V3.html</loc>
-    <lastmod>2023-03-28T07:36:22.872Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/Support.html</loc>
+    <lastmod>2023-04-13T08:31:27.955Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Evalscript.html</loc>
-    <lastmod>2023-03-28T07:36:23.348Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Catalog.html</loc>
+    <lastmod>2023-04-13T08:31:28.451Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/UserGuides/Datamask.html</loc>
-    <lastmod>2023-03-28T07:36:23.892Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Catalog/Examples.html</loc>
+    <lastmod>2023-04-13T08:31:28.983Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/UserGuides/Transparency.html</loc>
-    <lastmod>2023-03-28T07:36:24.568Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Evalscript.html</loc>
+    <lastmod>2023-04-13T08:31:29.379Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Overview.html</loc>
-    <lastmod>2023-03-28T07:36:24.972Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Statistical.html</loc>
+    <lastmod>2023-04-13T08:31:29.887Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Catalog/Examples.html</loc>
-    <lastmod>2023-03-28T07:36:25.636Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Overview/RateLimiting.html</loc>
+    <lastmod>2023-04-13T08:31:30.355Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Overview/Authentication.html</loc>
-    <lastmod>2023-03-28T07:36:26.204Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Overview/ErrorHandling.html</loc>
+    <lastmod>2023-04-13T08:31:30.743Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Catalog.html</loc>
-    <lastmod>2023-03-28T07:36:26.740Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Overview/ProcessingUnit.html</loc>
+    <lastmod>2023-04-13T08:31:31.283Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process.html</loc>
-    <lastmod>2023-03-28T07:36:27.164Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Overview/Authentication.html</loc>
+    <lastmod>2023-04-13T08:31:31.739Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Statistical.html</loc>
-    <lastmod>2023-03-28T07:36:27.756Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC.html</loc>
+    <lastmod>2023-04-13T08:31:32.147Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S2L2A.html</loc>
-    <lastmod>2023-03-28T07:36:28.844Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Evalscript/V3.html</loc>
+    <lastmod>2023-04-13T08:31:33.071Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S2L1C.html</loc>
-    <lastmod>2023-03-28T07:36:29.796Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Evalscript/Functions.html</loc>
+    <lastmod>2023-04-13T08:31:33.859Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S5PL2.html</loc>
-    <lastmod>2023-03-28T07:36:30.760Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Overview.html</loc>
+    <lastmod>2023-04-13T08:31:34.271Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S3SLSTR.html</loc>
-    <lastmod>2023-03-28T07:36:31.508Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/Examples.html</loc>
+    <lastmod>2023-04-13T08:31:34.703Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S3OLCI.html</loc>
-    <lastmod>2023-03-28T07:36:32.296Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/OutputFormats.html</loc>
+    <lastmod>2023-04-13T08:31:35.143Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Examples/S1GRD.html</loc>
-    <lastmod>2023-03-28T07:36:33.128Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/WMTS.html</loc>
+    <lastmod>2023-04-13T08:31:35.595Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Process/Crs.html</loc>
-    <lastmod>2023-03-28T07:36:33.600Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/WFS.html</loc>
+    <lastmod>2023-04-13T08:31:36.023Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub/Statistical/Examples.html</loc>
-    <lastmod>2023-03-28T07:36:34.508Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/WMS.html</loc>
+    <lastmod>2023-04-13T08:31:36.527Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/SentinelHub.html</loc>
-    <lastmod>2023-03-28T07:36:34.948Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/AdditionalRequestParameters.html</loc>
+    <lastmod>2023-04-13T08:31:36.971Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/OpenSearch.html</loc>
-    <lastmod>2023-03-28T07:36:35.532Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/OGC/WCS.html</loc>
+    <lastmod>2023-04-13T08:31:37.375Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/APIs/OData.html</loc>
-    <lastmod>2023-03-28T07:36:36.180Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S3SLSTR.html</loc>
+    <lastmod>2023-04-13T08:31:38.003Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/cdse_doc.html</loc>
-    <lastmod>2023-03-28T07:36:36.632Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S1GRD.html</loc>
+    <lastmod>2023-04-13T08:31:38.771Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Roadmap.html</loc>
-    <lastmod>2023-03-28T07:36:37.088Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S5PL2.html</loc>
+    <lastmod>2023-04-13T08:31:39.547Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Home.html</loc>
-    <lastmod>2023-03-28T07:36:37.516Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S2L1C.html</loc>
+    <lastmod>2023-04-13T08:31:40.363Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/FAQ.html</loc>
-    <lastmod>2023-03-28T07:36:38.116Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/DataFusion.html</loc>
+    <lastmod>2023-04-13T08:31:41.087Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/404-not-found.html</loc>
-    <lastmod>2023-03-28T07:36:38.512Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S2L2A.html</loc>
+    <lastmod>2023-04-13T08:31:41.919Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/Registration.html</loc>
-    <lastmod>2023-03-28T07:36:38.968Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S3OLCI.html</loc>
+    <lastmod>2023-04-13T08:31:42.587Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/majcn/cdse-documentation/logos.html</loc>
-    <lastmod>2023-03-28T07:36:39.376Z</lastmod>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Crs.html</loc>
+    <lastmod>2023-04-13T08:31:42.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/DataFusion.html</loc>
+    <lastmod>2023-04-13T08:31:43.495Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process.html</loc>
+    <lastmod>2023-04-13T08:31:43.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/UserGuides/Datamask.html</loc>
+    <lastmod>2023-04-13T08:31:44.331Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/UserGuides/Transparency.html</loc>
+    <lastmod>2023-04-13T08:31:44.895Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/UserGuides/CloudMasks.html</loc>
+    <lastmod>2023-04-13T08:31:45.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/UserGuides/TimeSeries.html</loc>
+    <lastmod>2023-04-13T08:31:45.703Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub/Statistical/Examples.html</loc>
+    <lastmod>2023-04-13T08:31:46.515Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/SentinelHub.html</loc>
+    <lastmod>2023-04-13T08:31:46.867Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/OData.html</loc>
+    <lastmod>2023-04-13T08:32:13.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs/OpenSearch.html</loc>
+    <lastmod>2023-04-13T08:32:17.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/APIs.html</loc>
+    <lastmod>2023-04-13T08:32:17.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/Applications/Browser.html</loc>
+    <lastmod>2023-04-13T08:32:18.268Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/cdse_doc.html</loc>
+    <lastmod>2023-04-13T08:32:18.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/Applications.html</loc>
+    <lastmod>2023-04-13T08:32:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/FAQ.html</loc>
+    <lastmod>2023-04-13T08:32:19.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/Roadmap/DataTable.html</loc>
+    <lastmod>2023-04-13T08:32:19.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/Roadmap/AppTable.html</loc>
+    <lastmod>2023-04-13T08:32:20.284Z</lastmod>
+  </url>
+  <url>
+    <loc>https://eu-cdse.github.io/documentation/Roadmap/APITable.html</loc>
+    <lastmod>2023-04-13T08:32:20.696Z</lastmod>
   </url>
 </urlset>

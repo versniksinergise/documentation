@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL - Utility Functions</title>
+<title>Documentation - Utility Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,10 +105,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "start",
-  "type": "overlay",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -122,23 +122,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="text/javascript">
+
+    window.onload = () => {
+        const elems = document.getElementsByClassName('navbar-title');
+        if (elems.length > 0) {
+            const title = elems[0];
+            title.parentElement.href = '/Home.html'
+        }
+    }
+</script>
 
 
-<link rel="stylesheet" href="../../../custom.scss">
+<link rel="stylesheet" href="../../../custom.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="https://dataspace.copernicus.eu/" class="navbar-brand navbar-brand-logo">
     <img src="../../../_images/logos/combinedLogo.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL</span>
+    <a class="navbar-brand" href="https://dataspace.copernicus.eu/">
+    <span class="navbar-title">Documentation</span>
     </a>
   </div>
       </div> <!-- /container-fluid -->
@@ -153,14 +164,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="d-flex mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
       </div>
-        <div class="sidebar-tools-main">
-    <div id="quarto-search" class="sidebar-tool" title="Search"></div>
-</div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -176,8 +187,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Roadmap/DataTable.html" class="sidebar-item-text sidebar-link">Data</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Roadmap/APITable.html" class="sidebar-item-text sidebar-link">APIs</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Roadmap/AppTable.html" class="sidebar-item-text sidebar-link">Applications</a>
+  </div>
+</li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Registration.html" class="sidebar-item-text sidebar-link">User registration and authentication</a>
@@ -193,22 +220,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Data/Sentinel1.html" class="sidebar-item-text sidebar-link">Sentinel 1</a>
+  <a href="../../../Data/Sentinel1.html" class="sidebar-item-text sidebar-link">Sentinel-1</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Data/Sentinel2.html" class="sidebar-item-text sidebar-link">Sentinel 2</a>
+  <a href="../../../Data/Sentinel2.html" class="sidebar-item-text sidebar-link">Sentinel-2</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Data/Sentinel3.html" class="sidebar-item-text sidebar-link">Sentinel 3</a>
+  <a href="../../../Data/Sentinel3.html" class="sidebar-item-text sidebar-link">Sentinel-3</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Data/Sentinel5P.html" class="sidebar-item-text sidebar-link">Sentinel 5P</a>
+  <a href="../../../Data/Sentinel5P.html" class="sidebar-item-text sidebar-link">Sentinel-5P</a>
   </div>
 </li>
       </ul>
@@ -223,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../APIs/OData.html" class="sidebar-item-text sidebar-link">Data catalogue API with OData interface</a>
+  <a href="../../../APIs/OData.html" class="sidebar-item-text sidebar-link">OData</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,7 +281,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/UserGuides/CloudMasks.html" class="sidebar-item-text sidebar-link">Cloud Masks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../APIs/SentinelHub/UserGuides/Transparency.html" class="sidebar-item-text sidebar-link">Transparency</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/UserGuides/TimeSeries.html" class="sidebar-item-text sidebar-link">Time Series</a>
   </div>
 </li>
       </ul>
@@ -262,11 +299,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../APIs/SentinelHub/Evalscript.html" class="sidebar-item-text sidebar-link">Evalscript (custom script)</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../APIs/SentinelHub/Evalscript/V3.html" class="sidebar-item-text sidebar-link">Evalscript V3</a>
@@ -282,21 +319,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../APIs/SentinelHub/Overview.html" class="sidebar-item-text sidebar-link">API Overview</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">Authentication</a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">Process API</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -304,17 +326,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">Authentication</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Overview/RateLimiting.html" class="sidebar-item-text sidebar-link">Rate limiting</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Overview/ProcessingUnit.html" class="sidebar-item-text sidebar-link">Processing Unit</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Overview/ErrorHandling.html" class="sidebar-item-text sidebar-link">Error Handling</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">Process API</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../APIs/SentinelHub/Process/Crs.html" class="sidebar-item-text sidebar-link">CRS support</a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">Examples</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../APIs/SentinelHub/Process/Examples/S1GRD.html" class="sidebar-item-text sidebar-link">Examples for S1GRD</a>
@@ -345,6 +397,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../../../APIs/SentinelHub/Process/Examples/S5PL2.html" class="sidebar-item-text sidebar-link">Examples for S5PL2</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Process/Examples/DataFusion.html" class="sidebar-item-text sidebar-link">Examples for DataFusion</a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -352,21 +409,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link">Catalog API</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">Catalog API examples</a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">Statistical API</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -374,7 +416,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">Examples of Statistical API</a>
+  <a href="../../../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">Examples for Catalog API</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">Statistical API</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">Examples for Statistical API</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../APIs/SentinelHub/OGC.html" class="sidebar-item-text sidebar-link">OGC</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/WMS.html" class="sidebar-item-text sidebar-link">WMS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/WCS.html" class="sidebar-item-text sidebar-link">WCS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/WFS.html" class="sidebar-item-text sidebar-link">WFS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/WMTS.html" class="sidebar-item-text sidebar-link">WMTS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/AdditionalRequestParameters.html" class="sidebar-item-text sidebar-link">Additional Request Parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/OutputFormats.html" class="sidebar-item-text sidebar-link">Output Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../APIs/SentinelHub/OGC/Examples.html" class="sidebar-item-text sidebar-link">Examples for OGC</a>
   </div>
 </li>
       </ul>
@@ -386,11 +488,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../Applications.html" class="sidebar-item-text sidebar-link">Applications</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Applications/Browser.html" class="sidebar-item-text sidebar-link">About the Browser</a>
@@ -398,6 +500,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../FAQ.html" class="sidebar-item-text sidebar-link">FAQ</a>
@@ -513,7 +616,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -542,7 +645,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters" class="level4">
 <h4 class="anchored" data-anchor-id="parameters">Parameters</h4>
 <ul>
-<li><code>valColPairs</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</strong></li>
+<li><code>valColPairs</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</strong></li>
 </ul>
 </section>
 <section id="examples" class="level4">
@@ -565,9 +668,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-1" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-1">Parameters</h5>
 <ul>
-<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
+<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
 </ul>
-<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> normalized RGB triplet.</p>
+<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> normalized RGB triplet.</p>
 </section>
 </section>
 <section id="createdefaultcolormap" class="level4">
@@ -596,9 +699,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-2" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-2">Parameters</h4>
 <ul>
-<li><code>valColPairs</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</strong></li>
-<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> (optional, default <code>0.0</code>)</li>
-<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> (optional, default <code>1.0</code>)</li>
+<li><code>valColPairs</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</strong></li>
+<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> (optional, default <code>0.0</code>)</li>
+<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> (optional, default <code>1.0</code>)</li>
 </ul>
 </section>
 <section id="process-1" class="level4">
@@ -607,9 +710,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-3" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-3">Parameters</h5>
 <ul>
-<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
+<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
 </ul>
-<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> normalized RGB triplet.</p>
+<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> normalized RGB triplet.</p>
 </section>
 </section>
 <section id="createredtemperature" class="level4">
@@ -618,8 +721,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-4" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-4">Parameters</h5>
 <ul>
-<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> min value of interval</li>
-<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> max value of interval</li>
+<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> min value of interval</li>
+<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> max value of interval</li>
 </ul>
 </section>
 <section id="examples-1" class="level5">
@@ -639,8 +742,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-5" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-5">Parameters</h5>
 <ul>
-<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> min value of interval</li>
-<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> max value of interval</li>
+<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> min value of interval</li>
+<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> max value of interval</li>
 </ul>
 </section>
 <section id="examples-2" class="level5">
@@ -660,8 +763,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-6" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-6">Parameters</h5>
 <ul>
-<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> min value of interval</li>
-<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> max value of interval</li>
+<li><code>minVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> min value of interval</li>
+<li><code>maxVal</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> max value of interval</li>
 </ul>
 </section>
 <section id="examples-3" class="level5">
@@ -682,7 +785,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-7" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-7">Parameters</h4>
 <ul>
-<li><code>ramps</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</strong> Array of color ramps, which are defined as a pair of numbers - the ramp start and the ramp starting color.</li>
+<li><code>ramps</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</strong> Array of color ramps, which are defined as a pair of numbers - the ramp start and the ramp starting color.</li>
 </ul>
 </section>
 <section id="examples-4" class="level4">
@@ -705,9 +808,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-8" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-8">Parameters</h5>
 <ul>
-<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
+<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
 </ul>
-<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> normalized RGB triplet.</p>
+<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> normalized RGB triplet.</p>
 </section>
 </section>
 </section>
@@ -725,8 +828,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-9" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-9">Parameters</h4>
 <ul>
-<li><code>minValue</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> the value which will be mapped to 0. All values smaller than minValue will also be mapped to 0. (optional, default <code>0.0</code>)</li>
-<li><code>maxValue</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> the value which controls the position of the boundary point between both linear functions. It will be mapped to approx. 0.9259, while values greater than or equal to (2*maxValue - minValue) will be mapped to 1 (see the figure above). (optional, default <code>1.0</code>)</li>
+<li><code>minValue</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> the value which will be mapped to 0. All values smaller than minValue will also be mapped to 0. (optional, default <code>0.0</code>)</li>
+<li><code>maxValue</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> the value which controls the position of the boundary point between both linear functions. It will be mapped to approx. 0.9259, while values greater than or equal to (2*maxValue - minValue) will be mapped to 1 (see the figure above). (optional, default <code>1.0</code>)</li>
 <li><code>gain</code> (optional, default <code>1.0</code>)</li>
 <li><code>offset</code> (optional, default <code>0.0</code>)</li>
 <li><code>gamma</code> (optional, default <code>1.0</code>)</li>
@@ -750,10 +853,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-10" class="level5">
 <h5 class="anchored" data-anchor-id="parameters-10">Parameters</h5>
 <ul>
-<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> the input value to be mapped.</li>
-<li><code>i</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> the index of val. This is EO Browser specific.</li>
+<li><code>val</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> the input value to be mapped.</li>
+<li><code>i</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> the index of val. This is EO Browser specific.</li>
 </ul>
-<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> mapped value.</p>
+<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> mapped value.</p>
 </section>
 </section>
 </section>
@@ -767,7 +870,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-11" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-11">Parameters</h4>
 <ul>
-<li><code>color</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> as integer</li>
+<li><code>color</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> as integer</li>
 </ul>
 </section>
 <section id="examples-6" class="level4">
@@ -775,7 +878,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">int2rgb</span>(<span class="dv">255</span>)<span class="op">;</span>    <span class="co">// returns [ 0, 0, 255 ]</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">int2rgb</span>(<span class="dv">256</span>)<span class="op">;</span>    <span class="co">// returns [ 0, 1, 0 ]</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">int2rgb</span>(<span class="dv">65537</span>)<span class="op">;</span>  <span class="co">// returns [ 1, 0, 1 ]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong></p>
+<p>Returns <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong></p>
 </section>
 </section>
 <section id="rgb2int" class="level3">
@@ -784,7 +887,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-12" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-12">Parameters</h4>
 <ul>
-<li><code>color</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> as RGB triplet</li>
+<li><code>color</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> as RGB triplet</li>
 </ul>
 </section>
 <section id="examples-7" class="level4">
@@ -792,7 +895,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb9"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rgb2int</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">255</span>])<span class="op">;</span>  <span class="co">// returns 255</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rgb2int</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">0</span>])<span class="op">;</span>    <span class="co">// returns 256</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rgb2int</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])<span class="op">;</span>    <span class="co">// returns 65537</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></p>
 </section>
 </section>
 <section id="combine" class="level3">
@@ -801,9 +904,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-13" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-13">Parameters</h4>
 <ul>
-<li><code>color1</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> The first color defined as an array of values.</li>
-<li><code>color2</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> The second color defined as an array of values.</li>
-<li><code>alpha</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> A share of the first color defined as a floating point between 0 and
+<li><code>color1</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> The first color defined as an array of values.</li>
+<li><code>color2</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> The second color defined as an array of values.</li>
+<li><code>alpha</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> A share of the first color defined as a floating point between 0 and
 <ol type="1">
 <li></li>
 </ol></li>
@@ -814,7 +917,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">combine</span>([<span class="dv">100</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span>   <span class="co">// returns [ 100, 0, 0 ]</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">combine</span>([<span class="dv">100</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span>   <span class="co">// returns [ 0, 100, 0 ]</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">combine</span>([<span class="dv">100</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span> <span class="fl">0.5</span>)<span class="op">;</span> <span class="co">// returns [ 50, 50, 0 ]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> The combined color defined as an array of values.</p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> The combined color defined as an array of values.</p>
 </section>
 </section>
 <section id="index" class="level3">
@@ -823,15 +926,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-14" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-14">Parameters</h4>
 <ul>
-<li><code>x</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> first value</li>
-<li><code>y</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> second value</li>
+<li><code>x</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> first value</li>
+<li><code>y</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> second value</li>
 </ul>
 </section>
 <section id="examples-9" class="level4">
 <h4 class="anchored" data-anchor-id="examples-9">Examples</h4>
 <div class="sourceCode" id="cb11"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">index</span>(<span class="fl">0.6</span><span class="op">,</span> <span class="fl">0.4</span>)<span class="op">;</span> <span class="co">// returns 0.2</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">index</span>(<span class="fl">0.5</span><span class="op">,</span> <span class="op">-</span><span class="fl">0.5</span>)<span class="op">;</span> <span class="co">//returns 0.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> <code>(x - y) / (x + y)</code>, if sum is 0 returns 0</p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> <code>(x - y) / (x + y)</code>, if sum is 0 returns 0</p>
 </section>
 </section>
 <section id="inverse" class="level3">
@@ -840,7 +943,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-15" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-15">Parameters</h4>
 <ul>
-<li><code>x</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> value</li>
+<li><code>x</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> value</li>
 </ul>
 </section>
 <section id="examples-10" class="level4">
@@ -848,7 +951,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb12"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">inverse</span>(<span class="fl">2.0</span>)<span class="op">;</span> <span class="co">// returns 0.5</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">inverse</span>(<span class="fl">5.0</span>)<span class="op">;</span> <span class="co">// returns 0.2</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">inverse</span>(<span class="dv">0</span>)<span class="op">;</span> <span class="co">// returns 1.7976931348623157E308</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> inverse of value of x (<code>1 / x</code>), if x is 0 returns <a href="#java_double_max_val">JAVA_DOUBLE_MAX_VAL</a></p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> inverse of value of x (<code>1 / x</code>), if x is 0 returns <a href="#java_double_max_val">JAVA_DOUBLE_MAX_VAL</a></p>
 </section>
 </section>
 <section id="valuemap" class="level3">
@@ -864,9 +967,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-16" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-16">Parameters</h4>
 <ul>
-<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> input value</li>
-<li><code>intervals</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> array of numbers in ascending order defining intervals</li>
-<li><code>values</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]</strong> output value for the given interval</li>
+<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> input value</li>
+<li><code>intervals</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> array of numbers in ascending order defining intervals</li>
+<li><code>values</code> <strong>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]</strong> output value for the given interval</li>
 </ul>
 </section>
 <section id="examples-11" class="level4">
@@ -876,7 +979,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">valueMap</span>(<span class="dv">2</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">300</span><span class="op">,</span> <span class="dv">500</span><span class="op">,</span> <span class="dv">700</span><span class="op">,</span> <span class="dv">900</span>])<span class="op">;</span> <span class="co">// returns 300</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">valueMap</span>(<span class="dv">12</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">300</span><span class="op">,</span> <span class="dv">500</span><span class="op">,</span> <span class="dv">700</span><span class="op">,</span> <span class="dv">900</span>])<span class="op">;</span> <span class="co">// returns 900</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">valueMap</span>(<span class="dv">50</span>)<span class="op">;</span> <span class="co">// returns 50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></p>
 </section>
 </section>
 <section id="valueinterpolate" class="level3">
@@ -893,9 +996,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-17" class="level4">
 <h4 class="anchored" data-anchor-id="parameters-17">Parameters</h4>
 <ul>
-<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> input value</li>
-<li><code>intervals</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;</strong> array of numbers in ascending order defining intervals</li>
-<li><code>values</code> <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt; | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;&gt;)</strong> output interval for the given value/interval of the intervals array</li>
+<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> input value</li>
+<li><code>intervals</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;</strong> array of numbers in ascending order defining intervals</li>
+<li><code>values</code> <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt; | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;&gt;)</strong> output interval for the given value/interval of the intervals array</li>
 </ul>
 </section>
 <section id="examples-12" class="level4">
@@ -912,7 +1015,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.75</span><span class="op">,</span> <span class="fl">0.8</span><span class="op">,</span> <span class="fl">0.5</span>]<span class="op">,</span></span>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="fl">0.5</span>]</span>
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>])<span class="op">;</span> <span class="co">// return [0.05, 0.1, 0.25]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Returns <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;)</strong></p>
+<p>Returns <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;)</strong></p>
 </section>
 </section>
 </section>
@@ -921,7 +1024,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="java_double_max_val" class="level3">
 <h3 class="anchored" data-anchor-id="java_double_max_val">JAVA_DOUBLE_MAX_VAL</h3>
 <div class="sourceCode" id="cb17"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a> <span class="kw">const</span> JAVA_DOUBLE_MAX_VAL <span class="op">=</span> <span class="fl">1.7976931348623157E308</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></p>
+<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></p>
 </section>
 <section id="bluered" class="level3">
 <h3 class="anchored" data-anchor-id="bluered">blueRed</h3>
@@ -933,7 +1036,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.125</span><span class="op">,</span> <span class="bn">0xFF0000</span>]<span class="op">,</span></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.000</span><span class="op">,</span> <span class="bn">0x800000</span>]</span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</p>
+<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</p>
 </section>
 <section id="redtemperature" class="level3">
 <h3 class="anchored" data-anchor-id="redtemperature">redTemperature</h3>
@@ -944,7 +1047,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.250</span><span class="op">,</span> <span class="bn">0xFF8600</span>]<span class="op">,</span></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.000</span><span class="op">,</span> <span class="bn">0xFFFFFF</span>]</span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</p>
+<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</p>
 </section>
 <section id="greenwhite" class="level3">
 <h3 class="anchored" data-anchor-id="greenwhite">greenWhite</h3>
@@ -954,7 +1057,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.300</span><span class="op">,</span> <span class="bn">0x80B300</span>]<span class="op">,</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  [<span class="fl">0.000</span><span class="op">,</span> <span class="bn">0xFFFFFF</span>]</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>]&gt;</p>
+<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>]&gt;</p>
 </section>
 </section>
 <section id="colorblend" class="level2">
@@ -962,11 +1065,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="parameters-18" class="level3">
 <h3 class="anchored" data-anchor-id="parameters-18">Parameters</h3>
 <ul>
-<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> input value</li>
-<li><code>limits</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;</strong> array of numbers in ascending order defining intervals</li>
-<li><code>colors</code> <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt; | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;&gt;)</strong> output interval for the given value/interval of the intervals array</li>
+<li><code>value</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> input value</li>
+<li><code>limits</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;</strong> array of numbers in ascending order defining intervals</li>
+<li><code>colors</code> <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt; | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;&gt;)</strong> output interval for the given value/interval of the intervals array</li>
 </ul>
-<p>Returns <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>&gt;)</strong></p>
+<p>Returns <strong>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a>&gt;)</strong></p>
 <p><strong>Meta</strong></p>
 <ul>
 <li><strong>deprecated</strong>: See <a href="#valueinterpolate">valueInterpolate</a></li>
@@ -982,22 +1085,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>2 = “Medium / Reserved” = Medium only for cloud confidence.</li>
 <li>3 = “High” = High confidence.</li>
 </ul>
-<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></p>
+<p>Type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a></p>
 <section id="properties" class="level3">
 <h3 class="anchored" data-anchor-id="properties">Properties</h3>
 <ul>
-<li><code>fill</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for image data, 1 for fill data</li>
-<li><code>dilatedCloud</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for cloud is not dilated or no cloud, 1 for cloud dilation</li>
-<li><code>cirrus</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for no confidence level or low confidence, 1 for high confidence cirrus</li>
-<li><code>cloud</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for cloud confidence is not high, 1 for high confidence cloud</li>
-<li><code>cloudShadow</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for cloud shadow confidence is not high, 1 for high confidence cloud shadow</li>
-<li><code>snow</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for snow/ice confidence is not high, 1 for high confidence snow cover</li>
-<li><code>clear</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 if cloud or dilated cloud, or else 1</li>
-<li><code>water</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> 0 for land or cloud, 1 for water</li>
-<li><code>cloudConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
-<li><code>cloudShadowConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
-<li><code>snowIceConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
-<li><code>cirrusConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong></li>
+<li><code>fill</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for image data, 1 for fill data</li>
+<li><code>dilatedCloud</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for cloud is not dilated or no cloud, 1 for cloud dilation</li>
+<li><code>cirrus</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for no confidence level or low confidence, 1 for high confidence cirrus</li>
+<li><code>cloud</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for cloud confidence is not high, 1 for high confidence cloud</li>
+<li><code>cloudShadow</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for cloud shadow confidence is not high, 1 for high confidence cloud shadow</li>
+<li><code>snow</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for snow/ice confidence is not high, 1 for high confidence snow cover</li>
+<li><code>clear</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 if cloud or dilated cloud, or else 1</li>
+<li><code>water</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong> 0 for land or cloud, 1 for water</li>
+<li><code>cloudConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
+<li><code>cloudShadowConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
+<li><code>snowIceConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
+<li><code>cirrusConfidence</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">number</a></strong></li>
 </ul>
 </section>
 </section>
@@ -1037,7 +1140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><code>value</code> <strong>integer</strong> QUALITY_FLAGS band DN value (32-bit value)</li>
 </ul>
-<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> An object containing the following keys with either 0 or 1 values: land, coastline, fresh_inland_water, tidal_region, bright, straylight_risk, invalid, cosmetic, duplicated, sun_glint_risk, dubious, saturatedBxy (where xy is the band number, e.g.&nbsp;saturatedB01).</p>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">object</a></strong> An object containing the following keys with either 0 or 1 values: land, coastline, fresh_inland_water, tidal_region, bright, straylight_risk, invalid, cosmetic, duplicated, sun_glint_risk, dubious, saturatedBxy (where xy is the band number, e.g.&nbsp;saturatedB01).</p>
 
 
 </section>
@@ -1177,7 +1280,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../../../APIs/SentinelHub/Evalscript/V3.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Evalscript V3</span>

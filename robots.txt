@@ -1,1 +1,1 @@
-Sitemap: https://github.com/majcn/cdse-documentation/sitemap.xml
+Sitemap: https://eu-cdse.github.io/documentation/sitemap.xml

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL – sentinel3</title>
+<title>Documentation - Sentinel-3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "start",
-  "type": "overlay",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -59,30 +59,41 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="text/javascript">
+
+    window.onload = () => {
+        const elems = document.getElementsByClassName('navbar-title');
+        if (elems.length > 0) {
+            const title = elems[0];
+            title.parentElement.href = '/Home.html'
+        }
+    }
+</script>
 
 
-<link rel="stylesheet" href="../custom.scss">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="https://dataspace.copernicus.eu/" class="navbar-brand navbar-brand-logo">
     <img src="../_images/logos/combinedLogo.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">COPERNICUS DATA SPACE ECOSYSTEM DOCUMENTATION PORTAL</span>
+    <a class="navbar-brand" href="https://dataspace.copernicus.eu/">
+    <span class="navbar-title">Documentation</span>
     </a>
   </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Sentinel-3</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -90,14 +101,14 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-      <div class="d-flex mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
       </div>
-        <div class="sidebar-tools-main">
-    <div id="quarto-search" class="sidebar-tool" title="Search"></div>
-</div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -113,8 +124,24 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Roadmap/DataTable.html" class="sidebar-item-text sidebar-link">Data</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Roadmap/APITable.html" class="sidebar-item-text sidebar-link">APIs</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Roadmap/AppTable.html" class="sidebar-item-text sidebar-link">Applications</a>
+  </div>
+</li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Registration.html" class="sidebar-item-text sidebar-link">User registration and authentication</a>
@@ -130,22 +157,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Data/Sentinel1.html" class="sidebar-item-text sidebar-link">Sentinel 1</a>
+  <a href="../Data/Sentinel1.html" class="sidebar-item-text sidebar-link">Sentinel-1</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Data/Sentinel2.html" class="sidebar-item-text sidebar-link">Sentinel 2</a>
+  <a href="../Data/Sentinel2.html" class="sidebar-item-text sidebar-link">Sentinel-2</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Data/Sentinel3.html" class="sidebar-item-text sidebar-link active">Sentinel 3</a>
+  <a href="../Data/Sentinel3.html" class="sidebar-item-text sidebar-link active">Sentinel-3</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Data/Sentinel5P.html" class="sidebar-item-text sidebar-link">Sentinel 5P</a>
+  <a href="../Data/Sentinel5P.html" class="sidebar-item-text sidebar-link">Sentinel-5P</a>
   </div>
 </li>
       </ul>
@@ -160,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../APIs/OData.html" class="sidebar-item-text sidebar-link">Data catalogue API with OData interface</a>
+  <a href="../APIs/OData.html" class="sidebar-item-text sidebar-link">OData</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -191,7 +218,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/UserGuides/CloudMasks.html" class="sidebar-item-text sidebar-link">Cloud Masks</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../APIs/SentinelHub/UserGuides/Transparency.html" class="sidebar-item-text sidebar-link">Transparency</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/UserGuides/TimeSeries.html" class="sidebar-item-text sidebar-link">Time Series</a>
   </div>
 </li>
       </ul>
@@ -199,11 +236,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../APIs/SentinelHub/Evalscript.html" class="sidebar-item-text sidebar-link">Evalscript (custom script)</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../APIs/SentinelHub/Evalscript/V3.html" class="sidebar-item-text sidebar-link">Evalscript V3</a>
@@ -219,21 +256,6 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../APIs/SentinelHub/Overview.html" class="sidebar-item-text sidebar-link">API Overview</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">Authentication</a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">Process API</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -241,17 +263,47 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Overview/Authentication.html" class="sidebar-item-text sidebar-link">Authentication</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Overview/RateLimiting.html" class="sidebar-item-text sidebar-link">Rate limiting</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Overview/ProcessingUnit.html" class="sidebar-item-text sidebar-link">Processing Unit</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Overview/ErrorHandling.html" class="sidebar-item-text sidebar-link">Error Handling</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../APIs/SentinelHub/Process.html" class="sidebar-item-text sidebar-link">Process API</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../APIs/SentinelHub/Process/Crs.html" class="sidebar-item-text sidebar-link">CRS support</a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">Examples</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">Examples</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../APIs/SentinelHub/Process/Examples/S1GRD.html" class="sidebar-item-text sidebar-link">Examples for S1GRD</a>
@@ -282,6 +334,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../APIs/SentinelHub/Process/Examples/S5PL2.html" class="sidebar-item-text sidebar-link">Examples for S5PL2</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Process/Examples/DataFusion.html" class="sidebar-item-text sidebar-link">Examples for DataFusion</a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -289,21 +346,6 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../APIs/SentinelHub/Catalog.html" class="sidebar-item-text sidebar-link">Catalog API</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">Catalog API examples</a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">Statistical API</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -311,7 +353,67 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">Examples of Statistical API</a>
+  <a href="../APIs/SentinelHub/Catalog/Examples.html" class="sidebar-item-text sidebar-link">Examples for Catalog API</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../APIs/SentinelHub/Statistical.html" class="sidebar-item-text sidebar-link">Statistical API</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/Statistical/Examples.html" class="sidebar-item-text sidebar-link">Examples for Statistical API</a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../APIs/SentinelHub/OGC.html" class="sidebar-item-text sidebar-link">OGC</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/WMS.html" class="sidebar-item-text sidebar-link">WMS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/WCS.html" class="sidebar-item-text sidebar-link">WCS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/WFS.html" class="sidebar-item-text sidebar-link">WFS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/WMTS.html" class="sidebar-item-text sidebar-link">WMTS</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/AdditionalRequestParameters.html" class="sidebar-item-text sidebar-link">Additional Request Parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/OutputFormats.html" class="sidebar-item-text sidebar-link">Output Formats</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/SentinelHub/OGC/Examples.html" class="sidebar-item-text sidebar-link">Examples for OGC</a>
   </div>
 </li>
       </ul>
@@ -323,11 +425,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../Applications.html" class="sidebar-item-text sidebar-link">Applications</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Applications/Browser.html" class="sidebar-item-text sidebar-link">About the Browser</a>
@@ -335,6 +437,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../FAQ.html" class="sidebar-item-text sidebar-link">FAQ</a>
@@ -354,29 +457,75 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sentinel-3" id="toc-sentinel-3" class="nav-link active" data-scroll-target="#sentinel-3">Sentinel 3</a>
+  <li><a href="#description" id="toc-description" class="nav-link active" data-scroll-target="#description">Description</a></li>
+  <li><a href="#collections" id="toc-collections" class="nav-link" data-scroll-target="#collections">Collections</a></li>
+  <li><a href="#data-offer" id="toc-data-offer" class="nav-link" data-scroll-target="#data-offer">Data Offer</a>
   <ul>
-  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
-  <li><a href="#data-offer" id="toc-data-offer" class="nav-link" data-scroll-target="#data-offer">Data Offer</a></li>
+  <li><a href="#full-archive---immediate-access" id="toc-full-archive---immediate-access" class="nav-link" data-scroll-target="#full-archive---immediate-access">Full Archive - immediate access</a></li>
+  <li><a href="#full-archive---deferred-access" id="toc-full-archive---deferred-access" class="nav-link" data-scroll-target="#full-archive---deferred-access">Full Archive - Deferred access</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Sentinel-3</h1>
+</div>
 
 
 
-<section id="sentinel-3" class="level1">
-<h1>Sentinel 3</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- ```{python}
+#| tags: [parameters]
+
+mission = "SENTINEL3"
+
+```
+
+{{< include _render_collections.qmd >}}
+
+
+[![Sentinel-3 in browser](https://img.shields.io/badge/-Browser-blue
+"Explore Sentinel-3 in the browser")
+](https://sentinelshare.page.link/NPph)
+[![User guide](https://img.shields.io/badge/-User_guide-green
+"User guide")
+](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi)
+[![Catalog API](https://img.shields.io/badge/-Catalog_API-orange
+"Catalog API")
+](http://catalogue.dataspace.copernicus.eu/resto/api/collections/Sentinel2/search.json?cloudCover=[0,10]&startDate=2022-06-11&completionDate=2022-06-22&maxRecords=10)
+
+![Resolution](https://img.shields.io/badge/resolution-10m-green?style=flat-square)
+![Revisit](https://img.shields.io/badge/revisit-5--daily-green?style=flat-square)
+![Revisit](https://img.shields.io/badge/Start--date-2015-green?style=flat-square) -->
 <section id="description" class="level2">
 <h2 class="anchored" data-anchor-id="description">Description</h2>
-<p><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3">SENTINEL-3</a> is an European Earth Observation satellite mission developed to support Copernicus ocean, land, atmospheric, emergency, security and cryospheric applications.</p>
-<p>The main objective of the SENTINEL-3 mission is to measure sea surface topography, sea and land surface temperature, and ocean and land surface colour with high accuracy and reliability to support ocean forecasting systems, environmental monitoring and climate monitoring. The mission definition is driven by the need for continuity in provision of ERS, ENVISAT and SPOT vegetation data, with improvements in instrument performance and coverage.</p>
+<p><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3" target="_blank">Sentinel-3</a> is an European Earth Observation satellite mission developed to support Copernicus ocean, land, atmospheric, emergency, security and cryospheric applications.</p>
+<p>The main objective of the Sentinel-3 mission is to measure sea surface topography, sea and land surface temperature, and ocean and land surface colour with high accuracy and reliability to support ocean forecasting systems, environmental monitoring and climate monitoring. The mission definition is driven by the need for continuity in provision of ERS, ENVISAT and SPOT vegetation data, with improvements in instrument performance and coverage.</p>
 <p>The table below indicates for each type of user level product, the access type (IAD or DAD), the spatial and temporal extent of the offer and from when the data will be available in the Copernicus Data Space Ecosystem. The table includes as well an overview of the planned Sentinel engineering data availability.</p>
+</section>
+<section id="collections" class="level2">
+<h2 class="anchored" data-anchor-id="collections">Collections</h2>
 </section>
 <section id="data-offer" class="level2">
 <h2 class="anchored" data-anchor-id="data-offer">Data Offer</h2>
+<section id="full-archive---immediate-access" class="level3">
+<h3 class="anchored" data-anchor-id="full-archive---immediate-access">Full Archive - immediate access</h3>
+</section>
+<section id="full-archive---deferred-access" class="level3">
+<h3 class="anchored" data-anchor-id="full-archive---deferred-access">Full Archive - Deferred access</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -396,7 +545,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD (Immediately available data)</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -405,7 +554,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -414,7 +563,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -423,7 +572,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -432,7 +581,7 @@ ul.task-list li input[type="checkbox"] {
 <td>DAD (Deferred available data)</td>
 <td>World</td>
 <td>Feb-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci" target="_blank">Details</a></td>
 <td>Jul-23</td>
 </tr>
 <tr class="even">
@@ -441,7 +590,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -450,7 +599,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -459,7 +608,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -468,7 +617,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -477,7 +626,7 @@ ul.task-list li input[type="checkbox"] {
 <td>DAD</td>
 <td>World</td>
 <td>Feb-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr" target="_blank">Details</a></td>
 <td>Jul-23</td>
 </tr>
 <tr class="odd">
@@ -486,7 +635,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -495,7 +644,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 month</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -504,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -513,7 +662,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -522,7 +671,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 month</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="even">
@@ -531,7 +680,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 year</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -540,7 +689,7 @@ ul.task-list li input[type="checkbox"] {
 <td>DAD</td>
 <td>World</td>
 <td>Feb-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry" target="_blank">Details</a></td>
 <td>Jul-23</td>
 </tr>
 <tr class="even">
@@ -549,7 +698,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Mar-16 - Present</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 <tr class="odd">
@@ -558,7 +707,7 @@ ul.task-list li input[type="checkbox"] {
 <td>IAD</td>
 <td>World</td>
 <td>Last 1 month</td>
-<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy">Details</a></td>
+<td><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy" target="_blank">Details</a></td>
 <td>Jan-23</td>
 </tr>
 </tbody>
@@ -567,31 +716,31 @@ ul.task-list li input[type="checkbox"] {
 <!--
 |Product Type| File Description| Data Access Type | Spatial Extent | Temporal Extent | More Information | Available from |
 |------------ | ---------------------- | ---------------------- | ------------ | ------------ | ------------| -----------|
-|OLCI Level-1 NRT & NTC (Near Real Time & Non Time Critical) | packed | IAD (Immediately available data) | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-1 NTC | unpacked or packed | IAD (Immediately available data) | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-1 NRT | unpacked | IAD | World |Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-2 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jan-23|
-|OLCI Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci)| Jul-23|
-|SLSTR Level-1 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-1 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-1 NRT  | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-2 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jan-23|
-|SLSTR Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr)| Jul-23|
-|SRAL Level-1 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-1 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-1 STC (Short Time Critical) | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-1 NRT | unpacked | IAD | World | Feb-22 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-2 NRT & STC & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-2 STC | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jan-23|
-|SRAL Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry)| Jul-23|
-|SYN Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy)| Jan-23|
-|SYN Level-2 STC | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy)| Jan-23|
+|OLCI Level-1 NRT & NTC (Near Real Time & Non Time Critical) | packed | IAD (Immediately available data) | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-1 NTC | unpacked or packed | IAD (Immediately available data) | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-1 NRT | unpacked | IAD | World |Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-2 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jan-23|
+|OLCI Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/olci){target="_blank"}| Jul-23|
+|SLSTR Level-1 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-1 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-1 NRT  | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-2 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jan-23|
+|SLSTR Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/slstr){target="_blank"}| Jul-23|
+|SRAL Level-1 NRT & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-1 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-1 STC (Short Time Critical) | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-1 NRT | unpacked | IAD | World | Feb-22 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-2 NRT & STC & NTC | packed | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-2 STC | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-2 NRT | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jan-23|
+|SRAL Level-0(*) | packed | DAD | World | Feb-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/altimetry){target="_blank"}| Jul-23|
+|SYN Level-2 NTC | unpacked | IAD | World | Mar-16 - Present | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy){target="_blank"}| Jan-23|
+|SYN Level-2 STC | unpacked | IAD | World | Last 1 month | [Details](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-3/data-products/synergy){target="_blank"}| Jan-23|
 
 (*) Access restrictions may apply-->
 
@@ -733,15 +882,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../Data/Sentinel2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sentinel 2</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sentinel-2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../Data/Sentinel5P.html" class="pagination-link">
-        <span class="nav-page-text">Sentinel 5P</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Sentinel-5P</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
