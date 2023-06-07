@@ -678,10 +678,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#automatic-configuration" id="toc-automatic-configuration" class="nav-link" data-scroll-target="#automatic-configuration">Automatic configuration</a></li>
   <li><a href="#manual-band-configuration" id="toc-manual-band-configuration" class="nav-link" data-scroll-target="#manual-band-configuration">Manual band configuration</a></li>
   <li><a href="#band-renaming" id="toc-band-renaming" class="nav-link" data-scroll-target="#band-renaming">Band renaming</a></li>
-  <li><a href="#configuring-band-sample-format" id="toc-configuring-band-sample-format" class="nav-link" data-scroll-target="#configuring-band-sample-format">Configuring band sample format</a>
-  <ul class="collapse">
-  <li><a href="#legacy-collections" id="toc-legacy-collections" class="nav-link" data-scroll-target="#legacy-collections">Legacy collections</a></li>
-  </ul></li>
+  <li><a href="#configuring-band-sample-format" id="toc-configuring-band-sample-format" class="nav-link" data-scroll-target="#configuring-band-sample-format">Configuring band sample format</a></li>
   </ul></li>
   <li><a href="#ingesting-the-tiles" id="toc-ingesting-the-tiles" class="nav-link" data-scroll-target="#ingesting-the-tiles">Ingesting the tiles</a>
   <ul>
@@ -946,11 +943,6 @@ Note
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>After formats are set, the formats of all new files must match the formats defined in BYOC. If they do not match, files do not get ingested.</p>
-<section id="legacy-collections" class="level4">
-<h4 class="anchored" data-anchor-id="legacy-collections">Legacy collections</h4>
-<p>Legacy collections are those collections created prior to the introduction of <code>sampleFormat</code> field. Before the field, we had read signed and unsigned integers as unsigned. To preserve backwards compatibility, we still read integers from these collections in this way, but you can change this by setting <code>sampleFormat</code>. If you do set it to <code>INT</code>, do note that you will get integers as signed in evalscripts from then on, and that you can set the field only once. Until you set it, we don't require that the formats in BYOC and files match.</p>
-<p>The format can be changed in Dashboard or using API. Using API, make an update collection call with a payload that has sample format(s) set like the example above.</p>
-</section>
 </section>
 </section>
 <section id="ingesting-the-tiles" class="level2">
