@@ -37,7 +37,8 @@ components:
         ```
       flows:
         clientCredentials:
-          tokenUrl: https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token
+          tokenUrl: >-
+            https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token
           scopes:
             SH: Sentinel Hub
   parameters:
@@ -2056,8 +2057,7 @@ components:
           properties:
             previewMode:
               type: string
-              description: >
-                The preview mode
+              description: The preview mode
               enum:
                 - DETAIL
                 - TILE_PREVIEW
@@ -2337,7 +2337,7 @@ components:
         - type: object
           properties:
             harmonizeValues:
-              description: >
+              description: >-
                 Harmonizes data values to be comparable with old processing
                 baselines.
               type: boolean
@@ -2481,7 +2481,8 @@ components:
           description: >
             Your evalscript. For details, click
 
-            <a href="https://eu-cdse.github.io/documentation/APIs/SentinelHub/Evalscript/V3.html"
+            <a
+            href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
             target="_blank">here</a>.
           type: string
     MultiPartProcessRequest:
@@ -2500,7 +2501,8 @@ components:
           description: >
             Your evalscript. For details, click
 
-            <a href="https://eu-cdse.github.io/documentation/APIs/SentinelHub/Evalscript/V3.html"
+            <a
+            href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
             target="_blank">here</a>.
           type: string
     ProcessRequestInput:
@@ -2521,7 +2523,7 @@ components:
 
         To learn how to request and work with multiple collection, check the
         "Data Fusion" page in our documentation
-        https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/DataFusion.html.
+        https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/DataFusion.html.
       type: array
       minItems: 1
       items:
@@ -2591,7 +2593,7 @@ components:
             The coordinate reference system of the coordinates. Must be
 
             one of the values listed at
-            https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Crs.html.
+            https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Crs.html.
 
             Default CRS is WGS84, http://www.opengis.net/def/crs/OGC/1.3/CRS84.
           type: string
@@ -2672,11 +2674,11 @@ components:
 
             Each response identifier value must either match one of the values
             in `setup()` -> `output.id` in the evalscript (see <a
-            href="https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S2L1C.html#ndvi-image-and-value-multi-part-response-png-and-geotiff"
+            href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S2L1C.html#ndvi-image-and-value-multi-part-response-png-and-geotiff"
             target="_blank">example</a>)
 
             or be `userdata` (see <a
-            href="https://eu-cdse.github.io/documentation/APIs/SentinelHub/Process/Examples/S2L1C.html#true-color-and-metadata-multi-part-response-geotiff-and-json"
+            href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S2L1C.html#true-color-and-metadata-multi-part-response-geotiff-and-json"
             target="_blank">example</a>).
           enum:
             - <identifier>
@@ -4846,7 +4848,8 @@ components:
           description: >
             Your evalscript. For details, click
 
-            <a href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
+            <a
+            href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
             target="_blank">here</a>.
           type: string
     ProcessRequestOutputForBatch:
