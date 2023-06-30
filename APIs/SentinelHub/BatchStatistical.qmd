@@ -211,19 +211,6 @@ this, [update your bucket policy](TODO link) to include the following statement 
 }
 ```
 
-In your Batch Statistical API request you will have to provide you `accessKey` and `secretAccessKey` pair
-in your batch statistical request:
-
-Example:
-
-```python
-s3 = {
-  "url": "s3://<your-bucket>/<path>",
-  "accessKey": "<your-bucket-access-key>",
-  "secretAccessKey": "<your-bucket-access-key-secret>"
-}
-```
-
 
 ## Examples
 
