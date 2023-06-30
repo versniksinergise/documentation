@@ -2914,7 +2914,7 @@ components:
 
         The first item in the array describes the overall extent of
 
-        the data. All subsequent items describe more precise extents, 
+        the data. All subsequent items describe more precise extents,
 
         e.g., to identify clusters of data.
 
@@ -2939,7 +2939,7 @@ components:
 
                 The first bounding box describes the overall spatial
 
-                extent of the data. All subsequent bounding boxes describe 
+                extent of the data. All subsequent bounding boxes describe
 
                 more precise bounding boxes, e.g., to identify clusters of data.
 
@@ -3048,7 +3048,7 @@ components:
                 The first time interval describes the overall
 
                 temporal extent of the data. All subsequent time intervals
-                describe 
+                describe
 
                 more precise time intervals, e.g., to identify clusters of data.
 
@@ -3238,10 +3238,10 @@ components:
         vertical axis (elevation or depth):
 
         * Lower left corner, coordinate axis 1
-        * Lower left corner, coordinate axis 2  
-        * Lower left corner, coordinate axis 3 (optional) 
-        * Upper right corner, coordinate axis 1 
-        * Upper right corner, coordinate axis 2 
+        * Lower left corner, coordinate axis 2
+        * Lower left corner, coordinate axis 3 (optional)
+        * Upper right corner, coordinate axis 1
+        * Upper right corner, coordinate axis 2
         * Upper right corner, coordinate axis 3 (optional)
 
         The coordinate reference system of the values is WGS84
@@ -4354,11 +4354,11 @@ components:
           description: >
             Path or path template specifying where batch processing results
             shall be stored. Supported formats: <ul>
-              <li>a valid Amazon S3 URL, e.g. `s3://some-bucket/some/folder`.<br/>
+              <li>a valid S3 URL, e.g. `s3://some-bucket/some/folder`.<br/>
                 A subdirectory will be created for this batch request, named after the request ID, and will contain further subdirectories with the output tiles.
                 This is equivalent to the template `s3://some-bucket/some/folder/<requestId>/<tileName>/<outputId>.<format>`.
               </li>
-              <li>a templated Amazon S3 URL, e.g. `s3://some-bucket/some/folder/<tileName>.tif`.
+              <li>a templated S3 URL, e.g. `s3://some-bucket/some/folder/<tileName>.tif`.
                 Templating allows custom organization of the output files.
                 Templates can contain the following placeholders, which are replaced by respective actual values when writing results:
                 <ul>
@@ -4522,11 +4522,11 @@ components:
           description: >
             Path or path template specifying where batch processing results
             shall be stored. Supported formats: <ul>
-              <li>a valid Amazon S3 URL, e.g. `s3://some-bucket/some/folder`.<br/>
+              <li>a valid S3 URL, e.g. `s3://some-bucket/some/folder`.<br/>
                 The output Zarr will be stored to this folder (prefix).
                 The request will fail if any files already exist in the folder.
               </li>
-              <li>a templated Amazon S3 URL, e.g. `s3://some-bucket/some/folder/<requestId>`.
+              <li>a templated S3 URL, e.g. `s3://some-bucket/some/folder/<requestId>`.
                 The placeholder `<requestId>` will be replaced by the ID of your batch request
                 and the output Zarr will be stored there.
               </li>
@@ -4893,7 +4893,7 @@ components:
           description: >
             Duration in ISO 8601 duration format, check
             [here](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical.html#split-requested-timerange-into-multiple-time-intervals)
-            for more details. 
+            for more details.
           type: string
         lastIntervalBehavior:
           description: >
@@ -4940,7 +4940,7 @@ components:
         Each key must match with one of the band names
 
         `output.bands` specified in a `setup()` function in an evalscript (for
-        this output) or be "default". If it is "default", 
+        this output) or be "default". If it is "default",
 
         the histogram specified below will be returned for all bands of this
         output for which histogram is not explicitly defined.
@@ -4953,7 +4953,7 @@ components:
           * exact bins provided by `bins` array
 
         [This
-        example](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types) 
+        example](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types)
 
         shows how to specify histograms using different parameters.
 
@@ -5045,7 +5045,7 @@ components:
           $ref: '#/components/schemas/Aggregation'
         width:
           description: >
-            Width of the sample matrix.  
+            Width of the sample matrix.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5057,7 +5057,7 @@ components:
           example: 512
         height:
           description: >
-            Height of the sample matrix.  
+            Height of the sample matrix.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5075,7 +5075,7 @@ components:
             Its units are defined by the CRS given in
             `input.bounds.properties.crs`
 
-            parameter.  
+            parameter.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5089,7 +5089,7 @@ components:
             Its units are defined by the CRS given in
             `input.bounds.properties.crs`
 
-            parameter.  
+            parameter.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5127,7 +5127,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
                 The evalscript will be executed once for each time interval
                 defined by `timeRange` and `aggregationInterval`.
@@ -5303,20 +5303,14 @@ components:
             A URL pointing to an S3 bucket or an object in an S3 bucket. It can
             contain prefixes, e.g. `s3://my-personal-bucket/some-folder` or
             `s3://my-personal-bucket/some-folder/some-file.gpk`.
-        iamRoleARN:
-          type: string
-          description: >-
-            IAM role ARN, which allows programmatic access to the S3 bucket
-            specified in the `url` field using the recommended assume IAM role
-            flow.
         accessKey:
           type: string
           description: >-
-            AWS access key, which allows programmatic access to the S3 bucket
+            access key, which allows programmatic access to the S3 bucket
             specified in the `url` field.
         secretAccessKey:
           type: string
-          description: AWS secret access key which must correspond to the AWS access key.
+          description: secret access key which must correspond to the access key.
     ObjectStorageOutputInfo:
       type: object
       required:
@@ -5334,11 +5328,11 @@ components:
           description: >
             A URL or URL template specifying where the results shall be written.
             Supported formats: <ul>
-              <li>a valid Amazon S3 URL, e.g. `s3://my-personal-bucket/some-folder`.
+              <li>a valid S3 URL, e.g. `s3://my-personal-bucket/some-folder`.
                 A subdirectory will be created for this statistical batch request, named after the request ID, and output JSON files will be stored there.
                 This is equivalent to the template `s3://my-personal-bucket/some-folder/<REQUEST_ID>/<ID>.json`.
               </li>
-              <li>a templated Amazon S3 URL, e.g. `s3://my-personal-bucket/some-folder/<ID>.json`.
+              <li>a templated S3 URL, e.g. `s3://my-personal-bucket/some-folder/<ID>.json`.
                 Templating allows custom organization of the output files.
                 Templates can contain the following placeholders, which are replaced by respective actual values when writing results:
                 <ul>
@@ -5349,20 +5343,14 @@ components:
                 The template must contain `<ID>` or `<IDENTIFIER>` in order to ensure unique output files.
               </li>
             </ul>
-        iamRoleARN:
-          type: string
-          description: >-
-            IAM role ARN, which allows programmatic access to the S3 bucket
-            specified in the `url` field using the recommended assume IAM role
-            flow.
         accessKey:
           type: string
           description: >-
-            AWS access key, which allows programmatic access to the S3 bucket
+            access key, which allows programmatic access to the S3 bucket
             specified in the `url` field.
         secretAccessKey:
           type: string
-          description: AWS secret access key which must correspond to the AWS access key.
+          description: secret access key which must correspond to the access key.
         region:
           type: string
           description: >-
@@ -5381,7 +5369,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
                 The evalscript will be executed once for each time interval
                 defined by `timeRange` and `aggregationInterval`.
@@ -5396,7 +5384,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
 
                 Either this or `evalscript` parameter is required.
@@ -6399,7 +6387,7 @@ paths:
         expressions. The
 
         precise definition of this can be found in the OGC API - Features - Part
-        3: Filtering and the 
+        3: Filtering and the
 
         Common Query Language (CQL) specification.
       parameters:
