@@ -4,16 +4,7 @@ resources:
 title: Batch Statistical API
 ---
 
-**The Batch Statistical API is in beta release. It might misbehave in
-case of large requests. We may change the interface, although no major
-changes are expected. If you have suggestions for improvements or any
-feedback, please share your thoughts on our
-[forum](https://forum.sentinel-hub.com/){target="_blank"}.
-`<br/>`{=html}The Batch statistical API is only available for enterprise
-users. If you don\'t have an enterprise account, and would like to try
-it out,
-`<a href="mailto:info@sentinel-hub.com?subject=Sentinel Hub Inquiry">`{=html}contact
-us`</a>`{=html} for a custom offer.**
+**The Batch Statistical API is available only for users with Copernicus Service accounts. Contact our [Copernicus Data Space Ecosystem support](https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new) to request your Copernicus Service account.**
 
 The Batch Statistical API (or shortly \"Batch Stats API\") enables you
 to request statistics similarly as with the [Statistical
@@ -183,6 +174,43 @@ The outputs will be stored in the bucket and the folder specified by
 will be available in a sub-folder named after the ID of your request
 (e.g.
 `s3://<my-bucket>/<my-folder>/db7de265-dfd4-4dc0-bc82-74866078a5ce`).
+
+## Bucket settings
+
+As noted above, the Batch Statistical API uses buckets to:
+- read GeoPackage file with input features (polygons) from a bucket,
+- read evalscript from a bucket (this is optional because an evalscript can also be provided directly in a request),
+- write results of processing to a bucket.
+
+One bucket or different buckets can be used for all three purposes.
+
+If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](TODO link) to get one.
+
+You will have to configure your bucket to allow full access to Sentinel Hub. To do
+this, [update your bucket policy](TODO link) to include the following statement (don't forget to replace `<bucket_name>` with your actual bucket name):
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Sentinel Hub permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ddf4c98b5e6647f0a246f0624c8341d9:root"
+            },
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>",
+                "arn:aws:s3:::<bucket_name>/*"
+            ]
+        }
+    ]
+}
+```
+
 
 ## Examples
 

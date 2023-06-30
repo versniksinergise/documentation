@@ -2,10 +2,7 @@
 title: Batch Processing API
 ---
 
-**Batch Processing API is only available for enterprise users. If you
-don\'t have an enterprise account, and would like to try it out,
-`<a href="mailto:info@sentinel-hub.com?subject=Sentinel Hub Inquiry">`{=html}contact
-us`</a>`{=html} for a custom offer.**
+**The Batch Processing API is available only for users with Copernicus Service accounts. Contact our [Copernicus Data Space Ecosystem support](https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new) to request your Copernicus Service account.**
 
 Batch Processing API (or shortly \"Batch API\") enables you to request
 data for large areas and/or longer time periods for any Sentinel Hub
@@ -293,7 +290,7 @@ By default, the results will be organized in sub-folders where one
 sub-folder will be created for each tile. Each sub-folder might contain
 one or more images depending on how many outputs were defined in the
 [evalscript](/APIs/SentinelHub/Evalscript/V3.qmd#setup-function) of the
-request. For example: ![](Batch/img/batch-sub-folders.png)
+request.
 
 You can also customize the sub-folder structure and file naming as
 described in the `defaultTilePath` parameter under `output` in [BATCH
@@ -334,6 +331,38 @@ The results of batch processing will be in the projection of the
 selected [tiling grid](/APIs/SentinelHub/Batch.qmd#tiling-grids). The
 tiling grids where output CRS is UTM zone are not supported for Zarr
 format output.
+
+## Bucket settings
+
+The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem. 
+
+If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](TODO link) to get one.
+
+You will have to configure your bucket to allow full access to Sentinel Hub. To do
+this, [update your bucket policy](TODO link) to include the following statement (don't forget to replace `<bucket_name>` with your actual bucket name):
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Sentinel Hub permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ddf4c98b5e6647f0a246f0624c8341d9:root"
+            },
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>",
+                "arn:aws:s3:::<bucket_name>/*"
+            ]
+        }
+    ]
+}
+```
+
 
 ## Tutorials and Other Related Materials
 
