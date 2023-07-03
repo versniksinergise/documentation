@@ -10,8 +10,8 @@ supported collection, including BYOC (bring your own data).
 
 It is an asynchronous REST service. This means that data will not be
 returned immediately in a request response but will be delivered to your
-object storage, which needs to be specified in the request (e.g. S3
-bucket, see [AWS S3 bucket settings](#aws-bucket-settings) below). The
+object storage, which needs to be specified in the request (e.g. a 
+bucket, see [Bucket settings](#bucket-settings) below). The
 processing results will be divided in tiles as described
 [below](#processing-results).
 

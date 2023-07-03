@@ -15,8 +15,8 @@ calculating statistics for all parcels in a country.
 Similarly to the [Batch Processing API](/APIs/SentinelHub/Batch.qmd),
 this is an asynchronous REST service. This means that data will not be
 immediately returned in the response of the request but delivered to
-your object storage, which needs to be specified in the request (e.g. S3
-bucket, see [AWS bucket access](#aws-bucket-access) below).
+your object storage, which needs to be specified in the request (e.g. a 
+bucket, see [bucket settings](#bucket-settings) below).
 
 You can find more details about the API in the [API
 Reference](/APIs/SentinelHub/ApiReference.qmd#tag/batch-statistical) or
