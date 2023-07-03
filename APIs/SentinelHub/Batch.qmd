@@ -10,8 +10,8 @@ supported collection, including BYOC (bring your own data).
 
 It is an asynchronous REST service. This means that data will not be
 returned immediately in a request response but will be delivered to your
-object storage, which needs to be specified in the request (e.g. S3
-bucket, see [AWS S3 bucket settings](#aws-bucket-settings) below). The
+object storage, which needs to be specified in the request (e.g. a
+bucket, see [Bucket settings](#aws-bucket-settings) below). The
 processing results will be divided in tiles as described
 [below](#processing-results).
 
@@ -334,7 +334,7 @@ format output.
 
 ## Bucket settings
 
-The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem. 
+The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem.
 
 If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](https://creodias.docs.cloudferro.com/en/latest/new/Access-CREODIAS-environment-to-create-S3-bucket-and-use-it-in-Sentinel-Hub-Batch-Processing-request-on-Creodias.html) to get one.
 
