@@ -336,10 +336,10 @@ format output.
 
 The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem. 
 
-If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](TODO link) to get one.
+If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](https://creodias.docs.cloudferro.com/en/latest/new/Access-CREODIAS-environment-to-create-S3-bucket-and-use-it-in-Sentinel-Hub-Batch-Processing-request-on-Creodias.html) to get one.
 
 You will have to configure your bucket to allow full access to Sentinel Hub. To do
-this, [update your bucket policy](TODO link) to include the following statement (don't forget to replace `<bucket_name>` with your actual bucket name):
+this, [update your bucket policy](https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket) to include the following statement (don't forget to replace `<bucket_name>` with your actual bucket name):
 
 ```
 {
