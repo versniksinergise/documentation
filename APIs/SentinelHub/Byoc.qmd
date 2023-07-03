@@ -164,7 +164,7 @@ For more information about each command see the GDAL documentation:
 
 If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow [these steps](https://creodias.docs.cloudferro.com/en/latest/new/Access-CREODIAS-environment-to-create-S3-bucket-and-use-it-in-Sentinel-Hub-Batch-Processing-request-on-Creodias.html) to get one.
 
-You will have to configure your bucket to allow full access to Sentinel Hub. To do
+You will have to configure your bucket to allow read access to Sentinel Hub. To do
 this, [update your bucket policy](https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket) to include the following statement (don't forget to replace `<bucket_name>` with your actual bucket name):
 
 ```
