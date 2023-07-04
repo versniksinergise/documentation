@@ -2,6 +2,8 @@
 title: Bring Your Own COG API
 ---
 
+**Bring Your Own COG API is available only for users with Copernicus Service accounts. Contact our [Copernicus Data Space Ecosystem support](https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new) to request your Copernicus Service account.**
+
 ## Overview
 
 Bring Your Own COG API (or shortly \"BYOC\") enables you to import your
