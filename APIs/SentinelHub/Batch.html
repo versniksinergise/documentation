@@ -736,6 +736,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#geotiff-output-format" id="toc-geotiff-output-format" class="nav-link" data-scroll-target="#geotiff-output-format">GeoTIFF output format</a></li>
   <li><a href="#zarr-output-format" id="toc-zarr-output-format" class="nav-link" data-scroll-target="#zarr-output-format">Zarr output format</a></li>
   </ul></li>
+  <li><a href="#bucket-settings" id="toc-bucket-settings" class="nav-link" data-scroll-target="#bucket-settings">Bucket settings</a></li>
   <li><a href="#tutorials-and-other-related-materials" id="toc-tutorials-and-other-related-materials" class="nav-link" data-scroll-target="#tutorials-and-other-related-materials">Tutorials and Other Related Materials</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
@@ -763,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><strong>The Batch Processing API is available only for users with Copernicus Service accounts. Contact our <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new" target="_blank">Copernicus Data Space Ecosystem support</a> to request your Copernicus Service account.</strong></p>
 <p>Batch Processing API (or shortly "Batch API") enables you to request data for large areas and/or longer time periods for any Sentinel Hub supported collection, including BYOC (bring your own data).</p>
-<p>It is an asynchronous REST service. This means that data will not be returned immediately in a request response but will be delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;S3 bucket, see <a href="#aws-bucket-settings">Bucket settings</a> below). The processing results will be divided in tiles as described <a href="#processing-results">below</a>.</p>
+<p>It is an asynchronous REST service. This means that data will not be returned immediately in a request response but will be delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;a bucket, see <a href="#aws-bucket-settings">Bucket settings</a> below). The processing results will be divided in tiles as described <a href="#processing-results">below</a>.</p>
 <section id="workflow" class="level2">
 <h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
 <p>The batch processing API comes with the set of REST APIs which support the execution of various workflows. The diagram below shows all possible statuses of a batch processing request (<code>CREATED</code>, <code>ANALYSING</code>, <code>ANALYSIS_DONE</code>, <code>PROCESSING</code>, <code>DONE</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PARTIAL</code>) and user's actions (<code>ANALYSE</code>, <code>START</code>, <code>RESTART</code>, <code>CANCEL</code>) which trigger transitions among them.</p>
@@ -839,7 +840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>failed requests (request status <code>FAILED</code>),</li>
 <li>requests that were created but never started (request statuses <code>CREATED</code>, <code>ANALYSIS_DONE</code>),</li>
-<li>successful requests (request statuses <code>DONE</code> and <code>PARTIAL</code>) for which it was not requested to add the results to your collections. Note that only such requests themselves will be deleted, while the requests' result (created imagery) will remain under your control in your S3 bucket.</li>
+<li>successful requests (request statuses <code>DONE</code> and <code>PARTIAL</code>) for which it was not requested to add the results to your collections. Note that only such requests themselves will be deleted, while the requests' result (created imagery) will remain under your control in your a bucket.</li>
 </ul>
 </section>
 <section id="cost-estimate" class="level4">
@@ -994,7 +995,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Make sure the evalscript returns only single-band outputs</li>
 <li>Keep <code>sampleType</code> in mind, as the values the evalscript returns when creating a collection will be the values available when making a request to access it</li>
 </ul>
-<p>Regardless of whether the user specifies an existing collection or requests a new one, processed data will still upload to the users S3 bucket, where they will be available for download and analysis.</p>
+<p>Regardless of whether the user specifies an existing collection or requests a new one, processed data will still upload to the users a bucket, where they will be available for download and analysis.</p>
 </section>
 <section id="processing-results" class="level2">
 <h2 class="anchored" data-anchor-id="processing-results">Processing results</h2>
@@ -1013,6 +1014,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The outputs of a batch processing will be stored as a single Zarr group containing one data array for each evalscript output and multiple coordinate arrays. By default, the Zarr will be stored in the folder you pass to the batch processing api in the <code>path</code> parameter under <code>zarrOutput</code> (see <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch_process/operation/createNewBatchProcessingRequest">BATCH API reference</a>). The folder must not contain any existing Zarr files. We recommend using a placeholder <code>&lt;requestId&gt;</code> as explained in the API reference to keep the results of your processing better organized.</p>
 <p>The results of batch processing will be in the projection of the selected <a href="../../APIs/SentinelHub/Batch.html#tiling-grids">tiling grid</a>. The tiling grids where output CRS is UTM zone are not supported for Zarr format output.</p>
 </section>
+</section>
+<section id="bucket-settings" class="level2">
+<h2 class="anchored" data-anchor-id="bucket-settings">Bucket settings</h2>
+<p>The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem.</p>
+<p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
+<p>You will have to configure your bucket to allow full access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
+<pre><code>{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Sentinel Hub permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ddf4c98b5e6647f0a246f0624c8341d9:root"
+            },
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::&lt;bucket_name&gt;",
+                "arn:aws:s3:::&lt;bucket_name&gt;/*"
+            ]
+        }
+    ]
+}</code></pre>
 </section>
 <section id="tutorials-and-other-related-materials" class="level2">
 <h2 class="anchored" data-anchor-id="tutorials-and-other-related-materials">Tutorials and Other Related Materials</h2>

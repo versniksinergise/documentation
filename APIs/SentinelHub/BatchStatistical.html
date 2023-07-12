@@ -697,6 +697,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#input-polygons-as-geopackage-file" id="toc-input-polygons-as-geopackage-file" class="nav-link" data-scroll-target="#input-polygons-as-geopackage-file">Input polygons as GeoPackage file</a></li>
   <li><a href="#evalscript-and-batch-statistical-api" id="toc-evalscript-and-batch-statistical-api" class="nav-link" data-scroll-target="#evalscript-and-batch-statistical-api">Evalscript and Batch statistical API</a></li>
   <li><a href="#processing-results" id="toc-processing-results" class="nav-link" data-scroll-target="#processing-results">Processing results</a></li>
+  <li><a href="#bucket-settings" id="toc-bucket-settings" class="nav-link" data-scroll-target="#bucket-settings">Bucket settings</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
 </nav>
@@ -721,9 +722,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>The Batch Statistical API is in beta release. It might misbehave in case of large requests. We may change the interface, although no major changes are expected. If you have suggestions for improvements or any feedback, please share your thoughts on our <a href="https://forum.sentinel-hub.com/" target="_blank">forum</a>. <br>The Batch statistical API is only available for enterprise users. If you don't have an enterprise account, and would like to try it out, <a href="mailto:info@sentinel-hub.com?subject=Sentinel Hub Inquiry">contact us</a> for a custom offer.</strong></p>
+<p><strong>The Batch Statistical API is available only for users with Copernicus Service accounts. Contact our <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new" target="_blank">Copernicus Data Space Ecosystem support</a> to request your Copernicus Service account.</strong></p>
 <p>The Batch Statistical API (or shortly "Batch Stats API") enables you to request statistics similarly as with the <a href="../../APIs/SentinelHub/Statistical.html">Statistical API</a> but for multiple polygons at once and/or for longer aggregations. A typical use case would be calculating statistics for all parcels in a country.</p>
-<p>Similarly to the <a href="../../APIs/SentinelHub/Batch.html">Batch Processing API</a>, this is an asynchronous REST service. This means that data will not be immediately returned in the response of the request but delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;S3 bucket, see <a href="#aws-bucket-access">AWS bucket access</a> below).</p>
+<p>Similarly to the <a href="../../APIs/SentinelHub/Batch.html">Batch Processing API</a>, this is an asynchronous REST service. This means that data will not be immediately returned in the response of the request but delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;S3 bucket, see <a href="#bucket-settings">bucket settings</a> below).</p>
 <p>You can find more details about the API in the <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch-statistical">API Reference</a> or in the <a href="../../APIs/SentinelHub/BatchStatistical/Examples.html">examples</a> of the workflow.</p>
 <section id="workflow" class="level2">
 <h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
@@ -805,7 +806,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="input-polygons-as-geopackage-file" class="level2">
 <h2 class="anchored" data-anchor-id="input-polygons-as-geopackage-file">Input polygons as GeoPackage file</h2>
-<p>The Batch Statistical API accepts a <a href="https://www.geopackage.org/" target="_blank">GeoPackage file</a> containing features (polygons) as an input. The GeoPackage must be stored in your object storage (e.g.&nbsp;AWS S3 bucket) and Sentinel Hub must be able to read from the storage (find more details about this in the <a href="#aws-bucket-access">bucket access</a> section below). In a batch statistical request, the input GeoPackage is specified by setting the path to the <code>.gpkg</code> file in the <code>input.features.s3</code> parameter.</p>
+<p>The Batch Statistical API accepts a <a href="https://www.geopackage.org/" target="_blank">GeoPackage file</a> containing features (polygons) as an input. The GeoPackage must be stored in your object storage (e.g.&nbsp;AWS S3 bucket) and Sentinel Hub must be able to read from the storage (find more details about this in the <a href="#bucket-settings">bucket settings</a> section below). In a batch statistical request, the input GeoPackage is specified by setting the path to the <code>.gpkg</code> file in the <code>input.features.s3</code> parameter.</p>
 <p>All features (polygons) in an input GeoPackage must be in the same CRS <a href="../../APIs/SentinelHub/Process/Crs.html">supported by Sentinel Hub</a>. An example of a GeoPackage file can be downloaded <a href="../../APIs/SentinelHub/BatchStatistical/resources/gpkg/geopackage-example.gpkg">here</a>.</p>
 </section>
 <section id="evalscript-and-batch-statistical-api" class="level2">
@@ -821,6 +822,32 @@ ul.task-list li input[type="checkbox"] {
 <li>a custom column <code>identifier</code> of type string can be added to GeoPackage and its value will be available in json file as <code>identifier</code> property.</li>
 </ul>
 <p>The outputs will be stored in the bucket and the folder specified by <code>output.s3.path</code> parameter of the batch statistical request. The outputs will be available in a sub-folder named after the ID of your request (e.g. <code>s3://&lt;my-bucket&gt;/&lt;my-folder&gt;/db7de265-dfd4-4dc0-bc82-74866078a5ce</code>).</p>
+</section>
+<section id="bucket-settings" class="level2">
+<h2 class="anchored" data-anchor-id="bucket-settings">Bucket settings</h2>
+<p>As noted above, the Batch Statistical API uses buckets to: - read GeoPackage file with input features (polygons) from a bucket, - read evalscript from a bucket (this is optional because an evalscript can also be provided directly in a request), - write results of processing to a bucket.</p>
+<p>One bucket or different buckets can be used for all three purposes.</p>
+<p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
+<p>You will have to configure your bucket to allow full access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
+<pre><code>{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Sentinel Hub permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ddf4c98b5e6647f0a246f0624c8341d9:root"
+            },
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::&lt;bucket_name&gt;",
+                "arn:aws:s3:::&lt;bucket_name&gt;/*"
+            ]
+        }
+    ]
+}</code></pre>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>

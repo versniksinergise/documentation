@@ -2,438 +2,438 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Home.html</loc>
-    <lastmod>2023-07-12T09:31:29.418Z</lastmod>
+    <lastmod>2023-07-12T11:34:57.904Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/cdse_doc.html</loc>
-    <lastmod>2023-07-12T09:31:28.606Z</lastmod>
+    <lastmod>2023-07-12T11:34:57.160Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/Browser.html</loc>
-    <lastmod>2023-07-12T09:31:27.846Z</lastmod>
+    <lastmod>2023-07-12T11:34:56.412Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/WebEditor.html</loc>
-    <lastmod>2023-07-12T09:31:26.390Z</lastmod>
+    <lastmod>2023-07-12T11:34:55.060Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ExecuteService.html</loc>
-    <lastmod>2023-07-12T09:31:25.350Z</lastmod>
+    <lastmod>2023-07-12T11:34:54.072Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ServiceProviderGuide.html</loc>
-    <lastmod>2023-07-12T09:31:24.470Z</lastmod>
+    <lastmod>2023-07-12T11:34:53.240Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ManageBilling.html</loc>
-    <lastmod>2023-07-12T09:31:23.574Z</lastmod>
+    <lastmod>2023-07-12T11:34:52.356Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/UserGuide.html</loc>
-    <lastmod>2023-07-12T09:31:22.390Z</lastmod>
+    <lastmod>2023-07-12T11:34:51.268Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/SignIn.html</loc>
-    <lastmod>2023-07-12T09:31:21.478Z</lastmod>
+    <lastmod>2023-07-12T11:34:50.388Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ManageOrg.html</loc>
-    <lastmod>2023-07-12T09:31:20.690Z</lastmod>
+    <lastmod>2023-07-12T11:34:49.636Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/Overview.html</loc>
-    <lastmod>2023-07-12T09:31:19.886Z</lastmod>
+    <lastmod>2023-07-12T11:34:48.872Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Roadmap/AppTable.html</loc>
-    <lastmod>2023-07-12T09:31:18.690Z</lastmod>
+    <lastmod>2023-07-12T11:34:47.728Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Roadmap/DataTable.html</loc>
-    <lastmod>2023-07-12T09:31:17.778Z</lastmod>
+    <lastmod>2023-07-12T11:34:46.876Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/BatchStatistical/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:16.090Z</lastmod>
+    <lastmod>2023-07-12T11:34:45.248Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Catalog/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:15.042Z</lastmod>
+    <lastmod>2023-07-12T11:34:44.224Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Batch/Crs.html</loc>
-    <lastmod>2023-07-12T09:31:13.854Z</lastmod>
+    <lastmod>2023-07-12T11:34:43.100Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/WMS.html</loc>
-    <lastmod>2023-07-12T09:31:12.970Z</lastmod>
+    <lastmod>2023-07-12T11:34:42.220Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/WFS.html</loc>
-    <lastmod>2023-07-12T09:31:11.758Z</lastmod>
+    <lastmod>2023-07-12T11:34:41.104Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/WCS.html</loc>
-    <lastmod>2023-07-12T09:31:10.742Z</lastmod>
+    <lastmod>2023-07-12T11:34:40.124Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC.html</loc>
-    <lastmod>2023-07-12T09:31:09.642Z</lastmod>
+    <lastmod>2023-07-12T11:34:39.064Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html</loc>
-    <lastmod>2023-07-12T09:31:08.794Z</lastmod>
+    <lastmod>2023-07-12T11:34:38.264Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Byoc/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:06.418Z</lastmod>
+    <lastmod>2023-07-12T11:34:35.980Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript.html</loc>
-    <lastmod>2023-07-12T09:31:05.298Z</lastmod>
+    <lastmod>2023-07-12T11:34:34.908Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Overview/RateLimiting.html</loc>
-    <lastmod>2023-07-12T09:31:04.502Z</lastmod>
+    <lastmod>2023-07-12T11:34:34.152Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Overview/ProcessingUnit.html</loc>
-    <lastmod>2023-07-12T09:31:03.586Z</lastmod>
+    <lastmod>2023-07-12T11:34:33.316Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical.html</loc>
-    <lastmod>2023-07-12T09:31:02.210Z</lastmod>
+    <lastmod>2023-07-12T11:34:32.024Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:00.670Z</lastmod>
+    <lastmod>2023-07-12T11:34:30.520Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Overview.html</loc>
-    <lastmod>2023-07-12T09:30:59.358Z</lastmod>
+    <lastmod>2023-07-12T11:34:29.244Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/UserGuides/CloudMasks.html</loc>
-    <lastmod>2023-07-12T09:30:58.358Z</lastmod>
+    <lastmod>2023-07-12T11:34:28.256Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/UserGuides/Datamask.html</loc>
-    <lastmod>2023-07-12T09:30:57.490Z</lastmod>
+    <lastmod>2023-07-12T11:34:27.376Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S3SLSTR.html</loc>
-    <lastmod>2023-07-12T09:30:56.418Z</lastmod>
+    <lastmod>2023-07-12T11:34:26.340Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S2L1C.html</loc>
-    <lastmod>2023-07-12T09:30:55.082Z</lastmod>
+    <lastmod>2023-07-12T11:34:25.056Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/DataFusion.html</loc>
-    <lastmod>2023-07-12T09:30:53.438Z</lastmod>
+    <lastmod>2023-07-12T11:34:23.508Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S1GRD.html</loc>
-    <lastmod>2023-07-12T09:30:51.770Z</lastmod>
+    <lastmod>2023-07-12T11:34:21.964Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/OData.html</loc>
-    <lastmod>2023-07-12T09:30:50.502Z</lastmod>
+    <lastmod>2023-07-12T11:34:20.800Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/Token.html</loc>
-    <lastmod>2023-07-12T09:30:21.093Z</lastmod>
+    <lastmod>2023-07-12T11:33:51.584Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/Traceability.html</loc>
-    <lastmod>2023-07-12T09:30:17.449Z</lastmod>
+    <lastmod>2023-07-12T11:33:48.048Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/S3.html</loc>
-    <lastmod>2023-07-12T09:30:16.685Z</lastmod>
+    <lastmod>2023-07-12T11:33:47.284Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/Python_Client/Python.html</loc>
-    <lastmod>2023-07-12T09:30:15.157Z</lastmod>
+    <lastmod>2023-07-12T11:33:45.796Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/BasicSentinelMerge/sentinel_merge.html</loc>
-    <lastmod>2023-07-12T09:30:04.049Z</lastmod>
+    <lastmod>2023-07-12T11:33:34.176Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/Anomaly_Detection/Anomaly_Detection.html</loc>
-    <lastmod>2023-07-12T09:30:02.545Z</lastmod>
+    <lastmod>2023-07-12T11:33:32.688Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/RescaleChunks/rescale_chunks.html</loc>
-    <lastmod>2023-07-12T09:30:00.893Z</lastmod>
+    <lastmod>2023-07-12T11:33:31.100Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/WorldCereal/WorldCereal.html</loc>
-    <lastmod>2023-07-12T09:29:59.405Z</lastmod>
+    <lastmod>2023-07-12T11:33:29.632Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/job_config.html</loc>
-    <lastmod>2023-07-12T09:29:55.637Z</lastmod>
+    <lastmod>2023-07-12T11:33:25.924Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/OpenSearch.html</loc>
-    <lastmod>2023-07-12T09:29:54.041Z</lastmod>
+    <lastmod>2023-07-12T11:33:24.424Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Sentinel2.html</loc>
-    <lastmod>2023-07-12T09:29:23.945Z</lastmod>
+    <lastmod>2023-07-12T11:32:25.049Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Sentinel5P.html</loc>
-    <lastmod>2023-07-12T09:29:15.109Z</lastmod>
+    <lastmod>2023-07-12T11:32:16.337Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Dashboard.html</loc>
-    <lastmod>2023-07-12T09:29:05.052Z</lastmod>
+    <lastmod>2023-07-12T11:32:06.345Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data.html</loc>
-    <lastmod>2023-07-12T09:29:03.552Z</lastmod>
+    <lastmod>2023-07-12T11:32:04.877Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications.html</loc>
-    <lastmod>2023-07-12T09:29:02.776Z</lastmod>
+    <lastmod>2023-07-12T11:32:04.129Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Support.html</loc>
-    <lastmod>2023-07-12T09:29:01.932Z</lastmod>
+    <lastmod>2023-07-12T11:32:03.269Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/sentinelhub/process_request.html</loc>
-    <lastmod>2023-07-12T09:29:01.124Z</lastmod>
+    <lastmod>2023-07-12T11:32:02.513Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/UDF.html</loc>
-    <lastmod>2023-07-12T09:28:59.316Z</lastmod>
+    <lastmod>2023-07-12T11:32:00.757Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/Batch_job.html</loc>
-    <lastmod>2023-07-12T09:28:57.808Z</lastmod>
+    <lastmod>2023-07-12T11:31:59.257Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/UDP.html</loc>
-    <lastmod>2023-07-12T09:28:55.812Z</lastmod>
+    <lastmod>2023-07-12T11:31:57.273Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/NDVI_Timeseries.html</loc>
-    <lastmod>2023-07-12T09:28:57.012Z</lastmod>
+    <lastmod>2023-07-12T11:31:58.453Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/Load_Collection.html</loc>
-    <lastmod>2023-07-12T09:28:58.588Z</lastmod>
+    <lastmod>2023-07-12T11:32:00.041Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/notebook-samples/openeo/basics.html</loc>
-    <lastmod>2023-07-12T09:28:59.988Z</lastmod>
+    <lastmod>2023-07-12T11:32:01.409Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/logos.html</loc>
-    <lastmod>2023-07-12T09:29:01.492Z</lastmod>
+    <lastmod>2023-07-12T11:32:02.861Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Registration.html</loc>
-    <lastmod>2023-07-12T09:29:02.328Z</lastmod>
+    <lastmod>2023-07-12T11:32:03.677Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs.html</loc>
-    <lastmod>2023-07-12T09:29:03.156Z</lastmod>
+    <lastmod>2023-07-12T11:32:04.509Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/FAQ.html</loc>
-    <lastmod>2023-07-12T09:29:04.640Z</lastmod>
+    <lastmod>2023-07-12T11:32:05.941Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Sentinel1.html</loc>
-    <lastmod>2023-07-12T09:29:10.852Z</lastmod>
+    <lastmod>2023-07-12T11:32:12.189Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Sentinel3.html</loc>
-    <lastmod>2023-07-12T09:29:20.061Z</lastmod>
+    <lastmod>2023-07-12T11:32:21.253Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Data/Sentinel1_COG.html</loc>
-    <lastmod>2023-07-12T09:29:27.401Z</lastmod>
+    <lastmod>2023-07-12T11:32:28.493Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/R_Client/R.html</loc>
-    <lastmod>2023-07-12T09:29:55.093Z</lastmod>
+    <lastmod>2023-07-12T11:33:25.396Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/Glossary.html</loc>
-    <lastmod>2023-07-12T09:29:58.681Z</lastmod>
+    <lastmod>2023-07-12T11:33:28.940Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/BurntMapping/burntmapping_chunks.html</loc>
-    <lastmod>2023-07-12T09:30:00.173Z</lastmod>
+    <lastmod>2023-07-12T11:33:30.376Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/FloodNDWI/flood_ndwi.html</loc>
-    <lastmod>2023-07-12T09:30:01.637Z</lastmod>
+    <lastmod>2023-07-12T11:33:31.824Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/FloodSAR/flood_sar_udf.html</loc>
-    <lastmod>2023-07-12T09:30:03.285Z</lastmod>
+    <lastmod>2023-07-12T11:33:33.436Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/openEO.html</loc>
-    <lastmod>2023-07-12T09:30:11.793Z</lastmod>
+    <lastmod>2023-07-12T11:33:42.512Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/openEO/JavaScript_Client/JavaScript.html</loc>
-    <lastmod>2023-07-12T09:30:16.253Z</lastmod>
+    <lastmod>2023-07-12T11:33:46.904Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub.html</loc>
-    <lastmod>2023-07-12T09:30:17.045Z</lastmod>
+    <lastmod>2023-07-12T11:33:47.640Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/STAC.html</loc>
-    <lastmod>2023-07-12T09:30:17.821Z</lastmod>
+    <lastmod>2023-07-12T11:33:48.412Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/On-Demand Production API.html</loc>
-    <lastmod>2023-07-12T09:30:21.689Z</lastmod>
+    <lastmod>2023-07-12T11:33:52.156Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Crs.html</loc>
-    <lastmod>2023-07-12T09:30:51.018Z</lastmod>
+    <lastmod>2023-07-12T11:34:21.260Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S2L2A.html</loc>
-    <lastmod>2023-07-12T09:30:52.646Z</lastmod>
+    <lastmod>2023-07-12T11:34:22.800Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S5PL2.html</loc>
-    <lastmod>2023-07-12T09:30:54.226Z</lastmod>
+    <lastmod>2023-07-12T11:34:24.252Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/Examples/S3OLCI.html</loc>
-    <lastmod>2023-07-12T09:30:55.742Z</lastmod>
+    <lastmod>2023-07-12T11:34:25.728Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process/DataFusion.html</loc>
-    <lastmod>2023-07-12T09:30:57.002Z</lastmod>
+    <lastmod>2023-07-12T11:34:26.900Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/UserGuides/TimeSeries.html</loc>
-    <lastmod>2023-07-12T09:30:57.906Z</lastmod>
+    <lastmod>2023-07-12T11:34:27.808Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/UserGuides/Transparency.html</loc>
-    <lastmod>2023-07-12T09:30:58.998Z</lastmod>
+    <lastmod>2023-07-12T11:34:28.852Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Catalog.html</loc>
-    <lastmod>2023-07-12T09:30:59.870Z</lastmod>
+    <lastmod>2023-07-12T11:34:29.744Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Batch.html</loc>
-    <lastmod>2023-07-12T09:31:01.634Z</lastmod>
+    <lastmod>2023-07-12T11:34:31.472Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Overview/Authentication.html</loc>
-    <lastmod>2023-07-12T09:31:02.738Z</lastmod>
+    <lastmod>2023-07-12T11:34:32.520Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Overview/ErrorHandling.html</loc>
-    <lastmod>2023-07-12T09:31:03.978Z</lastmod>
+    <lastmod>2023-07-12T11:34:33.664Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/ApiReference.html</loc>
-    <lastmod>2023-07-12T09:31:04.870Z</lastmod>
+    <lastmod>2023-07-12T11:34:34.500Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Byoc/img/resources/python/cdse_set_bucket_policy.html</loc>
-    <lastmod>2023-07-12T09:31:05.946Z</lastmod>
+    <lastmod>2023-07-12T11:34:35.528Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/Functions.html</loc>
-    <lastmod>2023-07-12T09:31:07.410Z</lastmod>
+    <lastmod>2023-07-12T11:34:36.916Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Process.html</loc>
-    <lastmod>2023-07-12T09:31:09.222Z</lastmod>
+    <lastmod>2023-07-12T11:34:38.628Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/AdditionalRequestParameters.html</loc>
-    <lastmod>2023-07-12T09:31:10.250Z</lastmod>
+    <lastmod>2023-07-12T11:34:39.648Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/OutputFormats.html</loc>
-    <lastmod>2023-07-12T09:31:11.166Z</lastmod>
+    <lastmod>2023-07-12T11:34:40.536Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/WMTS.html</loc>
-    <lastmod>2023-07-12T09:31:12.318Z</lastmod>
+    <lastmod>2023-07-12T11:34:41.600Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/OGC/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:13.494Z</lastmod>
+    <lastmod>2023-07-12T11:34:42.740Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Batch/Examples.html</loc>
-    <lastmod>2023-07-12T09:31:14.430Z</lastmod>
+    <lastmod>2023-07-12T11:34:43.652Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/BatchStatistical.html</loc>
-    <lastmod>2023-07-12T09:31:15.642Z</lastmod>
+    <lastmod>2023-07-12T11:34:44.816Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Byoc.html</loc>
-    <lastmod>2023-07-12T09:31:17.210Z</lastmod>
+    <lastmod>2023-07-12T11:34:46.336Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Roadmap/APITable.html</loc>
-    <lastmod>2023-07-12T09:31:18.178Z</lastmod>
+    <lastmod>2023-07-12T11:34:47.260Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/JupyterHub.html</loc>
-    <lastmod>2023-07-12T09:31:19.430Z</lastmod>
+    <lastmod>2023-07-12T11:34:48.436Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/CreateAccount.html</loc>
-    <lastmod>2023-07-12T09:31:20.262Z</lastmod>
+    <lastmod>2023-07-12T11:34:49.228Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ManageProfile.html</loc>
-    <lastmod>2023-07-12T09:31:21.074Z</lastmod>
+    <lastmod>2023-07-12T11:34:50.000Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ServiceMaturity.html</loc>
-    <lastmod>2023-07-12T09:31:21.978Z</lastmod>
+    <lastmod>2023-07-12T11:34:50.872Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/ManageService.html</loc>
-    <lastmod>2023-07-12T09:31:23.086Z</lastmod>
+    <lastmod>2023-07-12T11:34:51.912Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/Introduction.html</loc>
-    <lastmod>2023-07-12T09:31:24.082Z</lastmod>
+    <lastmod>2023-07-12T11:34:52.880Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/Strength.html</loc>
-    <lastmod>2023-07-12T09:31:24.870Z</lastmod>
+    <lastmod>2023-07-12T11:34:53.628Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/PlazaDetails/Reporting.html</loc>
-    <lastmod>2023-07-12T09:31:25.790Z</lastmod>
+    <lastmod>2023-07-12T11:34:54.496Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Applications/AlgorithmPlaza.html</loc>
-    <lastmod>2023-07-12T09:31:26.814Z</lastmod>
+    <lastmod>2023-07-12T11:34:55.448Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/404-not-found.html</loc>
-    <lastmod>2023-07-12T09:31:28.206Z</lastmod>
+    <lastmod>2023-07-12T11:34:56.780Z</lastmod>
   </url>
   <url>
     <loc>https://documentation.dataspace.copernicus.eu/Roadmap.html</loc>
-    <lastmod>2023-07-12T09:31:28.998Z</lastmod>
+    <lastmod>2023-07-12T11:34:57.536Z</lastmod>
   </url>
 </urlset>
