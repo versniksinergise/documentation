@@ -724,7 +724,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p><strong>The Batch Statistical API is available only for users with Copernicus Service accounts. Contact our <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new" target="_blank">Copernicus Data Space Ecosystem support</a> to request your Copernicus Service account.</strong></p>
 <p>The Batch Statistical API (or shortly "Batch Stats API") enables you to request statistics similarly as with the <a href="../../APIs/SentinelHub/Statistical.html">Statistical API</a> but for multiple polygons at once and/or for longer aggregations. A typical use case would be calculating statistics for all parcels in a country.</p>
-<p>Similarly to the <a href="../../APIs/SentinelHub/Batch.html">Batch Processing API</a>, this is an asynchronous REST service. This means that data will not be immediately returned in the response of the request but delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;S3 bucket, see <a href="#bucket-settings">bucket settings</a> below).</p>
+<p>Similarly to the <a href="../../APIs/SentinelHub/Batch.html">Batch Processing API</a>, this is an asynchronous REST service. This means that data will not be immediately returned in the response of the request but delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;a bucket, see <a href="#bucket-settings">bucket settings</a> below).</p>
 <p>You can find more details about the API in the <a href="../../APIs/SentinelHub/ApiReference.html#tag/batch-statistical">API Reference</a> or in the <a href="../../APIs/SentinelHub/BatchStatistical/Examples.html">examples</a> of the workflow.</p>
 <section id="workflow" class="level2">
 <h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
@@ -801,18 +801,18 @@ ul.task-list li input[type="checkbox"] {
 <li>requests with status <code>FAILED</code> are deleted after 15 days of inactivity</li>
 <li>all other requests are deleted after 30 days of inactivity.</li>
 </ul>
-<p>Note that only such requests themselves will be deleted, while the requests' result (created statistics) will remain under your control in your S3 bucket.</p>
+<p>Note that only such requests themselves will be deleted, while the requests' result (created statistics) will remain under your control in your a bucket.</p>
 </section>
 </section>
 <section id="input-polygons-as-geopackage-file" class="level2">
 <h2 class="anchored" data-anchor-id="input-polygons-as-geopackage-file">Input polygons as GeoPackage file</h2>
-<p>The Batch Statistical API accepts a <a href="https://www.geopackage.org/" target="_blank">GeoPackage file</a> containing features (polygons) as an input. The GeoPackage must be stored in your object storage (e.g.&nbsp;AWS S3 bucket) and Sentinel Hub must be able to read from the storage (find more details about this in the <a href="#bucket-settings">bucket settings</a> section below). In a batch statistical request, the input GeoPackage is specified by setting the path to the <code>.gpkg</code> file in the <code>input.features.s3</code> parameter.</p>
+<p>The Batch Statistical API accepts a <a href="https://www.geopackage.org/" target="_blank">GeoPackage file</a> containing features (polygons) as an input. The GeoPackage must be stored in your object storage (e.g.&nbsp;AWS a bucket) and Sentinel Hub must be able to read from the storage (find more details about this in the <a href="#bucket-settings">bucket settings</a> section below). In a batch statistical request, the input GeoPackage is specified by setting the path to the <code>.gpkg</code> file in the <code>input.features.s3</code> parameter.</p>
 <p>All features (polygons) in an input GeoPackage must be in the same CRS <a href="../../APIs/SentinelHub/Process/Crs.html">supported by Sentinel Hub</a>. An example of a GeoPackage file can be downloaded <a href="../../APIs/SentinelHub/BatchStatistical/resources/gpkg/geopackage-example.gpkg">here</a>.</p>
 </section>
 <section id="evalscript-and-batch-statistical-api" class="level2">
 <h2 class="anchored" data-anchor-id="evalscript-and-batch-statistical-api">Evalscript and Batch statistical API</h2>
 <p>The same specifics as described for <a href="../../APIs/SentinelHub/Statistical.html#statistical-api-and-evalscript">evalscript and Statistical API</a> apply also for Batch statistical API.</p>
-<p>Evalscripts smaller than 32KB in size can be provided directly in a batch statistical request under <code>evalscript</code> parameter. If your evalsript exceeds this limit, you can store it to your S3 bucket and provide a reference to it in a batch statistical request under <code>evalscriptReference</code> parameter.</p>
+<p>Evalscripts smaller than 32KB in size can be provided directly in a batch statistical request under <code>evalscript</code> parameter. If your evalsript exceeds this limit, you can store it to your a bucket and provide a reference to it in a batch statistical request under <code>evalscriptReference</code> parameter.</p>
 </section>
 <section id="processing-results" class="level2">
 <h2 class="anchored" data-anchor-id="processing-results">Processing results</h2>
@@ -829,7 +829,8 @@ ul.task-list li input[type="checkbox"] {
 <p>One bucket or different buckets can be used for all three purposes.</p>
 <p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
 <p>You will have to configure your bucket to allow full access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
-<pre><code>{
+<pre><code>```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -847,7 +848,8 @@ ul.task-list li input[type="checkbox"] {
             ]
         }
     ]
-}</code></pre>
+}
+```</code></pre>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>

@@ -764,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><strong>The Batch Processing API is available only for users with Copernicus Service accounts. Contact our <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb/requests/new" target="_blank">Copernicus Data Space Ecosystem support</a> to request your Copernicus Service account.</strong></p>
 <p>Batch Processing API (or shortly "Batch API") enables you to request data for large areas and/or longer time periods for any Sentinel Hub supported collection, including BYOC (bring your own data).</p>
-<p>It is an asynchronous REST service. This means that data will not be returned immediately in a request response but will be delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;a bucket, see <a href="#aws-bucket-settings">Bucket settings</a> below). The processing results will be divided in tiles as described <a href="#processing-results">below</a>.</p>
+<p>It is an asynchronous REST service. This means that data will not be returned immediately in a request response but will be delivered to your object storage, which needs to be specified in the request (e.g.&nbsp;bucket, see <a href="#aws-bucket-settings">Bucket settings</a> below). The processing results will be divided in tiles as described <a href="#processing-results">below</a>.</p>
 <section id="workflow" class="level2">
 <h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
 <p>The batch processing API comes with the set of REST APIs which support the execution of various workflows. The diagram below shows all possible statuses of a batch processing request (<code>CREATED</code>, <code>ANALYSING</code>, <code>ANALYSIS_DONE</code>, <code>PROCESSING</code>, <code>DONE</code>, <code>FAILED</code>, <code>CANCELED</code>, <code>PARTIAL</code>) and user's actions (<code>ANALYSE</code>, <code>START</code>, <code>RESTART</code>, <code>CANCEL</code>) which trigger transitions among them.</p>
@@ -840,7 +840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>failed requests (request status <code>FAILED</code>),</li>
 <li>requests that were created but never started (request statuses <code>CREATED</code>, <code>ANALYSIS_DONE</code>),</li>
-<li>successful requests (request statuses <code>DONE</code> and <code>PARTIAL</code>) for which it was not requested to add the results to your collections. Note that only such requests themselves will be deleted, while the requests' result (created imagery) will remain under your control in your a bucket.</li>
+<li>successful requests (request statuses <code>DONE</code> and <code>PARTIAL</code>) for which it was not requested to add the results to your collections. Note that only such requests themselves will be deleted, while the requests' result (created imagery) will remain under your control in your bucket.</li>
 </ul>
 </section>
 <section id="cost-estimate" class="level4">
@@ -995,7 +995,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Make sure the evalscript returns only single-band outputs</li>
 <li>Keep <code>sampleType</code> in mind, as the values the evalscript returns when creating a collection will be the values available when making a request to access it</li>
 </ul>
-<p>Regardless of whether the user specifies an existing collection or requests a new one, processed data will still upload to the users a bucket, where they will be available for download and analysis.</p>
+<p>Regardless of whether the user specifies an existing collection or requests a new one, processed data will still upload to the users bucket, where they will be available for download and analysis.</p>
 </section>
 <section id="processing-results" class="level2">
 <h2 class="anchored" data-anchor-id="processing-results">Processing results</h2>
@@ -1020,7 +1020,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The results will be delivered in your own bucket hosted at Copernicus Data Space Ecosystem.</p>
 <p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
 <p>You will have to configure your bucket to allow full access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
-<pre><code>{
+<pre><code>```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -1038,7 +1039,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             ]
         }
     ]
-}</code></pre>
+}
+```</code></pre>
 </section>
 <section id="tutorials-and-other-related-materials" class="level2">
 <h2 class="anchored" data-anchor-id="tutorials-and-other-related-materials">Tutorials and Other Related Materials</h2>

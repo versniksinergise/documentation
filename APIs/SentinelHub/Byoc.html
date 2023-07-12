@@ -880,7 +880,8 @@ Note
 <h2 class="anchored" data-anchor-id="bucket-settings">Bucket settings</h2>
 <p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
 <p>You will have to configure your bucket to allow read access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
-<pre><code>{
+<pre><code>```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -900,7 +901,8 @@ Note
             ]
         }
     ]
-}</code></pre>
+}
+```</code></pre>
 <p>A python script to set a bucket policy can be downloaded <a href="byoc/resources/python/cdse_set_bucket_access_policy.py">here</a>.</p>
 </section>
 <section id="configuring-collections" class="level2">
