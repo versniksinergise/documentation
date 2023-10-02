@@ -1,11 +1,10 @@
 on:
-  pull_request:
-    branches: [ publish, staging ]
-    types: [ opened, synchronize ]
+  push:
+    branches: feature/cdse_docs
 
 concurrency: preview-${{ github.ref }}
 name: Create PR preview
-env: 
+env:
   SENTINELHUB_CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
   SENTINELHUB_CLIENT_ID: ${{secrets.CLIENT_ID}}
 
@@ -21,11 +20,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
+          # To install LaTeX to build PDF book
+          tinytex: true
           # uncomment below and fill to pin a version
           # version: SPECIFIC-QUARTO-VERSION-HERE
-        
+
       # add software dependencies here
       - name: Install Python and Dependencies
         uses: actions/setup-python@v4
@@ -37,22 +36,23 @@ jobs:
 
       # To publish to Netlify, RStudio Connect, or GitHub Pages, uncomment
       # the appropriate block below
-      
+
       # - name: Publish to Netlify (and render)
       #   uses: quarto-dev/quarto-actions/publish@v2
       #   with:
       #     target: netlify
       #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        
+
       # - name: Publish to RStudio Connect (and render)
       #   uses: quarto-dev/quarto-actions/publish@v2
       #   with:
       #     target: connect
       #     CONNECT_SERVER: enter-the-server-url-here
-      #     CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }} 
-      - name: Render
-        run: quarto render --output-dir _build
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      #     CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          source-dir: ./_build/
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+      
