@@ -2914,7 +2914,7 @@ components:
 
         The first item in the array describes the overall extent of
 
-        the data. All subsequent items describe more precise extents, 
+        the data. All subsequent items describe more precise extents,
 
         e.g., to identify clusters of data.
 
@@ -2939,7 +2939,7 @@ components:
 
                 The first bounding box describes the overall spatial
 
-                extent of the data. All subsequent bounding boxes describe 
+                extent of the data. All subsequent bounding boxes describe
 
                 more precise bounding boxes, e.g., to identify clusters of data.
 
@@ -3048,7 +3048,7 @@ components:
                 The first time interval describes the overall
 
                 temporal extent of the data. All subsequent time intervals
-                describe 
+                describe
 
                 more precise time intervals, e.g., to identify clusters of data.
 
@@ -3238,10 +3238,10 @@ components:
         vertical axis (elevation or depth):
 
         * Lower left corner, coordinate axis 1
-        * Lower left corner, coordinate axis 2  
-        * Lower left corner, coordinate axis 3 (optional) 
-        * Upper right corner, coordinate axis 1 
-        * Upper right corner, coordinate axis 2 
+        * Lower left corner, coordinate axis 2
+        * Lower left corner, coordinate axis 3 (optional)
+        * Upper right corner, coordinate axis 1
+        * Upper right corner, coordinate axis 2
         * Upper right corner, coordinate axis 3 (optional)
 
         The coordinate reference system of the values is WGS84
@@ -4892,7 +4892,7 @@ components:
           description: >
             Duration in ISO 8601 duration format, check
             [here](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical.html#split-requested-timerange-into-multiple-time-intervals)
-            for more details. 
+            for more details.
           type: string
         lastIntervalBehavior:
           description: >
@@ -4939,7 +4939,7 @@ components:
         Each key must match with one of the band names
 
         `output.bands` specified in a `setup()` function in an evalscript (for
-        this output) or be "default". If it is "default", 
+        this output) or be "default". If it is "default",
 
         the histogram specified below will be returned for all bands of this
         output for which histogram is not explicitly defined.
@@ -4952,7 +4952,7 @@ components:
           * exact bins provided by `bins` array
 
         [This
-        example](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types) 
+        example](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Statistical/Examples.html#multiple-outputs-with-different-datamasks-multi-band-output-with-custom-bands-names-and-different-histogram-types)
 
         shows how to specify histograms using different parameters.
 
@@ -5032,10 +5032,10 @@ components:
         - aggregationInterval
       description: >
         Specifies how data is aggregated and processed before statistics is
-        calculated.  `timeRange` and `aggregationInterval` combined define
-        sampling intervals in time dimension.  Width/height or resx/resy
-        combined with `input.bounds` define a sample matrix (i.e. "image") in
-        spatial dimension.
+        calculated. `timeRange` and `aggregationInterval` combined define
+        sampling intervals in time dimension. Width/height or resx/resy combined
+        with `input.bounds` define a sample matrix (i.e. "image") in spatial
+        dimension.
       type: object
       properties:
         timeRange:
@@ -5044,7 +5044,7 @@ components:
           $ref: '#/components/schemas/Aggregation'
         width:
           description: >
-            Width of the sample matrix.  
+            Width of the sample matrix.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5056,7 +5056,7 @@ components:
           example: 512
         height:
           description: >
-            Height of the sample matrix.  
+            Height of the sample matrix.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5074,7 +5074,7 @@ components:
             Its units are defined by the CRS given in
             `input.bounds.properties.crs`
 
-            parameter.  
+            parameter.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5088,7 +5088,7 @@ components:
             Its units are defined by the CRS given in
             `input.bounds.properties.crs`
 
-            parameter.  
+            parameter.
 
             _Only one pair of parameters "width"/"height" or "resx"/"resy" must
             be set at the same time._
@@ -5126,7 +5126,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
                 The evalscript will be executed once for each time interval
                 defined by `timeRange` and `aggregationInterval`.
@@ -5367,7 +5367,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
                 The evalscript will be executed once for each time interval
                 defined by `timeRange` and `aggregationInterval`.
@@ -5382,7 +5382,7 @@ components:
 
                 <a
                 href="https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Evalscript/V3.html"
-                target="_blank">here</a>. 
+                target="_blank">here</a>.
 
 
                 Either this or `evalscript` parameter is required.
@@ -5390,6 +5390,10 @@ components:
     BatchStatisticsTaskStatusDto:
       type: object
       properties:
+        id:
+          description: UUID of the submitted request.
+          format: uuid
+          type: string
         status:
           description: >-
             Current processing status of the request. Must NOT be specified when
@@ -6385,7 +6389,7 @@ paths:
         expressions. The
 
         precise definition of this can be found in the OGC API - Features - Part
-        3: Filtering and the 
+        3: Filtering and the
 
         Common Query Language (CQL) specification.
       parameters:
