@@ -5745,6 +5745,165 @@ components:
 
             If "additionalData" is omitted, the bands will not be changed.
           $ref: '#/components/schemas/BYOCCollectionAdditionalData'
+    ZarrCollection:
+      type: object
+      format: ZarrCollection
+      required:
+        - name
+        - s3Bucket
+        - path
+        - crs
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        userId:
+          type: string
+          format: uuid
+          readOnly: true
+        accountId:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+        created:
+          description: The date and time when the collection was created.
+          type: string
+          format: date-time
+          readOnly: true
+        s3Bucket:
+          type: string
+          description: The S3 bucket where the Zarr is stored.
+        path:
+          type: string
+          description: >
+            The prefix within the bucket where the Zarr is stored. Must end with
+            '/' but not start with it and must contain a Zarr group.
+        status:
+          type: string
+          enum:
+            - CREATED
+            - INGESTING
+            - INGESTED
+            - FAILED
+          description: Only INGESTED collections can be used in Process API.
+          readOnly: true
+        ingestionErrors:
+          type:
+            - string
+            - 'null'
+          description: >-
+            Error message in case ingestion of the Zarr or any of its arrays
+            failed.
+          readOnly: true
+        crs:
+          type: string
+          description: >
+            Native CRS of the Zarr. See also [Sentinel Hub CRS
+            support](https://docs.sentinel-hub.com/api/latest/api/process/crs/).
+        envelope:
+          description: >
+            The area of coverage of the ingested Zarr collection, defined in its
+            native CRS.
+          type:
+            - object
+            - 'null'
+          readOnly: true
+          $ref: '#/components/schemas/Polygon'
+        width:
+          type:
+            - number
+            - 'null'
+          description: Width of the ingested Zarr collection in pixels.
+          readOnly: true
+        height:
+          type:
+            - number
+            - 'null'
+          description: Height of the ingested Zarr collection in pixels.
+          readOnly: true
+        zattrs:
+          $ref: '#/components/schemas/ZAttrs'
+        additionalData:
+          $ref: '#/components/schemas/ZarrCollectionAdditionalData'
+    ZarrCollectionAdditionalData:
+      type: object
+      readOnly: true
+      properties:
+        bands:
+          type: object
+          additionalProperties:
+            x-additionalPropertiesName: band
+            $ref: '#/components/schemas/BYOCFormat'
+        maxMetersPerPixel:
+          type: number
+          readOnly: true
+          description: >
+            How many meters per pixel can you request with Process/OGC/Batch
+            requests for this collection.
+    ZarrSingleResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ZarrCollection'
+    ZarrQueryCollectionsResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ZarrCollection'
+    ZarrCollectionUpdatePayload:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+    ZarrArray:
+      type: object
+      format: ZarrArray
+      properties:
+        name:
+          type: string
+        s3Bucket:
+          type: string
+        path:
+          type: string
+        zarray:
+          $ref: '#/components/schemas/ZArray'
+        zattrs:
+          $ref: '#/components/schemas/ZAttrs'
+    ZArray:
+      type: object
+      description: |
+        A subset of the metadata as read from the array's `.zarray` file.
+      externalDocs:
+        description: Zarr storage specification version 2, Array metadata
+        url: https://zarr.readthedocs.io/en/stable/spec/v2.html#metadata
+    ZarrQueryArraysResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ZarrArray'
+    ZarrGetSingleArrayResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ZarrArray'
+    ZAttrs:
+      type:
+        - object
+        - 'null'
+      description: Custom attributes as read from the `.zattrs` file.
+      externalDocs:
+        description: Zarr storage specification version 2, Attributes
+        url: https://zarr.readthedocs.io/en/stable/spec/v2.html#attributes
+      readOnly: true
     ResolvableDataProduct:
       type: object
       properties:
@@ -6014,6 +6173,10 @@ tags:
     x-displayName: Collection
   - name: byoc_tile
     x-displayName: Tile
+  - name: zarr_collection
+    x-displayName: Collection
+  - name: zarr_array
+    x-displayName: Arrays
   - name: configuration_data_product
     x-displayName: Data product
   - name: configuration_dataset
@@ -6054,6 +6217,10 @@ x-tagGroups:
     tags:
       - byoc_collection
       - byoc_tile
+  - name: Zarr Import API
+    tags:
+      - zarr_collection
+      - zarr_array
   - name: Configuration
     tags:
       - configuration_data_product
@@ -7711,6 +7878,207 @@ paths:
           $ref: '#/components/responses/404'
       security:
         - OAuth2: []
+  /api/v1/zarr/collections:
+    post:
+      summary: Create a Zarr collection
+      tags:
+        - zarr_collection
+      operationId: createZarrCollection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZarrCollection'
+      responses:
+        '201':
+          description: Collection created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZarrSingleResponse'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+      security:
+        - OAuth2: [ ]
+    get:
+      summary: Query Zarr collections
+      tags:
+        - zarr_collection
+      operationId: getZarrCollections
+      parameters:
+        - $ref: '#/components/parameters/SearchBeanCount'
+        - $ref: '#/components/parameters/SearchBeanViewtoken'
+        - name: search
+          in: query
+          description: >
+            Optional query to search Zarr collections by name. If omitted, all
+            items are returned.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schemas/ZarrQueryCollectionsResponse'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+      security:
+        - OAuth2: [ ]
+  /api/v1/zarr/collections/{collectionId}:
+    get:
+      summary: Get a Zarr collection
+      tags:
+        - zarr_collection
+      operationId: getZarrCollection
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZarrSingleResponse'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+      security:
+        - OAuth2: [ ]
+    put:
+      summary: Update Zarr collection
+      operationId: updateZarrCollectionById
+      tags:
+        - zarr_collection
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZarrCollectionUpdatePayload'
+      responses:
+        '204':
+          description: Collection updated
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+      security:
+        - OAuth2: [ ]
+    delete:
+      summary: Delete Zarr collection
+      operationId: deleteZarrCollectionById
+      tags:
+        - zarr_collection
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+      responses:
+        '204':
+          description: Collection deleted
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+      security:
+        - OAuth2: [ ]
+  /api/v1/zarr/collections/{collectionId}/reingest:
+    put:
+      summary: Reingest a Zarr collection
+      tags:
+        - zarr_collection
+      operationId: reingestZarrCollectionById
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZarrSingleResponse'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+      security:
+        - OAuth2: [ ]
+  /api/v1/zarr/collections/{collectionId}/arrays:
+    get:
+      summary: Query Zarr collection's arrays
+      operationId: getZarrArrays
+      tags:
+        - zarr_array
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+        - $ref: '#/components/parameters/SearchBeanCount'
+        - $ref: '#/components/parameters/SearchBeanViewtoken'
+        - name: search
+          in: query
+          description: >
+            Optional query to search arrays by name. If omitted, all items are
+            returned.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZarrQueryArraysResponse'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+  /api/v1/zarr/collections/{collectionId}/arrays/{arrayName}:
+    get:
+      summary: Get a single Zarr array
+      operationId: getSingleZarrArray
+      tags:
+        - zarr_array
+      parameters:
+        - $ref: '#/components/parameters/ByocCollectionId'
+        - name: arrayName
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ZarrGetSingleArrayResponse'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
   /configuration/v1/datasets/{datasetType}/dataproducts:
     get:
       tags:
