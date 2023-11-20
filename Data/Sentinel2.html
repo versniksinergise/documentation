@@ -252,6 +252,12 @@ window.onload = function() {
  <span class="menu-text">Sentinel-5P</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Data/Sentinel6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sentinel-6</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -450,6 +456,18 @@ window.onload = function() {
  <span class="menu-text">Preprocessing &amp; merging Sentinels</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../APIs/openEO/openeo-community-examples/python/RankComposites/rank_composites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rank Composites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebook-samples/openeo/Whittaker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Smoothening dataset using Whittaker</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -518,12 +536,6 @@ window.onload = function() {
   <div class="sidebar-item-container"> 
   <a href="../APIs/SentinelHub/UserGuides/Metadata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with metadata in evalscript</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Applications/QGIS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">QGIS Plugin</span></a>
   </div>
 </li>
       </ul>
@@ -1055,6 +1067,10 @@ window.onload = function() {
   <ul>
   <li><a href="#overview-3" id="toc-overview-3" class="nav-link" data-scroll-target="#overview-3">Overview</a></li>
   </ul></li>
+  <li><a href="#sentinel-2-precise-orbit-determination-pod-products" id="toc-sentinel-2-precise-orbit-determination-pod-products" class="nav-link" data-scroll-target="#sentinel-2-precise-orbit-determination-pod-products">Sentinel-2 Precise Orbit Determination (POD) products</a>
+  <ul>
+  <li><a href="#overview-4" id="toc-overview-4" class="nav-link" data-scroll-target="#overview-4">Overview</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/eu-cdse/documentation/issues" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -1107,7 +1123,7 @@ window.onload = function() {
 </div>
 <section id="overview" class="level4">
 <h4 class="anchored" data-anchor-id="overview">Overview</h4>
-<p><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/product-types/level-2a" target="_blank">Sentinel-2 Level 2A</a> Level 2A product provides atmospherically corrected Surface Reflectance (SR) images, derived from the associated Level-1C products.&nbsp;The atmospheric correction of Sentinel-2 images includes the correction of the scattering of air molecules (Rayleigh scattering), of the absorbing and scattering effects of atmospheric gases, in particular ozone, oxygen and water vapour and the correction of absorption and scattering due to aerosol particles. Level 2A product are considered an ARD product.</p>
+<p><a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/product-types/level-2a" target="_blank">Sentinel-2 Level 2A</a> Level 2A product provides atmospherically corrected Surface Reflectance (SR) images, derived from the associated Level-1C products. The atmospheric correction of Sentinel-2 images includes the correction of the scattering of air molecules (Rayleigh scattering), of the absorbing and scattering effects of atmospheric gases, in particular ozone, oxygen and water vapour and the correction of absorption and scattering due to aerosol particles. Level 2A product are considered an ARD product.</p>
 <h5 class="anchored">
 Offered Data
 </h5>
@@ -1178,7 +1194,7 @@ Immediately available data (IAD)
 World
 </td>
 <td>
-Jul 2015 - Present
+Dec 2021 - Present
 </td>
 <td>
 Jul 2023
@@ -1195,7 +1211,7 @@ Deferred available data (DAD)
 World
 </td>
 <td>
-Jul 2015 - Present
+Mar 2017 - Present
 </td>
 <td>
 Jul 2023
@@ -1204,7 +1220,7 @@ Jul 2023
 </tbody>
 
 </table>
-<p>(*) For period 01/2020 - 11/2021 the data repository holds original ESA products and products generated using Sentinel-2 Toolbox (sen2cor). See note above. <br></p>
+<p>(*) For period 07/2015 - 11/2021 the data repository holds original ESA products and products generated using Sentinel-2 Toolbox (sen2cor). See note above. <br></p>
 <button onclick="toggleContent('SENTINEL2_L2A')" class="expand-collapse">
 Further details about the data collection
 </button>
@@ -1557,7 +1573,7 @@ Processing Baseline 5.00 (originating from the Sentinel-2 Collection 1)
 </tr>
 <tr>
 <td rowspan="3">
-04/07/2015 - 30/06/2021
+04/07/2015 - 30/03/2021
 </td>
 <td>
 Processing Baselines (2.01-2.13) originating from Copernicus Open Access Hub and generated by CloudFerro
@@ -1938,6 +1954,132 @@ WMTS: <a href="https://services.sentinel-hub.com/ogc/wmts/ef291c3e-77fd-43f2-a88
 </ul>
 </div>
 </div>
+<section id="sentinel-2-l1c-baselines" class="level5">
+<h5 class="anchored" data-anchor-id="sentinel-2-l1c-baselines">Sentinel-2 L1C Baselines</h5>
+<p>The Sentinel-1 L1C collection within the Copernicus Data Space Ecosystem originates from the operational Copernicus processing, i.e.&nbsp;data previously accessible on the Copernicus Open Access Hub (formerly known as Sentinels Scientific Data Hub).</p>
+<p>These products can be differentiated by the <a href="https://documentation.dataspace.copernicus.eu/APIs/OData.html#query-by-attributes" target="_blank">OData</a> and <a href="https://catalogue.dataspace.copernicus.eu/resto/api/collections/Sentinel2/describe.xml" target="_blank">OpenSearch</a> <strong>processingBaseline</strong> attribute. Processing Baseline is presented on Copernicus Browser as a “Processor version” attribute.</p>
+<p>The current state of the archive of the Sentinel-L1C data is as follows:</p>
+
+<table class="table-roadmap" style="margin: 10px;">
+<thead>
+<tr>
+<th style="background-color: #9ea1a5">
+Date
+</th>
+<th style="background-color: #9ea1a5">
+Processing Baseline Availability
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+15/12/2015 - 03/05/2016
+</td>
+<td>
+Processing Baseline 02.01 <br>(Attribute ‘processorVersion’: 2.01)
+</td>
+</tr>
+<tr>
+<td>
+03/05/2016 - 15/06/2016
+</td>
+<td>
+Processing Baseline 02.02 <br>(Attribute ‘processorVersion’: 02.02 or 2.01)
+</td>
+</tr>
+<tr>
+<td>
+04/07/2015 - 26/05/2017
+</td>
+<td>
+Processing Baseline 02.04 (To replace 02.03) <br>(Attribute ‘processorVersion’: 02.04 or 2.04)
+</td>
+</tr>
+<tr>
+<td>
+19/03/2017 - 23/10/2017
+</td>
+<td>
+Processing Baseline 02.05 <br>(Attribute ‘processorVersion’: 02.05 or 2.05)
+</td>
+</tr>
+<tr>
+<td>
+23/10/2017 - 06/11/2018
+</td>
+<td>
+Processing Baseline 02.06 <br>(Attribute ‘processorVersion’: 02.06 or 2.06) <br>Single products before October 2017
+</td>
+</tr>
+<tr>
+<td>
+06/11/2018 - 22/07/2019
+</td>
+<td>
+Processing Baseline 02.07 <br>(Attribute ‘processorVersion’: 02.07 or 2.07)
+</td>
+</tr>
+<tr>
+<td>
+08/07/2019 - 04/02/2020
+</td>
+<td>
+Processing Baseline 02.08 <br>(Attribute ‘processorVersion’: 2.08) <br>Single products before July 2019
+</td>
+</tr>
+<tr>
+<td>
+04/02/2022 - 30/03/2021
+</td>
+<td>
+Processing Baseline 02.09 <br>(Attribute ‘processorVersion’: 2.09) <br>Single products before February 2020
+</td>
+</tr>
+<tr>
+<td>
+30/03/2021 - 30/06/2021
+</td>
+<td>
+Processing Baseline 03.00 <br>(Attribute ‘processorVersion’: 3.0)
+</td>
+</tr>
+<tr>
+<td>
+30/06/2021 - 25/01/2022
+</td>
+<td>
+Processing Baseline 03.01 <br>(Attribute ‘processorVersion’: 03.01 or 3.01)
+</td>
+</tr>
+<tr>
+<td>
+25/01/2022 - 06/12/2022
+</td>
+<td>
+Processing Baseline 04.00 <br>(Attribute ‘processorVersion’: 04.00 or 4.0)
+</td>
+</tr>
+<tr>
+<td>
+14/01/2019 - 31/12/2021
+</td>
+<td>
+Processing Baseline 05.00 <br>(Attribute ‘processorVersion’: 05.00 or 5.0)
+</td>
+</tr>
+<tr>
+<td>
+29/04/2022 - Now
+</td>
+<td>
+Processing Baseline 05.09 <br>(Attribute ‘processorVersion’: 05.09 or 5.09)
+</td>
+</tr>
+</tbody>
+
+</table>
+</section>
 </section>
 </section>
 </div>
@@ -2002,12 +2144,12 @@ World
 Full Archive
 </td>
 <td>
-Oct 2023
+Dec 2023
 </td>
 </tr>
 <tr>
 <td>
-EUP
+(*) EUP
 </td>
 <td>
 Immediately available data (IAD)
@@ -2019,7 +2161,7 @@ World
 Last two weeks
 </td>
 <td>
-Oct 2023
+Dec 2023
 </td>
 </tr>
 </tbody>
@@ -2097,6 +2239,80 @@ Jul 2023
 
 </table>
 <p>(*) Access restrictions may apply.</p>
+</section>
+</section>
+</div>
+<div style="display: block;">
+<section id="sentinel-2-precise-orbit-determination-pod-products" class="level2">
+<h2 class="anchored" data-anchor-id="sentinel-2-precise-orbit-determination-pod-products">Sentinel-2 Precise Orbit Determination (POD) products</h2>
+<section id="overview-4" class="level4">
+<h4 class="anchored" data-anchor-id="overview-4">Overview</h4>
+<p>The Copernicus POD Service for SENTINEL-2 provides Precise Orbital products with NRT timeliness, including two product types. Near Real-Time (NRT) orbital products are created immediately using real-time GPS data from EGP, while Near Real Time Predicted (PRE) products are calculated in advance of specific astronomical events, such as ascending node crossings.</p>
+<h5 class="anchored">
+Offered Data
+</h5>
+
+<table class="table">
+<thead>
+<tr>
+<th>
+Product ID
+</th>
+<th>
+Content
+</th>
+<th>
+EOF
+</th>
+<th>
+TGZ
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+AUX_GNSSRD
+</td>
+<td>
+RINEX
+</td>
+<td>
+</td>
+<td>
+X
+</td>
+</tr>
+<tr>
+<td>
+AUX_PROQUA
+</td>
+<td>
+Quaternions
+</td>
+<td>
+</td>
+<td>
+X
+</td>
+</tr>
+<tr>
+<td>
+AUX_POEORB*
+</td>
+<td>
+Orbit
+</td>
+<td>
+X
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>*S-2 AUX_POEORB currently not available. The backlog will be generated by CPOD, and made available on CPODIP, but it will require coordination with ESA/Copernicus Data Space Ecosystem.</p>
 </section>
 </section>
 </div>
