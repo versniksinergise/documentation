@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Documentation - Manage your billing information</title>
+<title>Documentation - Asynchronous Processing API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,6 +63,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../APIs/SentinelHub/AsyncProcess/Examples.html" rel="next">
+<link href="../../APIs/SentinelHub/Process/Examples/DataFusion.html" rel="prev">
 <link href="../../_images/logos/favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -140,7 +176,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Manage your billing information</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../APIs.html">APIs</a></li><li class="breadcrumb-item"><a href="../../APIs/SentinelHub.html">Sentinel Hub</a></li><li class="breadcrumb-item"><a href="../../APIs/SentinelHub/AsyncProcess.html">Asynchronous Processing API</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -335,11 +371,11 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../../APIs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">APIs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../APIs/Token.html" class="sidebar-item-text sidebar-link">
@@ -498,11 +534,11 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../../APIs/SentinelHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel Hub</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
@@ -745,13 +781,13 @@ window.onload = function() {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../APIs/SentinelHub/AsyncProcess.html" class="sidebar-item-text sidebar-link">
+            <a href="../../APIs/SentinelHub/AsyncProcess.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Asynchronous Processing API</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../APIs/SentinelHub/AsyncProcess/Examples.html" class="sidebar-item-text sidebar-link">
@@ -1066,10 +1102,12 @@ window.onload = function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#monitor-available-credits" id="toc-monitor-available-credits" class="nav-link active" data-scroll-target="#monitor-available-credits">Monitor available credits</a></li>
-  <li><a href="#credits-strength" id="toc-credits-strength" class="nav-link" data-scroll-target="#credits-strength">Credit’s strength</a></li>
-  <li><a href="#adding-credits" id="toc-adding-credits" class="nav-link" data-scroll-target="#adding-credits">Adding credits</a></li>
-  <li><a href="#request-for-statement" id="toc-request-for-statement" class="nav-link" data-scroll-target="#request-for-statement">Request for statement</a></li>
+  <li><a href="#general-approach" id="toc-general-approach" class="nav-link active" data-scroll-target="#general-approach">General approach</a></li>
+  <li><a href="#bucket-access" id="toc-bucket-access" class="nav-link" data-scroll-target="#bucket-access">Bucket access</a></li>
+  <li><a href="#bucket-settings" id="toc-bucket-settings" class="nav-link" data-scroll-target="#bucket-settings">Bucket settings</a></li>
+  <li><a href="#checking-the-status-of-the-request" id="toc-checking-the-status-of-the-request" class="nav-link" data-scroll-target="#checking-the-status-of-the-request">Checking the status of the request</a></li>
+  <li><a href="#troubleshoting" id="toc-troubleshoting" class="nav-link" data-scroll-target="#troubleshoting">Troubleshoting</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul>
 </nav>
     </div>
@@ -1078,7 +1116,7 @@ window.onload = function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Manage your billing information</h1>
+<h1 class="title">Asynchronous Processing API</h1>
 </div>
 
 
@@ -1093,59 +1131,73 @@ window.onload = function() {
 
 </header>
 
-<div style="text-align: justify">
-
-<!-- <div style="width: 100%; text-align: center">
-<img src="Developers/EOplaza/fig/billing.png" alt="Sign In"
-width="800" height="400" />
-</div> -->
-<p>During the execution of our openEO algorithm plaza services, credits will be deducted for each execution. You can manage your credits directly on the openEO algorithm plaza by clicking the <code>Billing</code> menu item. This redirects to the billing page where you can see:</p>
+<p><strong>Asynchronous Processing API is currently in beta release.</strong></p>
+<p>Asynchronous Processing API (or shortly "Async API") allows you to process more data with a single request than Processing API. This is possible because the processing results are not returned immediately but are - after some time - delivered in your object storage. We recommend using Async API when you want to process bigger images, when you do not want to deal with tiled results and when it is not crucial for you to get the processing results immediately.</p>
+<section id="general-approach" class="level2">
+<h2 class="anchored" data-anchor-id="general-approach">General approach</h2>
+<p>The Async API allows you to process the data in a similar way as Processing API; you define input data, area of interest and time range in the body of an Async API request and Sentinel Hub will process the data as defined in your evalscript. When using Async API keep in mind that:</p>
 <ul>
-<li>An overview of your current credit score</li>
-<li>A Call to Action (CTA) button to top up your credits</li>
-<li>A selection menu to select a subscription plan</li>
-<li>An overview of your financial transactions</li>
-</ul>
-<section id="monitor-available-credits" class="level2">
-<h2 class="anchored" data-anchor-id="monitor-available-credits">Monitor available credits</h2>
-<p>To visualize available credits in your account, first, you must sign in. If you don’t have login credentials, please <a href="../../Applications/PlazaDetails/CreateAccount.html"><code>Register</code></a>.</p>
-<p>Once logged in, click on the Billing tab that leads to a page showing your available credits, followed by additional information on subscription.</p>
-<blockquote class="blockquote">
-<p>The credits that are shown are shared amongst your organization. If you are a member of multiple organizations, navigate to the <a href="../../Applications/PlazaDetails/ManageProfile.html">profile page</a> to change your <code>Billing Organization</code>.</p>
-</blockquote>
-<p><img src="../_images/billing.png" class="img-fluid"></p>
-</section>
-<section id="credits-strength" class="level2">
-<h2 class="anchored" data-anchor-id="credits-strength">Credit’s strength</h2>
-<p>Credits are deducted based on the chosen services and spatial extent. The amount will vary depending on the processing complexity and time required for each type of service. Detailed examples of some well-known services and how they fit into the 3000 free credits can further be found <a href="../../Applications/PlazaDetails/Strength.html">here</a>.</p>
-<p>Moreover, every user is provided with 3000 credits each month, with which they can execute multiple services.</p>
-</section>
-<section id="adding-credits" class="level2">
-<h2 class="anchored" data-anchor-id="adding-credits">Adding credits</h2>
-<p>Based on the required credits for executing a service, if you think your available credits are insufficient, there are two ways you can replenish the credits available in your account. You can purchase them as a one-time purchase or buy a subscription.</p>
-<ul>
-<li><p><strong>Purchase Credits</strong></p>
-<p>You can add/purchase a limited credit amount through a one-time payment by clicking on <code>Add credits</code> button next to the credit score. After choosing among the different credit packs, you are redirected to a payment service to continue payment.</p>
-<blockquote class="blockquote">
-<p>Credits packs will be made available soon.</p>
-</blockquote>
-<p>Once we receive the payment, your credits will be updated.</p></li>
-<li><p><strong>Credit Subscription</strong></p>
-<p>The other way is by selecting one of the available subscription plans. Once you click on the “Start subscription” button, you will be redirected to the payment page for your selected subscription plan, where you can provide the payment details for recurring payments.</p>
-<blockquote class="blockquote">
-<p>Subscriptions will be made available soon.</p>
-</blockquote>
-<p>At any time, you can change or cancel an active subscription. The current credits will be kept, and you will receive a new amount after the successful payment of the new subscription plan.</p></li>
+<li>The maximum output image size can not exceed 10000 pixels in any dimension.</li>
+<li>Evalscript can be either sent directly in the request or it can be stored in object storage and referenced in an async request (see paratmeter evalscriptReference in Async API reference for more details). This allows you to use bigger evalscripts.</li>
+<li>The processing is asynchronous, which means that you do not get results in a response of your request. Instead they are delivered in your object storage.</li>
+<li>A copy of your Async API request is also stored in your object storage. After the request is processed, the copy is updated and additional information about the cost of the request is added.</li>
+<li>Only a limited number of async requests can run concurrently for each Sentinel Hub user. The exact limit depends on the account type.</li>
+<li>The processing time depends on request size and on the current and past load of the service. Generally, the first request is the slowest while the subsequent requests run faster.</li>
+<li>The cost is the same as with Process API, except that the minimal cost is 10 PU per request.</li>
 </ul>
 </section>
-<section id="request-for-statement" class="level2">
-<h2 class="anchored" data-anchor-id="request-for-statement">Request for statement</h2>
-<p>If you want to request a statement regarding your credit expenditure, you can <a href="https://helpcenter.dataspace.copernicus.eu/hc/en-gb" target="_blank">create a ticket</a> with your username, email, and the time interval for the requested information.</p>
+<section id="bucket-access" class="level2">
+<h2 class="anchored" data-anchor-id="bucket-access">Bucket access</h2>
+<p>The Async API uses buckets to:</p>
+<ul>
+<li>read evalscript from an bucket (this is optional because an evalscript can also be provided directly in a request),</li>
+<li>write results of processing to an bucket.</li>
+</ul>
+<p>One bucket or different buckets can be used for these purposes.</p>
+</section>
+<section id="bucket-settings" class="level2">
+<h2 class="anchored" data-anchor-id="bucket-settings">Bucket settings</h2>
+<p>If you do not yet have a bucket at Copernicus Data Space Ecosystem, please follow <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Create-S3-bucket-and-use-it-in-Sentinel-Hub-requests.html" target="_blank">these steps</a> to get one.</p>
+<p>You will have to configure your bucket to allow read access to Sentinel Hub. To do this, <a href="https://creodias.docs.cloudferro.com/en/latest/s3/Bucket-sharing-using-s3-bucket-policy-on-Creodias.html#setting-a-policy-on-the-bucket" target="_blank">update your bucket policy</a> to include the following statement (don’t forget to replace <code>&lt;bucket_name&gt;</code> with your actual bucket name):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    "Version": "2012-10-17",</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    "Statement": [</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            "Sid": "Sentinel Hub permissions",</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            "Effect": "Allow",</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            "Principal": {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                "AWS": "arn:aws:iam::ddf4c98b5e6647f0a246f0624c8341d9:root"</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            "Action": [</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                "s3:GetBucketLocation",</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                "s3:ListBucket",</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                "s3:GetObject"</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            ],</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            "Resource": [</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                "arn:aws:s3:::&lt;bucket_name&gt;",</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                "arn:aws:s3:::&lt;bucket_name&gt;/*"</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A python script to set a bucket policy can be downloaded <a href="../../APIs/SentinelHub/Byoc/resources/python/cdse_set_bucket_access_policy.py">here</a>.</p>
+</section>
+<section id="checking-the-status-of-the-request" class="level2">
+<h2 class="anchored" data-anchor-id="checking-the-status-of-the-request">Checking the status of the request</h2>
+<p>While the request is running, you can get its status (see this <a href="../../APIs/SentinelHub/AsyncProcess/Examples.html#get-information-about-your-asynchronous-processing-request">example</a>). Once the processing is finished the request is deleted from our system. If you try to check its status after it has been deleted, you will get a '404 Not Found' response even if the request was processed successfully.</p>
+</section>
+<section id="troubleshoting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshoting">Troubleshoting</h2>
+<p>In case anything goes wrong when creating an Async request, we will return an error message immediately. If anything goes wrong once the Async request has been created, we will deliver a "error.json" file with an error message to your object storage.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p><a href="../../APIs/SentinelHub/AsyncProcess/Examples.html">Example of a Async API request</a></p>
 
 
 </section>
 
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1379,6 +1431,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../../APIs/SentinelHub/Process/Examples/DataFusion.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Examples for DataFusion</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../APIs/SentinelHub/AsyncProcess/Examples.html" class="pagination-link">
+        <span class="nav-page-text">Examples for Asynchronous Processing API</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
