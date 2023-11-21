@@ -3161,14 +3161,14 @@
     "href": "APIs/SentinelHub/AsyncProcess.html#general-approach",
     "title": "Asynchronous Processing API",
     "section": "General approach",
-    "text": "General approach\nThe Async API allows you to process the data in a similar way as Processing API; you define input data, area of interest and time range in the body of an Async API request and Sentinel Hub will process the data as defined in your evalscript. When using Async API keep in mind that:\n\nThe maximum output image size can not exceed 10000 pixels in any dimension.\nEvalscript can be either sent directly in the request or it can be stored in object storage and referenced in an async request (see paratmeter evalscriptReference in Async API reference for more details). This allows you to use bigger evalscripts.\nThe processing is asynchronous, which means that you do not get results in a response of your request. Instead they are delivered in your object storage.\nA copy of your Async API request is also stored in your object storage. After the request is processed, the copy is updated and additional information about the cost of the request is added.\nOnly a limited number of async requests can run concurrently for each Sentinel Hub user. The exact limit depends on the account type.\nThe processing time depends on request size and on the current and past load of the service. Generally, the first request is the slowest while the subsequent requests run faster.\nThe cost is the same as with Process API, except that the minimal cost is 10 PU per request."
+    "text": "General approach\nThe Async API allows you to process the data in a similar way as Processing API; you define input data, area of interest and time range in the body of an Async API request and Sentinel Hub will process the data as defined in your evalscript. When using Async API keep in mind that:\n\nThe maximum output image size can not exceed 10000 pixels in any dimension.\nEvalscript can be either sent directly in the request or it can be stored in object storage and referenced in an async request (see parameter evalscriptReference in Async API reference for more details). This allows you to use bigger evalscripts.\nThe processing is asynchronous, which means that you do not get results in a response of your request. Instead they are delivered in your object storage.\nA copy of your Async API request is also stored in your object storage. After the request is processed, the copy is updated and additional information about the cost of the request is added.\nOnly a limited number of async requests can run concurrently for each Sentinel Hub user. The exact limit depends on the account type.\nThe processing time depends on request size and on the current and past load of the service. Generally, the first request is the slowest while the subsequent requests run faster.\nThe cost is the same as with Process API, except that the minimal cost is 10 PU per request."
   },
   {
     "objectID": "APIs/SentinelHub/AsyncProcess.html#bucket-access",
     "href": "APIs/SentinelHub/AsyncProcess.html#bucket-access",
     "title": "Asynchronous Processing API",
     "section": "Bucket access",
-    "text": "Bucket access\nThe Async API uses buckets to:\n\nread evalscript from an bucket (this is optional because an evalscript can also be provided directly in a request),\nwrite results of processing to an bucket.\n\nOne bucket or different buckets can be used for these purposes."
+    "text": "Bucket access\nThe Async API uses buckets to:\n\nread evalscript from a bucket (this is optional because an evalscript can also be provided directly in a request),\nwrite results of processing to a bucket.\n\nOne bucket or different buckets can be used for these purposes."
   },
   {
     "objectID": "APIs/SentinelHub/AsyncProcess.html#bucket-settings",
@@ -3185,18 +3185,18 @@
     "text": "Checking the status of the request\nWhile the request is running, you can get its status (see this example). Once the processing is finished the request is deleted from our system. If you try to check its status after it has been deleted, you will get a '404 Not Found' response even if the request was processed successfully."
   },
   {
-    "objectID": "APIs/SentinelHub/AsyncProcess.html#troubleshoting",
-    "href": "APIs/SentinelHub/AsyncProcess.html#troubleshoting",
+    "objectID": "APIs/SentinelHub/AsyncProcess.html#troubleshooting",
+    "href": "APIs/SentinelHub/AsyncProcess.html#troubleshooting",
     "title": "Asynchronous Processing API",
-    "section": "Troubleshoting",
-    "text": "Troubleshoting\nIn case anything goes wrong when creating an Async request, we will return an error message immediately. If anything goes wrong once the Async request has been created, we will deliver a \"error.json\" file with an error message to your object storage."
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIn case anything goes wrong when creating an Async request, we will return an error message immediately. If anything goes wrong once the Async request has been created, we will deliver a \"error.json\" file with an error message to your object storage."
   },
   {
     "objectID": "APIs/SentinelHub/AsyncProcess.html#examples",
     "href": "APIs/SentinelHub/AsyncProcess.html#examples",
     "title": "Asynchronous Processing API",
     "section": "Examples",
-    "text": "Examples\nExample of a Async API request"
+    "text": "Examples\nExample of an Async API request"
   },
   {
     "objectID": "APIs/SentinelHub/BatchStatistical/Examples.html",
