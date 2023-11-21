@@ -26,7 +26,7 @@ that:
     dimension.
 -   Evalscript can be either sent directly in the request or it can be
     stored in object storage and referenced in an async request (see
-    paratmeter evalscriptReference in Async API reference for more
+    parameter evalscriptReference in Async API reference for more
     details). This allows you to use bigger evalscripts.
 -   The processing is asynchronous, which means that you do not get
     results in a response of your request. Instead they are delivered in
@@ -46,9 +46,9 @@ that:
 
 The Async API uses buckets to:
 
--   read evalscript from an bucket (this is optional because an
+-   read evalscript from a bucket (this is optional because an
     evalscript can also be provided directly in a request),
--   write results of processing to an bucket.
+-   write results of processing to a bucket.
 
 One bucket or different buckets can be used for these purposes.
 
@@ -101,7 +101,7 @@ If you try to check its status after it has been deleted, you will get a
 \'404 Not Found\' response even if the request was processed
 successfully.
 
-## Troubleshoting
+## Troubleshooting
 
 In case anything goes wrong when creating an Async request, we will
 return an error message immediately. If anything goes wrong once the
@@ -110,5 +110,5 @@ with an error message to your object storage.
 
 ## Examples
 
-[Example of a Async API
+[Example of an Async API
 request](/APIs/SentinelHub/AsyncProcess/Examples.qmd)
