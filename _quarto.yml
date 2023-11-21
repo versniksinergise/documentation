@@ -6,7 +6,6 @@ website:
   repo-url: "https://github.com/eu-cdse/documentation"
   repo-branch: "publish"
   site-url: "https://documentation.dataspace.copernicus.eu/"
-  issue-url: "https://github.com/eu-cdse/documentation/issues"
   site-path: '/Home.html'
   search:
     location: sidebar
@@ -119,7 +118,7 @@ website:
               - href: "APIs/openEO/openeo-community-examples/python/RankComposites/rank_composites.ipynb"
                 text: "Rank Composites"
               - href: "notebook-samples/openeo/Whittaker.ipynb"
-                text: Smoothening dataset using Whittaker  
+                text: Smoothening dataset using Whittaker
           - href: APIs/STAC.md
           - href: APIs/S3.md
             text: S3 Access
@@ -205,6 +204,11 @@ website:
                         text: Examples for DEM
                       - href: "APIs/SentinelHub/Process/Examples/DataFusion.qmd"
                         text: Examples for DataFusion
+              - section: "Asynchronous Processing API"
+                href: "APIs/SentinelHub/AsyncProcess.qmd"
+                contents:
+                  - href: "APIs/SentinelHub/AsyncProcess/Examples.qmd"
+                    text: Examples for Asynchronous Processing API
               - section: "Catalog API"
                 href: "APIs/SentinelHub/Catalog.qmd"
                 contents:
