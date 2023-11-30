@@ -142,7 +142,7 @@ userdata
 ```
 
 ``` default
-{'inputMetadata': {'serviceVersion': '4.263.0', 'normalizationFactor': 0.0001},
+{'inputMetadata': {'serviceVersion': '4.19.0', 'normalizationFactor': 0.0001},
  'orbits': [{'tiles': [{'date': '2020-12-06T10:08:08Z',
      'shId': 15161628,
      'cloudCoverage': 100,
@@ -210,6 +210,7 @@ function setup() {
 var maxValueB02 = 0
 
 function evaluatePixel(samples, scenes, inputMetadata, customData, outputMetadata) {
+
   //Average value of band B02 based on the requested tiles
   var sumOfValidSamplesB02 = 0
   var numberOfValidSamples = 0
@@ -460,7 +461,7 @@ userdata
   '2020-12-04T10:17:56Z',
   '2020-12-01T10:08:10Z',
   '2020-12-01T10:08:06Z'],
- 'inputMetadata.serviceVersion': '4.263.0',
+ 'inputMetadata.serviceVersion': '4.19.0',
  'description': 'The evalscript calculates average ndvi in a requested time period. Data collected on notAllowedDates is excluded. ndvi values greater than ndviThreshold are excluded. More about ndvi: https://www.indexdatabase.de/db/i-single.php?id=58. ',
  'tilesPPSDates': ['2020-12-11T10:08:07Z',
   '2020-12-11T10:08:03Z',

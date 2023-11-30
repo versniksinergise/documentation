@@ -94,8 +94,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-31T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
             }
@@ -145,8 +145,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-31T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
             }
@@ -196,8 +196,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-31T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
             }
@@ -605,8 +605,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-20T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
             }
@@ -708,8 +708,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-20T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
                 "processing": {"harmonizeValues": "true"},
@@ -810,8 +810,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-20T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
                 "processing": {"harmonizeValues": "true"},
@@ -943,8 +943,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-20T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
             }
@@ -1077,8 +1077,8 @@ request = {
                 "type": "sentinel-2-l1c",
                 "dataFilter": {
                     "timeRange": {
-                        "from": "2018-10-01T00:00:00Z",
-                        "to": "2018-12-20T00:00:00Z",
+                        "from": "2022-10-01T00:00:00Z",
+                        "to": "2022-10-31T00:00:00Z",
                     }
                 },
                 "processing": {"harmonizeValues": "false"},

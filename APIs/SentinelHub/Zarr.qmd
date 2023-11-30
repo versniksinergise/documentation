@@ -14,8 +14,8 @@ Copernicus Service account accordingly.
 ## Overview
 
 Zarr Import API (or shortly \"Zarr\") enables you to import your own
-Zarr data in Sentinel Hub and access it just like any other data you are
-used when some conditions are met.
+Zarr data in Sentinel Hub and access it just like any other data when
+some conditions are met.
 
 These are:
 

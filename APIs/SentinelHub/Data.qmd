@@ -14,7 +14,6 @@ listing:
     - Data/Byoc.qmd
     - Data/DataFusion.qmd
   fields: [title, description]
-  sort: false
   filter-ui: false
   page-size: 9
 ---

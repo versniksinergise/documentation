@@ -25,7 +25,7 @@ that:
 -   The maximum output image size can not exceed 10000 pixels in any
     dimension.
 -   Evalscript can be either sent directly in the request or it can be
-    stored in object storage and referenced in an async request (see
+    stored in object storage and referenced in an async request ( see
     parameter evalscriptReference in Async API reference for more
     details). This allows you to use bigger evalscripts.
 -   The processing is asynchronous, which means that you do not get
@@ -105,10 +105,10 @@ successfully.
 
 In case anything goes wrong when creating an Async request, we will
 return an error message immediately. If anything goes wrong once the
-Async request has been created, we will deliver a \"error.json\" file
+Async request has been created, we will deliver an \"error.json\" file
 with an error message to your object storage.
 
 ## Examples
 
-[Example of an Async API
+[Example of a Async API
 request](/APIs/SentinelHub/AsyncProcess/Examples.qmd)

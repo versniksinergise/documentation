@@ -36,8 +36,8 @@ Sets the sensing time order of preference.
 
   Value             Description                                                                                                                                                                                                                          Notes
   ----------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -------
-  **mostRecent**    \- In case of `SIMPLE` mosaicking, the values for most recent sensing time will be returned. `<br />`{=html} - For `ORBIT` and `TILE` mosaicking, `samples` in the evalscript will have values sorted by descending sensing times.
-  **leastRecent**   Similar to **mostRecent** but in reverse order.
+  **mostRecent**    \- In case of `SIMPLE` mosaicking, the values for most recent sensing time will be returned. `<br />`{=html} - For `ORBIT` and `TILE` mosaicking, `samples` in the evalscript will have values sorted by descending sensing times.   
+  **leastRecent**   Similar to **mostRecent** but in reverse order.                                                                                                                                                                                      
 
 **Note that [mosaicking works differently](#data-mask-and-mosaicking)**
 for Zarrs than for other collections.
