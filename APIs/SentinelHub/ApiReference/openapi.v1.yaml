@@ -4298,37 +4298,31 @@ components:
       properties:
         url:
           type: string
-          description: >
-            A URL or URL template specifying where the results shall be
-            accessed. Supported formats: <ul>
-              <li>a valid Amazon S3 URL, e.g. `s3://my-personal-bucket/some-folder`.
-                A subdirectory will be created for this async process request, named after the request ID, and output files will be stored there.
-                This is equivalent to the template `s3://my-personal-bucket/some-folder/<REQUEST_ID>/<OUTPUT>`.
-              </li>
-              <li>a templated Amazon S3 URL, e.g. `s3://my-personal-bucket/some-folder/<OUTPUT>`.
-                Templating allows custom organization of the output files.
-                Templates can contain the following placeholders, which are replaced by respective actual values when writing results:
-                <ul>
-                  <li> `<REQUEST_ID>` - the ID of your async process request,</li>
-                  <li> `<OUTPUT>` - the output of the async request.</li>
-                </ul>
-                If the request is not templated `<REQUEST_ID>/<OUTPUT>` will be used as default.
-              </li>
-            </ul>
-        iamRoleARN:
-          type: string
           description: >-
-            IAM role ARN, which allows programmatic access to the S3 bucket
-            specified in the `url` field using the recommended assume IAM role
-            flow.
+            A URL or URL template specifying where the results shall be written.
+            Supported formats: <ul> <li>a valid S3 URL, e.g.
+            `s3://my-personal-bucket/some-folder`. A subdirectory will be
+            created for this statistical batch request, named after the request
+            ID, and output JSON files will be stored there. This is equivalent
+            to the template
+            `s3://my-personal-bucket/some-folder/<REQUEST_ID>/<ID>.json`. </li>
+            <li>a templated S3 URL, e.g.
+            `s3://my-personal-bucket/some-folder/<ID>.json`. Templating allows
+            custom organization of the output files. Templates can contain the
+            following placeholders, which are replaced by respective actual
+            values when writing results: <ul> <li> `<REQUEST_ID>` - the ID of
+            your statistical batch request,</li> <li> `<ID>` - the `id` property
+            of the feature,</li> <li> `<IDENTIFIER>` - the `identifier` property
+            of the feature.</li> </ul> The template must contain `<ID>` or
+            `<IDENTIFIER>` in order to ensure unique output files. </li> </ul>
         accessKey:
           type: string
           description: >-
-            AWS access key, which allows programmatic access to the S3 bucket
+            access key, which allows programmatic access to the S3 bucket
             specified in the `url` field.
         secretAccessKey:
           type: string
-          description: AWS secret access key which must correspond to the AWS access key.
+          description: secret access key which must correspond to the access key.
         region:
           type: string
           description: >-
@@ -5809,6 +5803,14 @@ components:
           format: date-time
           description: The sensing time in ISO 8601 of the most recent tile.
           readOnly: true
+        storageIdentifier:
+          type: string
+          description: >
+            The identifier of the storage where the bucket resides.
+
+
+            For the default storage, you don't have to set this. The possible
+            values are deployment-specific.
     BYOCFormat:
       type: object
       required:
@@ -6588,7 +6590,7 @@ components:
 
                       * Use
                       [SkySatCollect](https://developers.planet.com/docs/data/skysatcollect/)
-                      to order SkySat data.
+                      to order SkySat archive data.
                     externalDocs:
                       description: Item Types Documentation
                       url: >-
@@ -6758,91 +6760,98 @@ components:
                   description: |
                     Specification of the data to subscribe to.
                   items:
-                    type: object
-                    required:
-                      - dataFilter
-                      - itemType
-                      - productBundle
-                      - harmonizeTo
-                    properties:
-                      dataFilter:
-                        type: object
-                        required:
-                          - timeRange
-                        description: >
-                          Selection criteria for the data the subscription
-                          should cover. At the minimum, `timeRange.from` must be
-                          included because subscriptions must have a start time.
-                        properties:
-                          timeRange:
-                            allOf:
-                              - $ref: '#/components/schemas/TimeRange'
-                              - required:
-                                  - from
-                              - description: >
-                                  A time interval to filter data by the
-                                  **publish** date (in contrast to orders, where
-                                  the data is filtered by the acquisition date).
-                                  It is defined by a start and end date and
-                                  time, e.g. 2019-01-31T14:00:00+01:00. A date
-                                  representation without time (e.g. 2019-01-31)
-                                  will not work. Both the start and end of a
-                                  time interval are inclusive and can be equal.
-                          maxCloudCoverage:
-                            $ref: '#/components/schemas/MaxCloudCoverage'
-                          nativeFilter:
-                            type: object
-                            description: |
-                              Planet Data API search filters
-                            externalDocs:
-                              description: >-
-                                Link to the Planet documentation page about
-                                search filters.
-                              url: >-
-                                https://developers.planet.com/docs/data/searches-filtering/#search-filters
-                            example:
-                              type: RangeFilter
-                              field_name: snow_ice_percent
-                              config:
-                                gte: 10
-                      itemType:
-                        type: string
-                        enum:
-                          - PSScene
-                        description: >
-                          The item type to subscribe to. Only
-                          [PSScene](https://developers.planet.com/docs/data/psscene/)
-                          is supported. Subscribing to
-                          [PSScene4Band](https://developers.planet.com/docs/data/psscene4band/)
-                          data is not possible since November 1st 2022.
-                        externalDocs:
-                          description: Item Types Documentation
-                          url: >-
-                            https://developers.planet.com/docs/apis/data/items-assets/#item-types
-                      productBundle:
-                        type: string
-                        enum:
-                          - analytic_udm2
-                          - analytic_sr_udm2
-                          - analytic_8b_udm2
-                          - analytic_8b_sr_udm2
-                        description: |
-                          The product bundle to subscribe to.
-                        externalDocs:
-                          description: Product Bundles Reference
-                          url: >-
-                            https://developers.planet.com/docs/orders/product-bundles-reference/
-                      harmonizeTo:
-                        type: string
-                        enum:
-                          - NONE
-                          - Sentinel-2
-                        description: >
-                          Sensing instrument whose values the data should be
-                          harmonized to, or `NONE` to disable harmonization.
-                        externalDocs:
-                          description: Details on PlanetScope instruments
-                          url: https://developers.planet.com/docs/data/sensors/
+                    $ref: '#/components/schemas/PlanetSubscriptionDataSpec'
+    PlanetSubscriptionDataSpec:
+      oneOf:
+        - $ref: '#/components/schemas/PSSceneDataSpec'
+    PlanetSubscriptionDataSpecBase:
+      type: object
+      required:
+        - dataFilter
+      properties:
+        dataFilter:
+          type: object
+          required:
+            - timeRange
+          description: >
+            Selection criteria for the data the subscription should cover. At
+            the minimum, `timeRange.from` must be included because subscriptions
+            must have a start time.
+          properties:
+            timeRange:
+              allOf:
+                - $ref: '#/components/schemas/TimeRange'
+                - required:
+                    - from
+                - description: >
+                    A time interval to filter data by the **publish** date (in
+                    contrast to orders, where the data is filtered by the
+                    acquisition date). It is defined by a start and end date and
+                    time, e.g. 2019-01-31T14:00:00+01:00. A date representation
+                    without time (e.g. 2019-01-31) will not work. Both the start
+                    and end of a time interval are inclusive and can be equal.
+            maxCloudCoverage:
+              $ref: '#/components/schemas/MaxCloudCoverage'
+            nativeFilter:
+              type: object
+              description: |
+                Planet Data API search filters
+              externalDocs:
+                description: Link to the Planet documentation page about search filters.
+                url: >-
+                  https://developers.planet.com/docs/data/searches-filtering/#search-filters
+              example:
+                type: RangeFilter
+                field_name: snow_ice_percent
+                config:
+                  gte: 10
+    PSSceneDataSpec:
+      allOf:
+        - $ref: '#/components/schemas/PlanetSubscriptionDataSpecBase'
+        - type: object
+          required:
+            - itemType
+            - productBundle
+            - harmonizeTo
+          properties:
+            itemType:
+              type: string
+              enum:
+                - PSScene
+              description: >
+                The item type to subscribe to. Only
+                [PSScene](https://developers.planet.com/docs/data/psscene/) is
+                supported. Subscribing to
+                [PSScene4Band](https://developers.planet.com/docs/data/psscene4band/)
+                data is not possible since November 1st 2022.
+              externalDocs:
+                description: Item Types Documentation
+                url: >-
+                  https://developers.planet.com/docs/apis/data/items-assets/#item-types
+            productBundle:
+              type: string
+              enum:
+                - analytic_udm2
+                - analytic_sr_udm2
+                - analytic_8b_udm2
+                - analytic_8b_sr_udm2
+              description: |
+                The product bundle to subscribe to.
+              externalDocs:
+                description: Product Bundles Reference
+                url: >-
+                  https://developers.planet.com/docs/orders/product-bundles-reference/
+            harmonizeTo:
+              type: string
+              enum:
+                - NONE
+                - Sentinel-2
+              description: >
+                Sensing instrument whose values the data should be harmonized
+                to, or `NONE` to disable harmonization.
+              externalDocs:
+                description: Details on PlanetScope instruments
+                url: https://developers.planet.com/docs/data/sensors/
     PlanetDeliveryProvider:
       type: object
       properties:
@@ -6858,7 +6867,7 @@ components:
         - type: object
           properties:
             itemId:
-              description: Planet's Item ID.
+              description: Planet's Item ID for PlanetScope and SkySat deliveries.
               type: string
     SubscriptionPlanetDelivery:
       allOf:
@@ -6867,7 +6876,7 @@ components:
         - type: object
           properties:
             itemId:
-              description: Planet's item ID.
+              description: Planet's item ID for PlanetScope and SkySat deliveries.
               type: string
     AirbusRequestBase:
       type: object
@@ -8339,12 +8348,6 @@ paths:
       tags:
         - batch_process
       parameters:
-        - name: userid
-          description: User ID
-          in: query
-          schema:
-            type: string
-            format: uuid
         - name: collectionId
           description: >
             Filter batch process requests by the collectionId of batch

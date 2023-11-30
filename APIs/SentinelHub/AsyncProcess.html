@@ -1138,7 +1138,7 @@ window.onload = function() {
 <p>The Async API allows you to process the data in a similar way as Processing API; you define input data, area of interest and time range in the body of an Async API request and Sentinel Hub will process the data as defined in your evalscript. When using Async API keep in mind that:</p>
 <ul>
 <li>The maximum output image size can not exceed 10000 pixels in any dimension.</li>
-<li>Evalscript can be either sent directly in the request or it can be stored in object storage and referenced in an async request (see parameter evalscriptReference in Async API reference for more details). This allows you to use bigger evalscripts.</li>
+<li>Evalscript can be either sent directly in the request or it can be stored in object storage and referenced in an async request ( see parameter evalscriptReference in Async API reference for more details). This allows you to use bigger evalscripts.</li>
 <li>The processing is asynchronous, which means that you do not get results in a response of your request. Instead they are delivered in your object storage.</li>
 <li>A copy of your Async API request is also stored in your object storage. After the request is processed, the copy is updated and additional information about the cost of the request is added.</li>
 <li>Only a limited number of async requests can run concurrently for each Sentinel Hub user. The exact limit depends on the account type.</li>
@@ -1188,11 +1188,11 @@ window.onload = function() {
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>In case anything goes wrong when creating an Async request, we will return an error message immediately. If anything goes wrong once the Async request has been created, we will deliver a "error.json" file with an error message to your object storage.</p>
+<p>In case anything goes wrong when creating an Async request, we will return an error message immediately. If anything goes wrong once the Async request has been created, we will deliver an "error.json" file with an error message to your object storage.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><a href="../../APIs/SentinelHub/AsyncProcess/Examples.html">Example of an Async API request</a></p>
+<p><a href="../../APIs/SentinelHub/AsyncProcess/Examples.html">Example of a Async API request</a></p>
 
 
 </section>
